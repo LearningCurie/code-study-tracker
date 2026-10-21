@@ -1,4 +1,5 @@
 """Shared rendering: inject tracker data into template.html and list every URL for the link checker."""
+import html
 import json
 from pathlib import Path
 
@@ -33,8 +34,27 @@ def urls_in(o, out):
 
 def render(data, out_path, urls_path):
     tpl = (HERE / "template.html").read_text()
-    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    out_path.write_text(tpl.replace("/*DATA*/null", payload).replace("__TITLE__", data["title"]))
+    # "<" is escaped so the JSON can never close its <script> block.
+    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
+    page = (tpl.replace("/*DATA*/", payload)
+            .replace("__TITLE__", html.escape(data["title"]))
+            .replace("__DESC__", html.escape(data["subtitle"])))
+    out_path.write_text(page)
+    write_track(data, out_path)
     urls = urls_in(data, set())
     urls_path.write_text("\n".join(sorted(urls)) + "\n")
     return urls
+
+
+def write_track(data, out_path):
+    """Keep tracks.js (used by the home page) in step with each generated tracker."""
+    path = out_path.parent / "tracks.js"
+    tracks = {}
+    if path.exists():
+        body = path.read_text()
+        tracks = json.loads(body[body.index("=") + 1:body.rindex(";")])
+    items = [i for m in data["modules"] for g in m["groups"] for i in g["items"]]
+    tracks[data["storageKey"]] = dict(
+        title=data["title"], href="./" + out_path.name, total=len(items),
+        topics=len(data["modules"]), unit=data["statuses"][0].lower(), first=data["modules"][0]["name"])
+    path.write_text("window.STUDY_TRACKS = " + json.dumps(tracks, indent=1, sort_keys=True) + ";\n")

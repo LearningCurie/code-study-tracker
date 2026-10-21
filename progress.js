@@ -2,17 +2,24 @@
   "use strict";
   const SCOPE = "https://www.googleapis.com/auth/drive.appdata";
   const API = "https://www.googleapis.com/drive/v3/files";
+  const UPLOAD = "https://www.googleapis.com/upload/drive/v3/files";
+  const ABOUT = "https://www.googleapis.com/drive/v3/about?fields=user(emailAddress)";
+  const HINT_KEY = "study-drive-account";
+  const MAX_ENTRIES = 20000;
+  const MAX_ID_LENGTH = 120;
 
   function validate(value, tracker) {
     if (!value || value.version !== 1 || value.tracker !== tracker ||
         !value.entries || typeof value.entries !== "object" || Array.isArray(value.entries)) {
       throw new Error("Invalid progress file or wrong tracker.");
     }
+    const list = Object.entries(value.entries);
+    if (list.length > MAX_ENTRIES) throw new Error("Progress file has too many entries.");
     const entries = Object.create(null);
-    for (const [id, entry] of Object.entries(value.entries)) {
-      if (!entry || !Number.isInteger(entry.status) || entry.status < 0 || entry.status > 3 ||
-          !Number.isSafeInteger(entry.updatedAt) || entry.updatedAt < 0) {
-        throw new Error("Invalid progress entry: " + id);
+    for (const [id, entry] of list) {
+      if (!id || id.length > MAX_ID_LENGTH || !entry || !Number.isInteger(entry.status) ||
+          entry.status < 0 || entry.status > 3 || !Number.isSafeInteger(entry.updatedAt) || entry.updatedAt < 0) {
+        throw new Error("Invalid progress entry: " + id.slice(0, MAX_ID_LENGTH));
       }
       entries[id] = { status: entry.status, updatedAt: entry.updatedAt };
     }
@@ -47,23 +54,35 @@
     return entries;
   }
 
-  function mount({ storageKey, ids, clientId, onChange }) {
+  function mount({ storageKey, ids, clientId, onChange, autoSync = true, syncDelay = 1500 }) {
     const $ = id => document.getElementById(id);
     const localKey = storageKey + ":v1";
     const knownIds = new Set(ids);
     let entries = Object.create(null);
-    let token = null, expiresAt = 0, busy = false, authClient = null;
-    let deviceId, storageHealthy = true, readBlocked = false;
+    let token = null, expiresAt = 0, busy = false, authClient = null, identity = "idle";
+    let deviceId, storageHealthy = true, readBlocked = false, account = "", timer = null;
+    let current = Promise.resolve();
     const envelope = () => ({ version: 1, tracker: storageKey, entries });
-    const report = (id, text) => { $(id).textContent = text; };
+    const connected = () => !!token && Date.now() < expiresAt;
+    const report = (id, text, tone = "") => {
+      const el = $(id);
+      el.textContent = text;
+      if (el.dataset) el.dataset.tone = tone;
+    };
     const error = (id, e) => {
       console.error(e);
-      report(id, e.message || String(e));
+      report(id, e.message || String(e), "error");
     };
+    const remember = value => { try { if (value) localStorage.setItem(HINT_KEY, value); else localStorage.removeItem(HINT_KEY); } catch (e) { /* hint is optional */ } };
+    const hint = () => { try { return localStorage.getItem(HINT_KEY) || ""; } catch (e) { return ""; } };
+    const idle = () => clientId
+      ? "Saved in this browser. Sign in with Google to sync across devices."
+      : "Saved in this browser.";
+
     function persist() {
       if (readBlocked) {
         storageHealthy = false;
-        report("local-status", "Existing local progress could not be read and was not overwritten. Export your visible progress before leaving.");
+        report("local-status", "Existing local progress could not be read and was not overwritten. Export your visible progress before leaving.", "error");
         return;
       }
       try {
@@ -97,6 +116,20 @@
       error("local-status", new Error("Could not load local progress; existing storage was not overwritten. Export any visible progress. " + e.message));
     }
     refresh();
+    report("cloud-status", idle());
+
+    function controls() {
+      const on = connected();
+      $("drive-connect").hidden = on;
+      $("drive-connect").disabled = busy;
+      $("drive-sync").hidden = !on;
+      $("drive-sync").disabled = busy || !on;
+      $("drive-sync-menu").disabled = busy || !on;
+      $("drive-menu").hidden = !on;
+      $("drive-disconnect").disabled = busy || !token;
+      $("drive-account").textContent = account ? "Signed in as " + account : "Signed in with Google";
+      $("drive-initial").textContent = (account[0] || "G").toUpperCase();
+    }
 
     function set(id, status) {
       if (!knownIds.has(id) || !Number.isInteger(status) || status < 0 || status > 3) {
@@ -107,7 +140,15 @@
       entries[id] = { status, updatedAt: Math.max(Date.now(), latest + 1) };
       persist();
       refresh();
-      report("cloud-status", "Changes are local. Click Sync now to update Google Drive.");
+      if (connected() && autoSync) {
+        report("cloud-status", "Saved in this browser. Syncing shortly...", "busy");
+        clearTimeout(timer);
+        timer = setTimeout(() => { timer = null; current = sync(); }, syncDelay);
+      } else if (token) {
+        report("cloud-status", "Saved in this browser. Sign in with Google again to sync.");
+      } else {
+        report("cloud-status", idle());
+      }
     }
 
     $("export-progress").onclick = () => {
@@ -130,7 +171,8 @@
         entries = merge(entries, imported);
         persist();
         refresh();
-        report("cloud-status", "Backup merged locally. Sync now to upload it to Drive.");
+        report("cloud-status", connected() ? "Backup merged. Syncing to Google Drive..." : "Backup merged in this browser.", "ok");
+        if (connected()) current = sync();
       } catch (e) { error("cloud-status", e); }
       finally { event.target.value = ""; }
     };
@@ -139,31 +181,25 @@
       try {
         entries = merge(entries, validate(JSON.parse(event.newValue), storageKey));
         refresh();
-        report("cloud-status", "Progress updated from another tab. Sync now to update Drive.");
       } catch (e) { error("local-status", e); }
     });
 
-    function controls() {
-      $("drive-connect").disabled = busy;
-      $("drive-sync").disabled = busy || !token;
-      $("drive-disconnect").disabled = busy || !token;
-    }
     async function request(url, options = {}) {
-      if (!token || Date.now() >= expiresAt) {
+      if (!connected()) {
         token = null;
         controls();
-        throw new Error("Google access expired. Connect Google Drive again, then sync.");
+        throw new Error("Your Google session expired. Sign in with Google again to sync.");
       }
       const response = await fetch(url, {
-        ...options, signal: AbortSignal.timeout(30000),
+        ...options, signal: AbortSignal.timeout(30000), credentials: "omit", referrerPolicy: "no-referrer",
         headers: { ...options.headers, Authorization: "Bearer " + token }
       });
       if (response.status === 401) {
         token = null;
         controls();
-        throw new Error("Google access expired. Connect Google Drive again.");
+        throw new Error("Your Google session expired. Sign in with Google again to sync.");
       }
-      if (!response.ok) throw new Error("Google Drive request failed (HTTP " + response.status + "). Progress remains local; retry sync.");
+      if (!response.ok) throw new Error("Google Drive request failed (HTTP " + response.status + "). Progress is still saved in this browser; try Sync now again.");
       return response.json();
     }
     async function syncFiles() {
@@ -196,10 +232,10 @@
       const own = files.find(file => file.name === name);
       let url, options;
       if (own) {
-        url = "https://www.googleapis.com/upload/drive/v3/files/" + encodeURIComponent(own.id) + "?uploadType=media";
+        url = UPLOAD + "/" + encodeURIComponent(own.id) + "?uploadType=media";
         options = { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify(envelope()) };
       } else {
-        url = "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart";
+        url = UPLOAD + "?uploadType=multipart";
         const boundary = "study_" + crypto.randomUUID();
         const metadata = { name, parents: ["appDataFolder"], appProperties: { studyTracker: storageKey } };
         const body = "--" + boundary + "\r\nContent-Type: application/json; charset=UTF-8\r\n\r\n" +
@@ -209,21 +245,37 @@
       }
       const sent = JSON.stringify(envelope());
       await request(url, options);
-      report("cloud-status", JSON.stringify(envelope()) === sent
-        ? "Synced with Google Drive. Sync on your other device to pick up these changes."
-        : "Earlier changes synced. New local changes need another sync.");
+      const time = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+      if (JSON.stringify(envelope()) === sent) {
+        report("cloud-status", "Synced with Google Drive at " + time + ".", "ok");
+      } else {
+        report("cloud-status", "Earlier changes synced at " + time + ". Newer changes will sync next.", "busy");
+      }
     }
     async function sync() {
       if (busy) return;
+      clearTimeout(timer);
+      timer = null;
       busy = true;
       controls();
-      report("cloud-status", "Syncing with Google Drive...");
+      report("cloud-status", "Syncing with Google Drive...", "busy");
       try {
-        if (!navigator.locks) throw new Error("Drive sync needs a browser with Web Locks support. Use a current Chrome, Edge, Firefox or Safari, or use export/import.");
+        if (!navigator.locks) throw new Error("Drive sync needs a current browser with Web Locks support. Use export and import instead.");
         if (!deviceId) throw new Error("Drive sync needs working browser storage. Export a backup instead.");
         await navigator.locks.request("study-drive:" + storageKey, syncFiles);
       } catch (e) { error("cloud-status", e); }
       finally { busy = false; controls(); }
+    }
+    async function identify() {
+      try {
+        const about = await request(ABOUT);
+        const email = about && about.user && typeof about.user.emailAddress === "string" ? about.user.emailAddress : "";
+        account = email.slice(0, 254);
+        remember(account);
+      } catch (e) {
+        account = "";
+      }
+      controls();
     }
 
     function loadIdentity() {
@@ -231,75 +283,88 @@
       return new Promise((resolve, reject) => {
         const script = document.createElement("script");
         script.src = "https://accounts.google.com/gsi/client";
+        script.async = true;
         const timer = setTimeout(() => {
           script.remove();
-          reject(new Error("Google sign-in timed out. Check your connection and try again."));
+          reject(new Error("Google sign-in did not load. Check your connection and reload the page."));
         }, 15000);
         script.onload = () => { clearTimeout(timer); resolve(); };
         script.onerror = () => { clearTimeout(timer); script.remove(); reject(new Error("Could not load Google sign-in. Check your connection or content blocker.")); };
         document.head.append(script);
       });
     }
-    $("drive-connect").onclick = async () => {
+    function onToken(response) {
+      if (response.error || !response.access_token) {
+        error("cloud-status", new Error("Google sign-in was not completed: " + (response.error_description || response.error || "no access token") + "."));
+      } else if (!google.accounts.oauth2.hasGrantedAllScopes(response, SCOPE)) {
+        error("cloud-status", new Error("Google Drive app-folder permission was not granted. Sign in again and allow it to sync."));
+      } else {
+        token = response.access_token;
+        expiresAt = Date.now() + Number(response.expires_in) * 1000 - 30000;
+        current = identify().then(sync);
+      }
+      controls();
+    }
+    function prepare() {
+      if (!clientId || authClient || identity === "loading" || location.protocol === "file:") return;
+      identity = "loading";
+      loadIdentity().then(() => {
+        authClient = google.accounts.oauth2.initTokenClient({
+          client_id: clientId, scope: SCOPE, callback: onToken,
+          error_callback: response => {
+            const closed = response && response.type === "popup_closed";
+            report("cloud-status", closed ? "Google sign-in was closed before finishing." : "Google sign-in failed (" + (response && response.type) + "). Allow pop-ups for this site and try again.", closed ? "" : "error");
+            controls();
+          }
+        });
+        identity = "ready";
+      }).catch(e => {
+        identity = "failed";
+        error("cloud-status", e);
+      });
+    }
+    function signIn(chooseAccount) {
       if (!clientId) {
-        report("cloud-status", "Google Drive is not configured. Follow Hosting and Google Drive setup to add your OAuth client ID.");
+        report("cloud-status", "Google sign-in is not configured for this site. See Setup and security.", "error");
         return;
       }
       if (location.protocol === "file:") {
-        report("cloud-status", "Google Drive needs an HTTP localhost server or your HTTPS GitHub Pages site, not a file URL.");
+        report("cloud-status", "Google sign-in needs the published HTTPS site or a localhost server, not a file opened from disk.", "error");
         return;
       }
       if (!authClient) {
-        busy = true;
-        token = null;
-        expiresAt = 0;
-        controls();
-        try {
-          await loadIdentity();
-          authClient = google.accounts.oauth2.initTokenClient({
-            client_id: clientId, scope: SCOPE,
-            callback: response => {
-              busy = false;
-              if (response.error || !response.access_token) {
-                error("cloud-status", new Error(response.error_description || response.error || "Google did not return an access token."));
-              } else if (!google.accounts.oauth2.hasGrantedAllScopes(response, SCOPE)) {
-                error("cloud-status", new Error("Drive app-data permission was not granted. Connect again and allow it."));
-              } else {
-                token = response.access_token;
-                expiresAt = Date.now() + Number(response.expires_in) * 1000 - 30000;
-                report("cloud-status", "Connected. Click Sync now. This browser's progress will merge with the selected Google account.");
-              }
-              controls();
-            },
-            error_callback: response => {
-              busy = false;
-              error("cloud-status", new Error("Google sign-in failed: " + response.type + ". Retry Connect Google Drive."));
-              controls();
-            }
-          });
-          report("cloud-status", "Google sign-in is ready. Click Connect Google Drive again to open sign-in.");
-        } catch (e) { error("cloud-status", e); }
-        finally { busy = false; controls(); }
+        if (identity !== "loading") prepare();
+        report("cloud-status", "Google sign-in is still loading. Try again in a moment.", "busy");
         return;
       }
-      busy = true;
-      controls();
-      try { authClient.requestAccessToken({ prompt: "select_account" }); }
-      catch (e) { busy = false; error("cloud-status", e); controls(); }
-    };
-    $("drive-sync").onclick = sync;
+      const login = chooseAccount ? "" : hint();
+      // The button stays enabled: browsers can hide pop-up closure from Google's library, so a second click must always work.
+      report("cloud-status", "Waiting for Google sign-in in the pop-up window...", "busy");
+      // Must run inside the click handler, or the browser blocks the sign-in pop-up.
+      try { authClient.requestAccessToken(login ? { prompt: "", login_hint: login } : { prompt: "select_account" }); }
+      catch (e) { error("cloud-status", e); controls(); }
+    }
+
+    $("drive-connect").onclick = () => signIn(false);
+    $("drive-switch").onclick = () => { token = null; expiresAt = 0; account = ""; remember(""); controls(); signIn(true); };
+    $("drive-sync").onclick = () => (current = sync());
+    $("drive-sync-menu").onclick = () => (current = sync());
     $("drive-disconnect").onclick = () => {
+      clearTimeout(timer);
+      timer = null;
       token = null;
       expiresAt = 0;
       controls();
-      report("cloud-status", "Disconnected locally. Local progress is unchanged. To revoke permission, remove this app in your Google account settings.");
+      report("cloud-status", "Signed out on this device. Progress is still saved in this browser and in your Google Drive.");
     };
     window.addEventListener("beforeunload", event => {
-      if (!busy) return;
+      if (!busy && !timer) return;
       event.preventDefault();
       event.returnValue = "";
     });
-    return { set };
+    controls();
+    prepare();
+    return { set, idle: () => current };
   }
   root.StudyProgress = { validate, merge, legacy, mount };
 })(typeof window === "undefined" ? globalThis : window);

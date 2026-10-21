@@ -1,23 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Study trackers</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Code Study Tracker</title>
+<meta name="description" content="Study routes for data structures and algorithms and for senior-level Python, with reading, videos, practice problems and progress tracking.">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="./site.css">
+<script src="./site.js"></script>
+<script src="./tracks.js"></script>
 </head>
-<body><main>
-<h1>Keep learning.<br>Keep your place.</h1>
-<p>Two study routes, with reading, practice and progress you can carry to your next device.</p>
-<nav aria-label="Choose a study tracker">
-<a href="./Python%20track_%20Intermediate%20to%20Senior.html">Python: intermediate to senior</a>
-<p>Build confidence in the language, then design, test and ship systems.</p>
-<a href="./DSA%20problem%20tracker_%20Easy%2C%20Medium%2C%20Hard.html">Data structures and algorithms</a>
-<p>Learn the patterns, solve problems and revisit what needs practice.</p>
+<body>
+<header class="appbar">
+<div class="appbar-in">
+<a class="brand" href="./index.html" aria-label="Code Study Tracker home"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2556c4"/><path d="M7 20h5v-5h5v-5h4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code Study Tracker</span></a>
+<nav class="appnav" aria-label="Main">
+<a href="./dsa.html">DSA</a>
+<a href="./python.html">Python</a>
+<a href="./setup.html">Setup &amp; security</a>
 </nav>
-<h2>Your progress, without a server</h2>
-<p>Changes save in this browser. Export a JSON backup anytime, or connect Google Drive and use Sync now on each device. No database is required.</p>
-<p><a href="./setup.html">Set up GitHub Pages and Google Drive</a></p>
-<p>Each tracker has separate progress. Other visitors keep their own progress; yours is not saved in the public repository.</p>
-</main></body>
+</div>
+</header>
+
+<main class="home">
+<section class="hero">
+<h1>Learn the idea, then prove it in code.</h1>
+<p class="lede">Two study routes with what to read and watch before each set of practice. Mark every problem as you go, and pick up where you left off on any device.</p>
+</section>
+
+<section class="routes" aria-label="Study routes">
+<article class="route" data-track="dsa-status">
+<h2>Data structures and algorithms</h2>
+<p class="desc">From arrays and hashing to graphs, dynamic programming and segment trees. Each topic teaches the pattern, then gives free problems from Easy to Hard on LeetCode, CSES and AtCoder.</p>
+<div class="facts"><p><b data-f="topics">34</b>topics</p><p><b data-f="total">899</b>problems</p></div>
+<div class="meter"><i></i></div>
+<p class="done" data-f="done">0 solved</p>
+<p class="next" data-f="next">Start with Arrays and hashing</p>
+<p class="act"><a class="btn pri" href="./dsa.html">Open the DSA tracker</a></p>
+</article>
+<article class="route" data-track="py-status">
+<h2>Python, intermediate to senior</h2>
+<p class="desc">From the data model and generators to typing, testing, architecture, concurrency and security. Each module explains how senior engineers work, with Exercism practice and projects to build.</p>
+<div class="facts"><p><b data-f="topics">26</b>modules</p><p><b data-f="total">254</b>items</p></div>
+<div class="meter"><i></i></div>
+<p class="done" data-f="done">0 confident</p>
+<p class="next" data-f="next">Start with the refresher</p>
+<p class="act"><a class="btn pri" href="./python.html">Open the Python track</a></p>
+</article>
+</section>
+
+<section class="sect" aria-labelledby="how">
+<h2 id="how">How each topic works</h2>
+<p class="sub">The same three-step loop runs through both trackers.</p>
+<ol class="steps">
+<li><h3>Learn</h3><p>Read one article and watch one video from the topic's study panel. Write the core moves from memory.</p></li>
+<li><h3>Apply</h3><p>Solve in order, Easy to Hard. Say the brute force first, then find the better approach without hints.</p></li>
+<li><h3>Review</h3><p>Mark each item. Filter by what needs practice and redo it a week later until it sticks.</p></li>
+</ol>
+</section>
+
+<section class="sect" aria-labelledby="data">
+<h2 id="data">Where your progress lives</h2>
+<p class="sub">There is no account system and no server. You decide where your progress goes.</p>
+<div class="cols">
+<div><h3>In this browser</h3><p>Every click saves on this device straight away. Nothing is sent anywhere.</p></div>
+<div><h3>In backups you keep</h3><p>Export a JSON file from the Backup menu and import it on any browser.</p></div>
+<div><h3>In your Google Drive, if you choose</h3><p>Sign in with Google inside a tracker to sync. The site can only use its own hidden app folder in your Drive, never your other files. <a href="./setup.html#security">How sign-in is kept safe</a></p></div>
+</div>
+</section>
+</main>
+
+<footer class="foot"><div class="foot-in">
+<p>Open source. Free study material from the linked sites; problems link to the original platforms.</p>
+<nav aria-label="Footer"><a href="./setup.html">Setup &amp; security</a><a href="https://github.com/LearningCurie/code-study-tracker" target="_blank" rel="noopener">Source on GitHub</a></nav>
+</div></footer>
+</body>
 </html>

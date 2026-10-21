@@ -1,55 +1,144 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hosting and Google Drive setup</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Setup and security | Code Study Tracker</title>
+<meta name="description" content="How Code Study Tracker stores progress, how Google sign-in works, and how to publish and secure your own copy.">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
 <link rel="stylesheet" href="./site.css">
+<script src="./site.js"></script>
 </head>
-<body><main>
-<a href="./index.html">All study trackers</a>
-<h1>Publish once.<br>Study anywhere.</h1>
-<p>This guide is for hosting your personal trackers on free GitHub Pages and optionally syncing progress through your Google account. There is no server, build step or database.</p>
-<h2>1. Publish on GitHub Pages</h2>
+<body>
+<header class="appbar">
+<div class="appbar-in">
+<a class="brand" href="./index.html" aria-label="Code Study Tracker home"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2556c4"/><path d="M7 20h5v-5h5v-5h4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code Study Tracker</span></a>
+<nav class="appnav" aria-label="Main">
+<a href="./dsa.html">DSA</a>
+<a href="./python.html">Python</a>
+<a href="./setup.html">Setup &amp; security</a>
+</nav>
+</div>
+</header>
+
+<div class="doc">
+<nav class="toc" aria-label="On this page">
+<p>On this page</p>
 <ol>
-<li>Create a public GitHub repository. Free GitHub Pages is available for public repositories; never upload credentials or private study data.</li>
-<li>Copy the contents of the <code>coding</code> folder into the repository root, including both tracker HTML files, <code>index.html</code>, <code>setup.html</code>, <code>site.css</code>, <code>progress.js</code>, <code>config.js</code> and <code>.nojekyll</code>. You can omit <code>_build</code> and <code>tests</code>.</li>
-<li>In the repository, open Settings &gt; Pages. Choose Deploy from a branch, select your branch (usually <code>main</code>) and <code>/(root)</code>, then Save.</li>
-<li>Wait for deployment, then open the published URL, usually <code>https://USERNAME.github.io/REPOSITORY/</code>. All links work under a repository subpath.</li>
+<li><a href="#security">Security and privacy</a></li>
+<li><a href="#sync">Syncing between devices</a></li>
+<li><a href="#backup">Backups</a></li>
+<li><a href="#publish">Publish your own copy</a></li>
+<li><a href="#google">Turn on Google sign-in</a></li>
+<li><a href="#owner">Owner security checklist</a></li>
+<li><a href="#trouble">Troubleshooting</a></li>
+<li><a href="#maintain">Maintaining the trackers</a></li>
 </ol>
-<p class="note">Export progress from the old site before moving. Browser storage belongs to an origin, so local preview progress will not automatically appear on GitHub Pages. Import the backup on the new site.</p>
-<h2>2. Enable optional Google Drive sync</h2>
-<p>Use the same OAuth client ID and Google account on every device. This uses Drive's hidden application data folder, not Google Cloud Storage or Firebase. Only application data permission is requested, not access to your personal Drive files. No client secret or service account is needed.</p>
+</nav>
+
+<article class="prose">
+<h1>Setup and security</h1>
+<p class="lede">The trackers are static pages. There is no server and no database. Progress lives in your browser, in backup files you export, and, if you sign in, in a private app folder in your own Google Drive.</p>
+
+<h2 id="security">Security and privacy</h2>
+<p>Signing in with Google gives this site one narrow permission: <code>drive.appdata</code>. That is a hidden folder in your Drive that only this app can see. The table shows what that allows.</p>
+<table class="facts-t">
+<tr><th>The site can</th><td>Create, read and update its own progress files in the hidden app folder, and read your email address so the account menu shows which account is signed in.</td></tr>
+<tr><th>The site cannot</th><td>See, open, change or delete any of your Drive files, Gmail, Photos, Contacts, Calendar, passwords or account settings. Google enforces this; the code cannot ask for more without showing you a new consent screen.</td></tr>
+<tr><th>Where the sign-in token goes</th><td>It stays in the page's memory, is sent only to Google's Drive API, and expires within an hour. It is never written to browser storage, a file or the repository.</td></tr>
+<tr><th>Who else can see your progress</th><td>Nobody. There is no server to send it to. Other visitors have their own browser storage and their own Google accounts.</td></tr>
+<tr><th>What Google sees without sign-in</th><td>The pages load fonts and, on tracker pages, Google's sign-in library from Google's servers, so the sign-in pop-up opens on the first click. That shares your IP address with Google like any embedded Google resource, but no progress and no account data.</td></tr>
+</table>
+
+<h3>Why open source does not expose your Google account</h3>
+<ul>
+<li><strong>The client ID in <code>config.js</code> is public by design.</strong> It is not a password. Google only accepts sign-ins from the web addresses listed for it, so a copy of this code on another site cannot use it.</li>
+<li><strong>Visitors only ever sign in to their own accounts.</strong> If someone else signs in on your site, they grant access to their own app folder, not yours.</li>
+<li><strong>There are no secrets to steal.</strong> The site needs no client secret, API key, service account or password, and the repository contains none. GitHub secret scanning and push protection are on for the repository.</li>
+<li><strong>Nobody can change the live site without your GitHub account.</strong> Pull requests only take effect if you merge them.</li>
+</ul>
+
+<h3>Protections built into the pages</h3>
+<ul>
+<li>A strict Content Security Policy allows scripts only from this site and Google's sign-in library, and network requests only to Google's Drive API.</li>
+<li>No inline scripts; study data is stored as inert JSON. Anything read from storage or imported files is shown as plain text, never as HTML.</li>
+<li>Pages refuse to render inside another site's frame, which blocks click-jacking.</li>
+<li>Imported and synced files are validated (format, tracker, size and number of entries) before they are merged.</li>
+<li>All external links open in a new tab with <code>rel="noopener"</code>.</li>
+</ul>
+<div class="callout ok"><p>You can remove the site's access at any time from <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener">your Google account's third-party connections</a>. Your progress in the browser is not affected.</p></div>
+
+<h2 id="sync">Syncing between devices</h2>
 <ol>
-<li>In Google Cloud Console, create or choose a project. Enable <strong>Google Drive API</strong> under APIs &amp; Services &gt; Library.</li>
-<li>Open Google Auth Platform (or the OAuth consent screen). Fill in Branding with the app name and support email. Choose External audience for a personal Google account.</li>
-<li>While the app is in Testing, add your own Google account under Test users. Add <code>https://www.googleapis.com/auth/drive.appdata</code> in Data Access. Google classifies this scope as non-sensitive. Testing-mode consent can expire after seven days; reconnect when prompted. For broader use, move to Production and complete any requirements Google presents. Do not assume testing mode is a permanent public release.</li>
-<li>Create an OAuth client of type <strong>Web application</strong>. Add the exact JavaScript origin <code>https://USERNAME.github.io</code>, without the repository path. For local testing, separately add the actual origin, such as <code>http://localhost:8765</code>. A different port or hostname is a different origin. This popup token flow does not need a redirect URI.</li>
-<li>Copy the public OAuth client ID into <code>config.js</code> as <code>googleClientId: "YOUR_ID.apps.googleusercontent.com"</code>, and publish the change. A browser client ID is public configuration; never add a client secret, token or service-account key.</li>
-<li>Open either tracker. Click <strong>Connect Google Drive</strong>. The first click loads Google sign-in; click again when prompted to open the popup, select your account and grant permission. Then click <strong>Sync now</strong>.</li>
-<li>On your other device, open the same site, connect the same account and click <strong>Sync now</strong>. Repeat for the other tracker; each tracker syncs separately.</li>
+<li>Open a tracker and click <strong>Sign in with Google</strong> in the top right. Choose your account and allow the app-folder permission.</li>
+<li>The tracker syncs straight away, and again a moment after each change while you are signed in.</li>
+<li>On your other device, open the same site and sign in with the same account. Your progress merges in.</li>
 </ol>
-<p>These small Drive API requests normally need no paid storage product or billing account, but are subject to Google's account storage limits, API quotas and policies. GitHub Pages only serves the static files.</p>
-<h2>Daily use and conflict handling</h2>
 <ul>
-<li>Changes save locally immediately. <strong>Sync is manual</strong>, not continuous: sync before switching devices and after opening the tracker on another device.</li>
-<li>Sync merges item changes; the most recent timestamp wins for the same item. Unmarking an item also syncs. Keep device clocks accurate. Exactly equal timestamps resolve deterministically by status number.</li>
-<li>Each browser keeps its own Drive snapshot, avoiding one device overwriting another's whole progress. Concurrent syncs may need another sync on each device to converge. Browser storage clearing creates a new device snapshot; older snapshots remain in Drive app data.</li>
-<li>Use a current browser with Web Locks support over HTTPS or localhost for Drive sync. Local saving and JSON backups do not require Google sign-in. Clearing browser data, private browsing or storage eviction can remove local progress.</li>
-<li>Access tokens stay in memory, not in browser storage or your repository. Reloading or token expiry requires reconnecting. Disconnect clears the in-memory connection, not local or Drive data.</li>
-<li>Connecting a different Google account merges this browser's existing progress into that account when you sync. Use separate browser profiles for separate people or accounts.</li>
+<li>Each tracker syncs separately. Sign-in lasts for the open page; after a reload or about an hour, click Sign in with Google again. Next time it usually takes one click.</li>
+<li>If the same item changed on two devices, the most recent change wins. Unmarking an item also syncs. Keep device clocks accurate.</li>
+<li>Each browser writes its own snapshot, so two devices never overwrite each other's files.</li>
+<li><strong>Sign out on this device</strong> forgets the session on this page. It does not delete progress here or in Drive.</li>
 </ul>
-<h2>Back up and recover</h2>
-<p>Click Export progress to download a versioned JSON backup. Import progress validates the tracker and file, then merges newer changes; it does not replace everything or roll back newer edits. Python and DSA backups are not interchangeable. Keep a backup before switching sites or accounts. Existing browser progress from the original tracker is migrated automatically on the same origin.</p>
-<h2>When something goes wrong</h2>
+
+<h2 id="backup">Backups</h2>
+<p>Open the <strong>Backup</strong> menu in a tracker to export a JSON file or import one. Importing merges changes, newest first; it never wipes newer progress. DSA and Python backups are separate files. Export before clearing browser data, switching browsers or moving the site to a new address, because browser storage belongs to one web address.</p>
+
+<h2 id="publish">Publish your own copy</h2>
+<ol>
+<li>Fork or copy the repository. Free GitHub Pages works with public repositories; never commit credentials.</li>
+<li>Open <strong>Settings &gt; Pages</strong>, choose <strong>Deploy from a branch</strong>, pick <code>main</code> and <code>/ (root)</code>, then save.</li>
+<li>Your site appears at <code>https://USERNAME.github.io/REPOSITORY/</code>. Every link works under that path.</li>
+</ol>
+
+<h2 id="google">Turn on Google sign-in</h2>
+<p>This is only needed for your own copy. The trackers work without it; the sign-in button explains that sync is not configured.</p>
+<ol>
+<li>In Google Cloud Console, create a project and enable the <strong>Google Drive API</strong> (APIs &amp; Services &gt; Library).</li>
+<li>Open <strong>Google Auth Platform</strong>. Under Branding, enter the app name and support email. Choose <strong>External</strong> audience.</li>
+<li>Under Data Access, add only <code>https://www.googleapis.com/auth/drive.appdata</code>. Do not add other scopes.</li>
+<li>Under Audience, leave the app in <strong>Testing</strong> and add your own Google account as a test user. Only listed test users can sign in. Testing-mode sign-ins may ask you to approve again after seven days.</li>
+<li>Under Clients, create an OAuth client of type <strong>Web application</strong>. Add the exact JavaScript origin, for example <code>https://learningcurie.github.io</code> (no path, no trailing slash). Leave redirect URIs empty; this sign-in uses a pop-up.</li>
+<li>Put the client ID in <code>config.js</code> as <code>googleClientId: "...apps.googleusercontent.com"</code> and publish. Never add the client secret.</li>
+</ol>
+<div class="callout warn"><p>For local testing, add <code>http://localhost:PORT</code> as a separate origin and remove it when you are done. A different port or host name is a different origin.</p></div>
+
+<h2 id="owner">Owner security checklist</h2>
+<h3>Google Cloud</h3>
 <ul>
-<li><strong>Google Drive is not configured:</strong> add the client ID to <code>config.js</code> and redeploy.</li>
-<li><strong>Origin or access denied:</strong> check the OAuth JavaScript origin, test-user list and requested app-data permission. Allow popups and Google sign-in scripts.</li>
-<li><strong>Expired access or HTTP errors:</strong> reconnect and retry. Your local changes remain available. Offline use saves locally, but syncing requires a connection.</li>
-<li><strong>Local saving failed:</strong> export immediately before closing the page. Check browser storage permissions and space. Do not rely on cloud sync until local storage is working.</li>
-<li><strong>Remove cloud data:</strong> manage the app in Google Drive Settings &gt; Manage apps and delete its hidden application data. To revoke access, use your Google account's third-party connections settings. Revoking access is separate from deleting progress.</li>
+<li>Authorized JavaScript origins list only your Pages address (plus localhost while developing). Redirect URIs are empty.</li>
+<li>The only scope is <code>drive.appdata</code>. Only the Google Drive API is enabled.</li>
+<li>No API keys or service accounts exist in the project. The client secret has never been copied anywhere.</li>
+<li>Keep the app in Testing with only your account, unless you want other people to sign in. If you publish it to Production, they still only reach their own app folders.</li>
 </ul>
-<h2>Maintaining the trackers</h2>
-<p>The shared layout source is <code>_build/template.html</code>. Both generated trackers must use that template and load the sibling <code>config.js</code> and <code>progress.js</code>. Keep the existing item IDs and storage keys when updating study content. Run the dependency-free JavaScript tests with <code>node --test tests/progress.test.cjs</code>.</p>
-</main></body>
+<h3>GitHub</h3>
+<ul>
+<li>Two-factor authentication is on for your GitHub and Google accounts.</li>
+<li>Secret scanning and push protection stay on. Consider a branch rule on <code>main</code> that blocks force pushes and deletion.</li>
+<li>Review any pull request that touches <code>progress.js</code>, <code>config.js</code> or the Content Security Policy with extra care. That code decides what the page asks Google for.</li>
+</ul>
+
+<h2 id="trouble">Troubleshooting</h2>
+<ul>
+<li><strong>"Sign-in is not configured":</strong> add the client ID to <code>config.js</code> and publish.</li>
+<li><strong>Pop-up blocked or closes immediately:</strong> allow pop-ups for this site, then click Sign in with Google again.</li>
+<li><strong>"Access blocked" or "origin mismatch" from Google:</strong> check the JavaScript origin in the OAuth client and that your account is a test user.</li>
+<li><strong>"Session expired":</strong> sign in again. Changes made meanwhile are saved in the browser and sync after you sign in.</li>
+<li><strong>"Local saving failed":</strong> export a backup immediately, then check browser storage settings and free space.</li>
+<li><strong>Remove cloud data:</strong> in Google Drive, open Settings &gt; Manage apps, find the app and delete its hidden data.</li>
+</ul>
+
+<h2 id="maintain">Maintaining the trackers</h2>
+<p>The trackers are generated from <code>_build/template.html</code> with shared <code>site.css</code>, <code>tracker.css</code>, <code>tracker.js</code> and <code>progress.js</code>. Keep item IDs and storage keys stable when you change study content, so saved progress still matches. Run the tests with <code>node --test tests/progress.test.cjs</code>.</p>
+</article>
+</div>
+
+<footer class="foot"><div class="foot-in">
+<p>Code Study Tracker is open source. Your progress never leaves your browser unless you export it or sign in with Google.</p>
+<nav aria-label="Footer"><a href="./index.html">Home</a><a href="https://github.com/LearningCurie/code-study-tracker" target="_blank" rel="noopener">Source on GitHub</a></nav>
+</div></footer>
+</body>
 </html>
