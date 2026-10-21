@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hosting and Google Drive setup</title>
+<link rel="stylesheet" href="./site.css">
+</head>
+<body><main>
+<a href="./index.html">All study trackers</a>
+<h1>Publish once.<br>Study anywhere.</h1>
+<p>This guide is for hosting your personal trackers on free GitHub Pages and optionally syncing progress through your Google account. There is no server, build step or database.</p>
+<h2>1. Publish on GitHub Pages</h2>
+<ol>
+<li>Create a public GitHub repository. Free GitHub Pages is available for public repositories; never upload credentials or private study data.</li>
+<li>Copy the contents of the <code>coding</code> folder into the repository root, including both tracker HTML files, <code>index.html</code>, <code>setup.html</code>, <code>site.css</code>, <code>progress.js</code>, <code>config.js</code> and <code>.nojekyll</code>. You can omit <code>_build</code> and <code>tests</code>.</li>
+<li>In the repository, open Settings &gt; Pages. Choose Deploy from a branch, select your branch (usually <code>main</code>) and <code>/(root)</code>, then Save.</li>
+<li>Wait for deployment, then open the published URL, usually <code>https://USERNAME.github.io/REPOSITORY/</code>. All links work under a repository subpath.</li>
+</ol>
+<p class="note">Export progress from the old site before moving. Browser storage belongs to an origin, so local preview progress will not automatically appear on GitHub Pages. Import the backup on the new site.</p>
+<h2>2. Enable optional Google Drive sync</h2>
+<p>Use the same OAuth client ID and Google account on every device. This uses Drive's hidden application data folder, not Google Cloud Storage or Firebase. Only application data permission is requested, not access to your personal Drive files. No client secret or service account is needed.</p>
+<ol>
+<li>In Google Cloud Console, create or choose a project. Enable <strong>Google Drive API</strong> under APIs &amp; Services &gt; Library.</li>
+<li>Open Google Auth Platform (or the OAuth consent screen). Fill in Branding with the app name and support email. Choose External audience for a personal Google account.</li>
+<li>While the app is in Testing, add your own Google account under Test users. Add <code>https://www.googleapis.com/auth/drive.appdata</code> in Data Access. Google classifies this scope as non-sensitive. Testing-mode consent can expire after seven days; reconnect when prompted. For broader use, move to Production and complete any requirements Google presents. Do not assume testing mode is a permanent public release.</li>
+<li>Create an OAuth client of type <strong>Web application</strong>. Add the exact JavaScript origin <code>https://USERNAME.github.io</code>, without the repository path. For local testing, separately add the actual origin, such as <code>http://localhost:8765</code>. A different port or hostname is a different origin. This popup token flow does not need a redirect URI.</li>
+<li>Copy the public OAuth client ID into <code>config.js</code> as <code>googleClientId: "YOUR_ID.apps.googleusercontent.com"</code>, and publish the change. A browser client ID is public configuration; never add a client secret, token or service-account key.</li>
+<li>Open either tracker. Click <strong>Connect Google Drive</strong>. The first click loads Google sign-in; click again when prompted to open the popup, select your account and grant permission. Then click <strong>Sync now</strong>.</li>
+<li>On your other device, open the same site, connect the same account and click <strong>Sync now</strong>. Repeat for the other tracker; each tracker syncs separately.</li>
+</ol>
+<p>These small Drive API requests normally need no paid storage product or billing account, but are subject to Google's account storage limits, API quotas and policies. GitHub Pages only serves the static files.</p>
+<h2>Daily use and conflict handling</h2>
+<ul>
+<li>Changes save locally immediately. <strong>Sync is manual</strong>, not continuous: sync before switching devices and after opening the tracker on another device.</li>
+<li>Sync merges item changes; the most recent timestamp wins for the same item. Unmarking an item also syncs. Keep device clocks accurate. Exactly equal timestamps resolve deterministically by status number.</li>
+<li>Each browser keeps its own Drive snapshot, avoiding one device overwriting another's whole progress. Concurrent syncs may need another sync on each device to converge. Browser storage clearing creates a new device snapshot; older snapshots remain in Drive app data.</li>
+<li>Use a current browser with Web Locks support over HTTPS or localhost for Drive sync. Local saving and JSON backups do not require Google sign-in. Clearing browser data, private browsing or storage eviction can remove local progress.</li>
+<li>Access tokens stay in memory, not in browser storage or your repository. Reloading or token expiry requires reconnecting. Disconnect clears the in-memory connection, not local or Drive data.</li>
+<li>Connecting a different Google account merges this browser's existing progress into that account when you sync. Use separate browser profiles for separate people or accounts.</li>
+</ul>
+<h2>Back up and recover</h2>
+<p>Click Export progress to download a versioned JSON backup. Import progress validates the tracker and file, then merges newer changes; it does not replace everything or roll back newer edits. Python and DSA backups are not interchangeable. Keep a backup before switching sites or accounts. Existing browser progress from the original tracker is migrated automatically on the same origin.</p>
+<h2>When something goes wrong</h2>
+<ul>
+<li><strong>Google Drive is not configured:</strong> add the client ID to <code>config.js</code> and redeploy.</li>
+<li><strong>Origin or access denied:</strong> check the OAuth JavaScript origin, test-user list and requested app-data permission. Allow popups and Google sign-in scripts.</li>
+<li><strong>Expired access or HTTP errors:</strong> reconnect and retry. Your local changes remain available. Offline use saves locally, but syncing requires a connection.</li>
+<li><strong>Local saving failed:</strong> export immediately before closing the page. Check browser storage permissions and space. Do not rely on cloud sync until local storage is working.</li>
+<li><strong>Remove cloud data:</strong> manage the app in Google Drive Settings &gt; Manage apps and delete its hidden application data. To revoke access, use your Google account's third-party connections settings. Revoking access is separate from deleting progress.</li>
+</ul>
+<h2>Maintaining the trackers</h2>
+<p>The shared layout source is <code>_build/template.html</code>. Both generated trackers must use that template and load the sibling <code>config.js</code> and <code>progress.js</code>. Keep the existing item IDs and storage keys when updating study content. Run the dependency-free JavaScript tests with <code>node --test tests/progress.test.cjs</code>.</p>
+</main></body>
+</html>
