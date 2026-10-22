@@ -377,7 +377,7 @@ const escapeHtml = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;",
 
 test("generated pages keep every item, match the shared template and contain no inline code", () => {
   const template = fs.readFileSync(path.join(root, "_build/template.html"), "utf8");
-  for (const name of ["python.html", "dsa.html", "cpp.html"]) {
+  for (const name of ["python.html", "dsa.html", "cpp.html", "math.html", "ml.html", "ai.html"]) {
     const html = fs.readFileSync(path.join(root, name), "utf8");
     const payload = html.match(/<script type="application\/json" id="tracker-data">(.*?)<\/script>/s)[1];
     assert.ok(!payload.includes("<"));

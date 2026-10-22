@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Code Study Tracker</title>
-<meta name="description" content="Study routes for data structures and algorithms, senior-level Python and modern C++ from beginner to pro, with reading, videos, practice problems and progress tracking.">
+<meta name="description" content="Study routes for data structures and algorithms, Python, modern C++, mathematics for machine learning, machine learning and AI engineering, with reading, videos, practice and progress tracking.">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -21,6 +21,9 @@
 <a href="./dsa.html">DSA</a>
 <a href="./python.html">Python</a>
 <a href="./cpp.html">C++</a>
+<a href="./math.html">Math</a>
+<a href="./ml.html">ML</a>
+<a href="./ai.html">AI</a>
 <a href="./setup.html">Setup &amp; security</a>
 </nav>
 </div>
@@ -29,12 +32,13 @@
 <main class="home">
 <section class="hero">
 <h1>Learn the idea, then prove it in code.</h1>
-<p class="lede">Three study routes with what to read and watch before each set of practice. Mark every problem as you go, and pick up where you left off on any device.</p>
+<p class="lede">Six study routes with what to read and watch before each set of practice. Mark every problem as you go, and pick up where you left off on any device.</p>
 </section>
 
-<section class="routes" aria-label="Study routes">
+<section class="routes" aria-labelledby="g-code">
+<h2 class="rg" id="g-code">Programming and problem solving</h2>
 <article class="route" data-track="dsa-status">
-<h2>Data structures and algorithms</h2>
+<h3>Data structures and algorithms</h3>
 <p class="desc">From arrays and hashing to graphs, dynamic programming and segment trees. Each topic teaches the pattern, then gives free problems from Easy to Hard on LeetCode, CSES and AtCoder.</p>
 <div class="facts"><p><b data-f="topics">34</b>topics</p><p><b data-f="total">899</b>problems</p></div>
 <div class="meter"><i></i></div>
@@ -43,7 +47,7 @@
 <p class="act"><a class="btn pri" href="./dsa.html">Open the DSA tracker</a></p>
 </article>
 <article class="route" data-track="py-status">
-<h2>Python, intermediate to senior</h2>
+<h3>Python, intermediate to senior</h3>
 <p class="desc">From the data model and generators to typing, testing, architecture, concurrency and security. Each module explains how senior engineers work, with Exercism practice and projects to build.</p>
 <div class="facts"><p><b data-f="topics">26</b>modules</p><p><b data-f="total">254</b>items</p></div>
 <div class="meter"><i></i></div>
@@ -52,13 +56,44 @@
 <p class="act"><a class="btn pri" href="./python.html">Open the Python track</a></p>
 </article>
 <article class="route" data-track="cpp-status">
-<h2>C++, beginner to pro</h2>
+<h3>C++, beginner to pro</h3>
 <p class="desc">From your first program to C++26: RAII, move semantics, ranges, concepts, reflection, contracts, concurrency and std::execution. Each module explains how professionals work, with Exercism practice and projects to build.</p>
 <div class="facts"><p><b data-f="topics">32</b>modules</p><p><b data-f="total">457</b>items</p></div>
 <div class="meter"><i></i></div>
 <p class="done" data-f="done">0 confident</p>
 <p class="next" data-f="next">Start with the toolchain</p>
 <p class="act"><a class="btn pri" href="./cpp.html">Open the C++ track</a></p>
+</article>
+</section>
+
+<section class="routes" aria-labelledby="g-ai">
+<h2 class="rg" id="g-ai">Machine learning and AI</h2>
+<article class="route" data-track="math-status">
+<h3>Mathematics for machine learning</h3>
+<p class="desc">Linear algebra, calculus, probability, statistics, optimisation and information theory, each tied to the ML idea it powers. Learn from 3Blue1Brown and MIT, practise on MIT problem sets and Khan Academy, and build it all in NumPy.</p>
+<div class="facts"><p><b data-f="topics">22</b>modules</p><p><b data-f="total">258</b>items</p></div>
+<div class="meter"><i></i></div>
+<p class="done" data-f="done">0 confident</p>
+<p class="next" data-f="next">Start with the refresher</p>
+<p class="act"><a class="btn pri" href="./math.html">Open the maths track</a></p>
+</article>
+<article class="route" data-track="ml-status">
+<h3>Machine learning, fundamentals to production</h3>
+<p class="desc">From framing problems and gradient boosting to deep learning with PyTorch, then deployment, monitoring and ML system design. Practise on Kaggle, official tutorials and course notebooks, with a build in every module.</p>
+<div class="facts"><p><b data-f="topics">26</b>modules</p><p><b data-f="total">260</b>items</p></div>
+<div class="meter"><i></i></div>
+<p class="done" data-f="done">0 confident</p>
+<p class="next" data-f="next">Start with problem framing</p>
+<p class="act"><a class="btn pri" href="./ml.html">Open the ML track</a></p>
+</article>
+<article class="route" data-track="ai-status">
+<h3>AI engineering: LLMs, agents and production AI</h3>
+<p class="desc">How LLMs work and are trained, prompting and context engineering, RAG, agents, MCP, evals, security, fine-tuning and serving open models. Free labs from Hugging Face, DeepLearning.AI and Kaggle.</p>
+<div class="facts"><p><b data-f="topics">24</b>modules</p><p><b data-f="total">288</b>items</p></div>
+<div class="meter"><i></i></div>
+<p class="done" data-f="done">0 confident</p>
+<p class="next" data-f="next">Start with the AI landscape</p>
+<p class="act"><a class="btn pri" href="./ai.html">Open the AI track</a></p>
 </article>
 </section>
 
