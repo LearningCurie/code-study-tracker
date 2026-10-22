@@ -1,4 +1,12 @@
 window.STUDY_TRACKS = {
+ "cpp-status": {
+  "first": "Toolchain and your first program",
+  "href": "./cpp.html",
+  "title": "C++ track: beginner to pro",
+  "topics": 32,
+  "total": 457,
+  "unit": "confident"
+ },
  "dsa-status": {
   "first": "Arrays and hashing",
   "href": "./dsa.html",

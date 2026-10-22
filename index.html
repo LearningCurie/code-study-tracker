@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Code Study Tracker</title>
-<meta name="description" content="Study routes for data structures and algorithms and for senior-level Python, with reading, videos, practice problems and progress tracking.">
+<meta name="description" content="Study routes for data structures and algorithms, senior-level Python and modern C++ from beginner to pro, with reading, videos, practice problems and progress tracking.">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
@@ -20,6 +20,7 @@
 <nav class="appnav" aria-label="Main">
 <a href="./dsa.html">DSA</a>
 <a href="./python.html">Python</a>
+<a href="./cpp.html">C++</a>
 <a href="./setup.html">Setup &amp; security</a>
 </nav>
 </div>
@@ -28,7 +29,7 @@
 <main class="home">
 <section class="hero">
 <h1>Learn the idea, then prove it in code.</h1>
-<p class="lede">Two study routes with what to read and watch before each set of practice. Mark every problem as you go, and pick up where you left off on any device.</p>
+<p class="lede">Three study routes with what to read and watch before each set of practice. Mark every problem as you go, and pick up where you left off on any device.</p>
 </section>
 
 <section class="routes" aria-label="Study routes">
@@ -50,11 +51,20 @@
 <p class="next" data-f="next">Start with the refresher</p>
 <p class="act"><a class="btn pri" href="./python.html">Open the Python track</a></p>
 </article>
+<article class="route" data-track="cpp-status">
+<h2>C++, beginner to pro</h2>
+<p class="desc">From your first program to C++26: RAII, move semantics, ranges, concepts, reflection, contracts, concurrency and std::execution. Each module explains how professionals work, with Exercism practice and projects to build.</p>
+<div class="facts"><p><b data-f="topics">32</b>modules</p><p><b data-f="total">457</b>items</p></div>
+<div class="meter"><i></i></div>
+<p class="done" data-f="done">0 confident</p>
+<p class="next" data-f="next">Start with the toolchain</p>
+<p class="act"><a class="btn pri" href="./cpp.html">Open the C++ track</a></p>
+</article>
 </section>
 
 <section class="sect" aria-labelledby="how">
 <h2 id="how">How each topic works</h2>
-<p class="sub">The same three-step loop runs through both trackers.</p>
+<p class="sub">The same three-step loop runs through every tracker.</p>
 <ol class="steps">
 <li><h3>Learn</h3><p>Read one article and watch one video from the topic's study panel. Write the core moves from memory.</p></li>
 <li><h3>Apply</h3><p>Solve in order, Easy to Hard. Say the brute force first, then find the better approach without hints.</p></li>
