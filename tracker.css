@@ -1,12 +1,6 @@
 html{scroll-padding-top:132px}
 ul{margin:0}
 .top{max-width:1180px;margin:0 auto;padding:26px 20px 0}
-.cloud{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mu);margin:0 0 14px}
-.cloud::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mu);flex:none}
-.cloud[data-tone="ok"]::before{background:var(--ok)}
-.cloud[data-tone="busy"]::before{background:var(--ac)}
-.cloud[data-tone="error"]::before{background:var(--no)}
-.cloud[data-tone="error"]{color:var(--no)}
 .top h1{font-size:32px;line-height:1.15;margin:0 0 6px}
 .sub{color:var(--mu);max-width:72ch}
 .bar{height:8px;background:var(--ln);border-radius:4px;margin:18px 0 10px;overflow:hidden}
@@ -100,5 +94,4 @@ ul{margin:0}
  .ctl{position:static}
  .it .lk{display:block;margin:2px 0 0}
  .ctl input{width:100%;order:9}
- #drive-sync{display:none}
 }

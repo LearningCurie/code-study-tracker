@@ -33,12 +33,7 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const here = location.pathname.split("/").pop() || "index.html";
-    document.querySelectorAll(".appnav a").forEach(a => {
-      if (a.getAttribute("href").replace("./", "") === here) a.setAttribute("aria-current", "page");
-    });
-
+  function paintTracks() {
     const tracks = window.STUDY_TRACKS || {};
     document.querySelectorAll("[data-track]").forEach(card => {
       const t = tracks[card.dataset.track];
@@ -57,5 +52,18 @@
         next.textContent = last && done ? "Continue with " + last : "Start with " + t.first;
       }
     });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const here = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".appnav a").forEach(a => {
+      if (a.getAttribute("href").replace("./", "") === here) a.setAttribute("aria-current", "page");
+    });
+    paintTracks();
+  });
+  // Progress synced on this page, or saved in another tab, updates the home page counts straight away.
+  document.addEventListener("study:progress", paintTracks);
+  window.addEventListener("storage", e => {
+    if (!e.key || e.key.endsWith(":v1") || e.key.startsWith("study-last:")) paintTracks();
   });
 })();

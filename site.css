@@ -51,6 +51,17 @@ code{font:.9em/1.4 ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;backgr
 .avatar{width:34px;height:34px;border-radius:50%;background:var(--ac);color:#fff;display:grid;place-items:center;font-weight:600;font-size:15px}
 @media(prefers-color-scheme:dark){.avatar{color:#0f151b}}
 
+/* Sync status line, shown on every page */
+.cloud{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--mu);margin:0 0 14px}
+.cloud::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mu);flex:none}
+.cloud[data-tone="ok"]::before{background:var(--ok)}
+.cloud[data-tone="busy"]::before{background:var(--ac)}
+.cloud[data-tone="error"]::before{background:var(--no)}
+.cloud[data-tone="error"]{color:var(--no)}
+.cloud-bar{max-width:1180px;margin:0 auto;padding:14px 20px 0}
+.cloud-bar .cloud{margin:0}
+.hero .cloud{margin:20px 0 0}
+
 /* Footer shared by every page */
 .foot{border-top:1px solid var(--ln);margin-top:40px}
 .foot-in{max-width:1180px;margin:0 auto;padding:22px 20px 40px;display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--mu);font-size:14px}
@@ -123,6 +134,7 @@ table.facts-t th{font-weight:600;width:34%}
  .toc{position:static}
  .foot-in nav{margin-left:0}
 }
+@media(max-width:900px){#drive-sync{display:none}}
 .gbtn .short{display:none}
 @media(max-width:520px){
  .gbtn .long{display:none}

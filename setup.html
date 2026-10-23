@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://accounts.google.com/gsi/client; connect-src https://www.googleapis.com https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; style-src 'self' https://fonts.googleapis.com https://accounts.google.com/gsi/style; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Setup and security | Code Study Tracker</title>
 <meta name="description" content="How Code Study Tracker stores progress, how Google sign-in works, and how to publish and secure your own copy.">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -46,15 +46,16 @@
 <article class="prose">
 <h1>Setup and security</h1>
 <p class="lede">The trackers are static pages. There is no server and no database. Progress lives in your browser, in backup files you export, and, if you sign in, in a private app folder in your own Google Drive.</p>
+<p class="cloud" id="cloud-status" role="status" aria-live="polite"></p>
 
 <h2 id="security">Security and privacy</h2>
 <p>Signing in with Google gives this site one narrow permission: <code>drive.appdata</code>. That is a hidden folder in your Drive that only this app can see. The table shows what that allows.</p>
 <table class="facts-t">
-<tr><th>The site can</th><td>Create, read and update its own progress files in the hidden app folder, and read your email address so the account menu shows which account is signed in.</td></tr>
+<tr><th>The site can</th><td>Create, read, update and delete its own progress files in the hidden app folder, and read your email address so the account menu shows which account is signed in.</td></tr>
 <tr><th>The site cannot</th><td>See, open, change or delete any of your Drive files, Gmail, Photos, Contacts, Calendar, passwords or account settings. Google enforces this; the code cannot ask for more without showing you a new consent screen.</td></tr>
-<tr><th>Where the sign-in token goes</th><td>It stays in the page's memory, is sent only to Google's Drive API, and expires within an hour. It is never written to browser storage, a file or the repository.</td></tr>
+<tr><th>Where the sign-in token goes</th><td>It is sent only to Google's Drive API. So one sign-in covers every page and tab, the token is kept in this site's browser storage until it expires (within an hour) or you sign out, whichever comes first. It is never written to a file, a backup or the repository, and it can only reach the hidden app folder.</td></tr>
 <tr><th>Who else can see your progress</th><td>Nobody. There is no server to send it to. Other visitors have their own browser storage and their own Google accounts.</td></tr>
-<tr><th>What Google sees without sign-in</th><td>The pages load fonts and, on tracker pages, Google's sign-in library from Google's servers, so the sign-in pop-up opens on the first click. That shares your IP address with Google like any embedded Google resource, but no progress and no account data.</td></tr>
+<tr><th>What Google sees without sign-in</th><td>Every page loads fonts and Google's sign-in library from Google's servers, so the sign-in pop-up opens on the first click. That shares your IP address with Google like any embedded Google resource, but no progress and no account data.</td></tr>
 </table>
 
 <h3>Why open source does not expose your Google account</h3>
@@ -77,19 +78,21 @@
 
 <h2 id="sync">Syncing between devices</h2>
 <ol>
-<li>Open a tracker and click <strong>Sign in with Google</strong> in the top right. Choose your account and allow the app-folder permission.</li>
-<li>The tracker syncs straight away, and again a moment after each change while you are signed in.</li>
-<li>On your other device, open the same site and sign in with the same account. Your progress merges in.</li>
+<li>On any page, click <strong>Sign in with Google</strong> in the top right. Choose your account and allow the app-folder permission.</li>
+<li>Every tracker syncs straight away. While you are signed in, each change syncs again a moment later, and <strong>Sync now</strong> syncs every tracker at once.</li>
+<li>On your other device, open the same site and sign in with the same account. Progress for every tracker merges in.</li>
 </ol>
 <ul>
-<li>Each tracker syncs separately. Sign-in lasts for the open page; after a reload or about an hour, click Sign in with Google again. Next time it usually takes one click.</li>
+<li>One sign-in covers every page and tab of the site in this browser. It lasts about an hour; after that, click Sign in with Google again. Next time it usually takes one click.</li>
+<li>New trackers sync automatically. Sync finds every tracker saved in the browser or in Drive, including ones you have not opened on this device yet.</li>
 <li>If the same item changed on two devices, the most recent change wins. Unmarking an item also syncs. Keep device clocks accurate.</li>
-<li>Each browser writes its own snapshot, so two devices never overwrite each other's files.</li>
-<li><strong>Sign out on this device</strong> forgets the session on this page. It does not delete progress here or in Drive.</li>
+<li>Each browser writes one file of its own, so two devices never overwrite each other's files. Files from older versions of the site are read and merged, and this browser's old files are removed once their progress is safely in its new file.</li>
+<li>If you leave a page before a change has synced, the next page you open while signed in syncs it.</li>
+<li><strong>Sign out on this device</strong> signs out every page and tab in this browser. It does not delete progress here or in Drive.</li>
 </ul>
 
 <h2 id="backup">Backups</h2>
-<p>Open the <strong>Backup</strong> menu in a tracker to export a JSON file or import one. Importing merges changes, newest first; it never wipes newer progress. Each tracker has its own backup file. Export before clearing browser data, switching browsers or moving the site to a new address, because browser storage belongs to one web address.</p>
+<p>Open the <strong>Backup</strong> menu on any page to export or import progress. One backup file holds every tracker. Importing merges changes, newest first; it never wipes newer progress. Backups from older versions, which held one tracker each, still import. Export before clearing browser data, switching browsers or moving the site to a new address, because browser storage belongs to one web address.</p>
 
 <h2 id="publish">Publish your own copy</h2>
 <ol>
@@ -137,6 +140,11 @@
 
 <h2 id="maintain">Maintaining the trackers</h2>
 <p>The trackers are generated from <code>_build/template.html</code> with shared <code>site.css</code>, <code>tracker.css</code>, <code>tracker.js</code> and <code>progress.js</code>. Keep item IDs and storage keys stable when you change study content, so saved progress still matches. Run the tests with <code>node --test tests/progress.test.cjs</code>.</p>
+<p>Sign-in, sync and backup are shared by the whole site, so adding a page never changes how they work:</p>
+<ul>
+<li><strong>A new tracker</strong> built from the template only needs a new <code>storageKey</code> (lowercase letters, digits and hyphens). It joins the shared sign-in, Sync now and backups automatically.</li>
+<li><strong>Any other new page</strong> gets the same account controls by copying the app bar and loading <code>./config.js</code> then <code>./progress.js</code> at the end of the body. Copy the Content Security Policy from an existing page so Google sign-in is allowed.</li>
+</ul>
 </article>
 </div>
 
@@ -144,5 +152,7 @@
 <p>Code Study Tracker is open source. Your progress never leaves your browser unless you export it or sign in with Google.</p>
 <nav aria-label="Footer"><a href="./index.html">Home</a><a href="https://github.com/LearningCurie/code-study-tracker" target="_blank" rel="noopener">Source on GitHub</a></nav>
 </div></footer>
+<script src="./config.js"></script>
+<script src="./progress.js"></script>
 </body>
 </html>

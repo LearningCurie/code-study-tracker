@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://accounts.google.com/gsi/client; connect-src https://www.googleapis.com https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; style-src 'self' https://fonts.googleapis.com https://accounts.google.com/gsi/style; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>Code Study Tracker</title>
 <meta name="description" content="Study routes for data structures and algorithms, Python, modern C++, mathematics for machine learning, machine learning and AI engineering, with reading, videos, practice and progress tracking.">
 <link rel="icon" href="./favicon.svg" type="image/svg+xml">
@@ -33,6 +33,7 @@
 <section class="hero">
 <h1>Learn the idea, then prove it in code.</h1>
 <p class="lede">Six study routes with what to read and watch before each set of practice. Mark every problem as you go, and pick up where you left off on any device.</p>
+<p class="cloud" id="cloud-status" role="status" aria-live="polite"></p>
 </section>
 
 <section class="routes" aria-labelledby="g-code">
@@ -112,8 +113,8 @@
 <p class="sub">There is no account system and no server. You decide where your progress goes.</p>
 <div class="cols">
 <div><h3>In this browser</h3><p>Every click saves on this device straight away. Nothing is sent anywhere.</p></div>
-<div><h3>In backups you keep</h3><p>Export a JSON file from the Backup menu and import it on any browser.</p></div>
-<div><h3>In your Google Drive, if you choose</h3><p>Sign in with Google inside a tracker to sync. The site can only use its own hidden app folder in your Drive, never your other files. <a href="./setup.html#security">How sign-in is kept safe</a></p></div>
+<div><h3>In backups you keep</h3><p>Export one JSON file with every tracker from the Backup menu and import it on any browser.</p></div>
+<div><h3>In your Google Drive, if you choose</h3><p>Sign in with Google once, on any page. Every page and tab shares that sign-in, and Sync now syncs every tracker together. The site can only use its own hidden app folder in your Drive, never your other files. <a href="./setup.html#security">How sign-in is kept safe</a></p></div>
 </div>
 </section>
 </main>
@@ -122,5 +123,7 @@
 <p>Open source. Free study material from the linked sites; problems link to the original platforms.</p>
 <nav aria-label="Footer"><a href="./setup.html">Setup &amp; security</a><a href="https://github.com/LearningCurie/code-study-tracker" target="_blank" rel="noopener">Source on GitHub</a></nav>
 </div></footer>
+<script src="./config.js"></script>
+<script src="./progress.js"></script>
 </body>
 </html>

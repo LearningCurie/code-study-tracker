@@ -123,7 +123,6 @@
   const progress = StudyProgress.mount({
     storageKey: DATA.storageKey,
     ids: items.map(li => li.dataset.id),
-    clientId: (window.STUDY_CONFIG && window.STUDY_CONFIG.googleClientId) || "",
     onChange(entries) {
       M.clear();
       Object.entries(entries).forEach(([id, e]) => { if (e.status) M.set(id, e.status); });

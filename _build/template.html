@@ -26,32 +26,6 @@
 <a href="./ai.html">AI</a>
 <a href="./setup.html">Setup &amp; security</a>
 </nav>
-<div class="account">
-<details class="menu" id="backup-menu">
-<summary class="btn quiet">Backup</summary>
-<div class="pop">
-<p class="pop-h">Backup and restore</p>
-<p class="pop-note" id="local-status" role="status"></p>
-<button type="button" class="mi" id="export-progress">Export progress as a JSON file</button>
-<button type="button" class="mi" id="import-progress">Import a backup file</button>
-<input type="file" id="progress-file" accept=".json,application/json" hidden>
-</div>
-</details>
-<button type="button" class="gbtn" id="drive-connect"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span class="long">Sign in with Google</span><span class="short">Sign in</span></button>
-<button type="button" class="btn" id="drive-sync" hidden>Sync now</button>
-<details class="menu" id="drive-menu" hidden>
-<summary class="avatar" aria-label="Google account menu"><span id="drive-initial">G</span></summary>
-<div class="pop">
-<p class="pop-h" id="drive-account">Signed in with Google</p>
-<p class="pop-note">Progress syncs to a private app folder in your Google Drive. This site cannot open your other files.</p>
-<button type="button" class="mi" id="drive-sync-menu">Sync now</button>
-<button type="button" class="mi" id="drive-switch">Use another account</button>
-<button type="button" class="mi" id="drive-disconnect">Sign out on this device</button>
-<hr>
-<a class="mi" href="https://myaccount.google.com/connections" target="_blank" rel="noopener">Review access in your Google account</a>
-</div>
-</details>
-</div>
 </div>
 </header>
 <section class="top">
@@ -79,7 +53,7 @@
 <main id="mods"></main>
 </div>
 <footer class="foot"><div class="foot-in">
-<p>Progress is saved in this browser. If you sign in with Google, it also syncs to a private app folder in your own Google Drive. Nothing is sent anywhere else.</p>
+<p>Progress is saved in this browser. Sign in with Google once and every tracker also syncs to a private app folder in your own Google Drive. Nothing is sent anywhere else.</p>
 <nav aria-label="Footer"><a href="./setup.html#security">Security</a><a href="https://github.com/LearningCurie/code-study-tracker" target="_blank" rel="noopener">Source on GitHub</a></nav>
 </div></footer>
 <script type="application/json" id="tracker-data">/*DATA*/</script>
