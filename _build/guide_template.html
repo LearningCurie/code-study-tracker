@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://accounts.google.com/gsi/client; connect-src https://www.googleapis.com https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/; style-src 'self' https://fonts.googleapis.com https://accounts.google.com/gsi/style; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>__TITLE__ | Code Study Tracker</title>
+<meta name="description" content="__DESC__">
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="./site.css">
+<link rel="stylesheet" href="./guide.css?v=__CSSV__">
+<script src="./site.js"></script>
+</head>
+<body>
+<header class="appbar">
+<div class="appbar-in">
+<a class="brand" href="./index.html" aria-label="Code Study Tracker home"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect width="28" height="28" rx="7" fill="#2556c4"/><path d="M7 20h5v-5h5v-5h4" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Code Study Tracker</span></a>
+<nav class="appnav" aria-label="Main">
+<a href="./dsa.html">DSA</a>
+<a href="./python.html">Python</a>
+<a href="./cpp.html">C++</a>
+<a href="./math.html">Math</a>
+<a href="./ml.html">ML</a>
+<a href="./ai.html">AI</a>
+<a href="./setup.html">Setup &amp; security</a>
+</nav>
+</div>
+</header>
+<section class="top">
+<p class="cloud" id="cloud-status" role="status" aria-live="polite"></p>
+<h1 id="ttl"></h1>
+<p class="sub" id="sub"></p>
+<div class="bar"><i id="fill"></i></div>
+<div class="stats" id="stats"></div>
+<div class="intro">
+<section class="box next" aria-labelledby="nexth">
+<h2 id="nexth">Your next session</h2>
+<p class="today" id="today"></p>
+<ol class="queue" id="queue"></ol>
+<p class="qa-act"><button type="button" class="btn pri" id="start">Start</button> <span class="qt" id="qtime"></span></p>
+<p><button type="button" class="linkish" id="review" hidden></button></p>
+</section>
+<section class="box"><h2>How to use this guide</h2><ol id="routine"></ol></section>
+</div>
+<nav aria-label="Stages"><ol class="stagemap" id="stagemap"></ol></nav>
+<details class="box atlas" id="atlas" hidden><summary><span class="ah">Your portfolio project: Atlas</span> <span class="ac" id="atlasCount"></span><span class="pb"><i id="atlasFill"></i></span></summary><p id="atlasDesc"></p><ol id="atlasList"></ol></details>
+</section>
+<div class="ctl"><div class="in">
+<span class="seg" id="seg" role="group" aria-label="Item type"></span>
+<select id="flt" aria-label="Filter by status"></select>
+<input id="q" type="search" aria-label="Search">
+<select id="jump" aria-label="Jump to module"></select>
+<span class="sp"></span>
+<button type="button" class="btn" id="tog">Expand all</button>
+<button type="button" class="btn pri" id="next">Continue</button>
+</div></div>
+<div class="lay">
+<nav class="rail" aria-label="Guide route"><ol id="rail"></ol></nav>
+<main id="mods"></main>
+</div>
+<footer class="foot"><div class="foot-in">
+<p>Progress is saved in this browser. Sign in with Google once and every tracker also syncs to a private app folder in your own Google Drive. Nothing is sent anywhere else.</p>
+<nav aria-label="Footer"><a href="./setup.html#security">Security</a><a href="https://github.com/LearningCurie/code-study-tracker" target="_blank" rel="noopener">Source on GitHub</a></nav>
+</div></footer>
+<script type="application/json" id="guide-data">/*DATA*/</script>
+<script src="./config.js"></script>
+<script src="./progress.js"></script>
+<script src="./guide.js?v=__JSV__"></script>
+</body>
+</html>

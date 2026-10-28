@@ -1,5 +1,6 @@
 _build/*
 !_build/template.html
+!_build/guide_template.html
 !_build/render.py
 node_modules/
 __pycache__/

@@ -139,7 +139,7 @@
 </ul>
 
 <h2 id="maintain">Maintaining the trackers</h2>
-<p>The trackers are generated from <code>_build/template.html</code> with shared <code>site.css</code>, <code>tracker.css</code>, <code>tracker.js</code> and <code>progress.js</code>. Keep item IDs and storage keys stable when you change study content, so saved progress still matches. Run the tests with <code>node --test tests/progress.test.cjs</code>.</p>
+<p>The trackers are generated from <code>_build/template.html</code> with shared <code>site.css</code>, <code>tracker.css</code>, <code>tracker.js</code> and <code>progress.js</code>. The AI field guide is the exception: <code>_build/build_guide.py</code> renders it from Markdown lessons in <code>_build/ai/</code> into <code>_build/guide_template.html</code> with <code>guide.css</code> and <code>guide.js</code>. Keep item IDs and storage keys stable when you change study content, so saved progress still matches. Run the tests with <code>node --test tests/progress.test.cjs</code>.</p>
 <p>Sign-in, sync and backup are shared by the whole site, so adding a page never changes how they work:</p>
 <ul>
 <li><strong>A new tracker</strong> built from the template only needs a new <code>storageKey</code> (lowercase letters, digits and hyphens). It joins the shared sign-in, Sync now and backups automatically.</li>

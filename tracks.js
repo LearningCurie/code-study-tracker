@@ -1,11 +1,11 @@
 window.STUDY_TRACKS = {
  "ai-status": {
-  "first": "AI landscape and model choice",
+  "first": "The AI engineering landscape",
   "href": "./ai.html",
-  "title": "AI engineering: LLMs, agents and production AI",
-  "topics": 24,
-  "total": 288,
-  "unit": "confident"
+  "title": "AI engineering field guide",
+  "topics": 31,
+  "total": 374,
+  "unit": "done"
  },
  "cpp-status": {
   "first": "Toolchain and your first program",

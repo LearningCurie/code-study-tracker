@@ -598,7 +598,7 @@ const escapeHtml = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;",
 
 test("generated pages keep every item, match the shared template and contain no inline code", () => {
   const template = fs.readFileSync(path.join(root, "_build/template.html"), "utf8");
-  for (const name of ["python.html", "dsa.html", "cpp.html", "math.html", "ml.html", "ai.html"]) {
+  for (const name of ["python.html", "dsa.html", "cpp.html", "math.html", "ml.html"]) {
     const html = fs.readFileSync(path.join(root, name), "utf8");
     const payload = html.match(/<script type="application\/json" id="tracker-data">(.*?)<\/script>/s)[1];
     assert.ok(!payload.includes("<"));
@@ -615,6 +615,42 @@ test("generated pages keep every item, match the shared template and contain no 
   }
 });
 
+test("the AI guide matches its template and every lesson is in its module's data-only content file", () => {
+  const template = fs.readFileSync(path.join(root, "_build/guide_template.html"), "utf8");
+  const html = fs.readFileSync(path.join(root, "ai.html"), "utf8");
+  const payload = html.match(/<script type="application\/json" id="guide-data">(.*?)<\/script>/s)[1];
+  assert.ok(!payload.includes("<"));
+  const value = JSON.parse(payload);
+  const version = file => require("node:crypto").createHash("sha256").update(fs.readFileSync(path.join(root, file))).digest("hex").slice(0, 10);
+  const expected = template.replace("/*DATA*/", () => payload)
+    .replace("__TITLE__", escapeHtml(value.title)).replace("__DESC__", escapeHtml(value.subtitle))
+    .replace("__CSSV__", version("guide.css")).replace("__JSV__", version("guide.js"));
+  assert.equal(html, expected);
+  assert.match(value.storageKey, /^[a-z0-9][a-z0-9-]{0,62}$/);
+  assert.match(value.contentDir, /^[a-z0-9-]+$/);
+  const items = value.modules.flatMap(m => m.items);
+  const ids = items.map(i => i.id);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.ok(ids.length > 300 && ids.every(id => id.length <= 120));
+  assert.ok(items.every(i => i.src.every(s => s.h.startsWith("https://"))));
+  assert.ok(value.modules.every(m => m.further.every(f => f.h.startsWith("https://"))));
+  const prefix = "(window.guideContent=window.guideContent||[]).push(";
+  for (const m of value.modules) {
+    const js = fs.readFileSync(path.join(root, value.contentDir, m.key + ".js"), "utf8");
+    // A content file is a single push of JSON data, so it can never run other code.
+    assert.ok(js.startsWith(prefix) && js.endsWith(");\n"), m.key);
+    const [key, bodies] = JSON.parse(js.slice(prefix.length, -3));
+    assert.equal(key, m.key);
+    assert.equal(m.v, require("node:crypto").createHash("sha256").update(js).digest("hex").slice(0, 10));
+    assert.deepEqual(Object.keys(bodies).sort(), m.items.map(i => i.id).sort());
+    for (const body of Object.values(bodies)) {
+      assert.ok(body.length > 200, m.key);
+      assert.ok(!/<script|<iframe|<img|<style|\son[a-z]+=|javascript:/i.test(body), m.key);
+      for (const href of body.match(/<a href="[^"]*"/g) || []) assert.match(href, /^<a href="https:\/\//, m.key);
+    }
+  }
+});
+
 test("every page has a strict Content Security Policy and no inline scripts or handlers", () => {
   const pages = fs.readdirSync(root).filter(f => f.endsWith(".html"));
   assert.ok(pages.length >= 6);
@@ -626,7 +662,7 @@ test("every page has a strict Content Security Policy and no inline scripts or h
     assert.match(csp[1], /base-uri 'none'/);
     assert.ok(!/unsafe-inline|unsafe-eval|\*/.test(csp[1]), name + " CSP is strict");
     for (const tag of html.match(/<script\b[^>]*>/g) || []) {
-      assert.ok(/\bsrc="\.\/[a-z]+\.js"/.test(tag) || tag.includes('type="application/json"'), name + ": " + tag);
+      assert.ok(/\bsrc="\.\/[a-z]+\.js(\?v=[a-f0-9]{10})?"/.test(tag) || tag.includes('type="application/json"'), name + ": " + tag);
     }
     assert.ok(!/\son[a-z]+=/i.test(html.replace(/<script type="application\/json"[\s\S]*?<\/script>/, "")), name + " has no inline event handlers");
     for (const a of html.match(/<a [^>]*target="_blank"[^>]*>/g) || []) assert.match(a, /rel="noopener"/);
