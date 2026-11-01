@@ -598,7 +598,7 @@ const escapeHtml = s => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;",
 
 test("generated pages keep every item, match the shared template and contain no inline code", () => {
   const template = fs.readFileSync(path.join(root, "_build/template.html"), "utf8");
-  for (const name of ["python.html", "dsa.html", "cpp.html", "math.html", "ml.html"]) {
+  for (const name of ["python.html", "cpp.html", "math.html", "ml.html"]) {
     const html = fs.readFileSync(path.join(root, name), "utf8");
     const payload = html.match(/<script type="application\/json" id="tracker-data">(.*?)<\/script>/s)[1];
     assert.ok(!payload.includes("<"));
@@ -645,6 +645,73 @@ test("the AI guide matches its template and every lesson is in its module's data
     assert.deepEqual(Object.keys(bodies).sort(), m.items.map(i => i.id).sort());
     for (const body of Object.values(bodies)) {
       assert.ok(body.length > 200, m.key);
+      assert.ok(!/<script|<iframe|<img|<style|\son[a-z]+=|javascript:/i.test(body), m.key);
+      for (const href of body.match(/<a href="[^"]*"/g) || []) assert.match(href, /^<a href="https:\/\//, m.key);
+    }
+  }
+});
+
+test("the DSA guide matches its template, keeps every old problem id once, and its content files are data-only", () => {
+  const template = fs.readFileSync(path.join(root, "_build/dsa_template.html"), "utf8");
+  const html = fs.readFileSync(path.join(root, "dsa.html"), "utf8");
+  const payload = html.match(/<script type="application\/json" id="guide-data">(.*?)<\/script>/s)[1];
+  assert.ok(!payload.includes("<"));
+  const value = JSON.parse(payload);
+  const version = file => require("node:crypto").createHash("sha256").update(fs.readFileSync(path.join(root, file))).digest("hex").slice(0, 10);
+  const expected = template.replace("/*DATA*/", () => payload)
+    .replace("__TITLE__", escapeHtml(value.title)).replace("__DESC__", escapeHtml(value.subtitle))
+    .replace("__GCSSV__", version("guide.css")).replace("__CSSV__", version("dsa.css")).replace("__JSV__", version("dsa.js"));
+  assert.equal(html, expected);
+  // Same tracker as the old problem page, so existing marks still apply.
+  assert.equal(value.storageKey, "dsa-status");
+  assert.match(value.contentDir, /^[a-z0-9-]+$/);
+  const items = value.modules.flatMap(m => m.items);
+  const placed = value.modules.flatMap(m => [...m.practice.map(p => p.id), ...m.bank]);
+  const ids = [...items.map(i => i.id), ...placed];
+  assert.equal(new Set(ids).size, ids.length, "every item and problem appears once");
+  assert.ok(items.every(i => i.id.length <= 120 && !/^\d+$/.test(i.id)), "lesson ids never collide with problem numbers");
+  const milestones = items.flatMap(i => Array.from({ length: i.ms || 0 }, (_, n) => `${i.id}#m${n + 1}`));
+  assert.ok(items.some(i => i.k === "build" && i.ms >= 3), "projects have trackable milestones");
+  assert.equal(new Set([...ids, ...milestones]).size, ids.length + milestones.length, "milestones have distinct ids");
+  assert.ok(milestones.every(id => id.length <= 120), "milestone ids fit the progress store");
+  for (const [tag, [name, id]] of Object.entries(value.tags)) assert.ok(name && items.some(i => i.id === id && i.tag === tag), tag);
+  // Every link on the page is https and none is a generic search page.
+  assert.ok(!payload.includes("youtube.com/results"));
+  assert.deepEqual(Object.keys(value.problems).sort(), [...placed].sort());
+  const old = JSON.parse(fs.readFileSync(path.join(__dirname, "dsa_old_ids.json"), "utf8"));
+  assert.equal(old.length, 899);
+  for (const id of old) assert.ok(placed.includes(id), "old problem " + id + " is still on the page");
+  assert.match(value.subtitle, /work-in-progress/i);
+  assert.match(value.subtitle, /not yet complete/i);
+  assert.deepEqual(value.stages.flatMap(stage => stage.modules), value.modules.map((_, i) => i), "modules follow stage order");
+  for (const stage of value.stages) {
+    assert.ok(stage.modules.some(i => value.modules[i].items.some(item => item.k === "build")), stage.key + " has a project");
+  }
+  assert.ok(value.stages.find(stage => stage.key === "mastery").modules
+    .flatMap(i => value.modules[i].items).filter(item => item.k === "build").length >= 3, "mastery has three capstones");
+  for (const [id, r] of Object.entries(value.problems)) {
+    if (/^\d+$/.test(id)) assert.ok(r.length === 6 && /^[a-z0-9-]+$/.test(r[2]) && /^[EMH]$/.test(r[1]) && (r[4] === "" || r[5] <= 20), id);
+    else assert.ok(r.length === 3 && r[2].startsWith("https://"), id);
+  }
+  assert.ok(items.every(i => i.src.every(s => s.h.startsWith("https://"))));
+  assert.ok(value.modules.every(m => m.further.every(f => f.h.startsWith("https://"))));
+  const prefix = "(window.guideContent=window.guideContent||[]).push(";
+  for (const m of value.modules) {
+    const js = fs.readFileSync(path.join(root, value.contentDir, m.key + ".js"), "utf8");
+    assert.ok(js.startsWith(prefix) && js.endsWith(");\n"), m.key);
+    const [key, bodies] = JSON.parse(js.slice(prefix.length, -3));
+    assert.equal(key, m.key);
+    assert.equal(m.v, version(path.join(value.contentDir, m.key + ".js")));
+    assert.deepEqual(Object.keys(bodies).sort(), [...m.items.map(i => i.id), ...m.practice.map(p => "p:" + p.id)].sort());
+    for (const it of m.items) assert.ok(it.p.every(id => placed.includes(id)), it.id);
+    for (const p of m.practice) {
+      assert.ok(p.t === "mixed" || value.tags[p.pat], m.key + " " + p.id + " links to a primer");
+      if (p.card) {
+        assert.match(bodies["p:" + p.id], /<details class="sol">/, p.id + " hides its solution");
+        assert.equal((bodies["p:" + p.id].match(/<details class="hs">/g) || []).length, 3, p.id + " has three hints");
+      }
+    }
+    for (const body of Object.values(bodies)) {
       assert.ok(!/<script|<iframe|<img|<style|\son[a-z]+=|javascript:/i.test(body), m.key);
       for (const href of body.match(/<a href="[^"]*"/g) || []) assert.match(href, /^<a href="https:\/\//, m.key);
     }

@@ -1,0 +1,7010 @@
+{
+ "1": [
+  "Two Sum",
+  "E",
+  "two-sum",
+  "two-integer-sum",
+  "KLlXCFG5TnA",
+  8
+ ],
+ "10": [
+  "Regular Expression Matching",
+  "H",
+  "regular-expression-matching",
+  "regular-expression-matching",
+  "",
+  0
+ ],
+ "100": [
+  "Same Tree",
+  "E",
+  "same-tree",
+  "same-binary-tree",
+  "vRbbcKXCxOw",
+  8
+ ],
+ "1000": [
+  "Minimum Cost to Merge Stones",
+  "H",
+  "minimum-cost-to-merge-stones",
+  "",
+  "",
+  0
+ ],
+ "1004": [
+  "Max Consecutive Ones III",
+  "M",
+  "max-consecutive-ones-iii",
+  "max-consecutive-ones-iii",
+  "",
+  0
+ ],
+ "1005": [
+  "Maximize Sum Of Array After K Negations",
+  "E",
+  "maximize-sum-of-array-after-k-negations",
+  "",
+  "",
+  0
+ ],
+ "1008": [
+  "Construct Binary Search Tree from Preorder Traversal",
+  "M",
+  "construct-binary-search-tree-from-preorder-traversal",
+  "",
+  "",
+  0
+ ],
+ "101": [
+  "Symmetric Tree",
+  "E",
+  "symmetric-tree",
+  "symmetric-tree",
+  "Mao9uzxwvmc",
+  7
+ ],
+ "1011": [
+  "Capacity To Ship Packages Within D Days",
+  "M",
+  "capacity-to-ship-packages-within-d-days",
+  "capacity-to-ship-packages-within-d-days",
+  "ER_oLmdc-nw",
+  12
+ ],
+ "1012": [
+  "Numbers With Repeated Digits",
+  "H",
+  "numbers-with-repeated-digits",
+  "",
+  "",
+  0
+ ],
+ "1019": [
+  "Next Greater Node In Linked List",
+  "M",
+  "next-greater-node-in-linked-list",
+  "",
+  "",
+  0
+ ],
+ "102": [
+  "Binary Tree Level Order Traversal",
+  "M",
+  "binary-tree-level-order-traversal",
+  "level-order-traversal-of-binary-tree",
+  "6ZnyEApgFYg",
+  10
+ ],
+ "1020": [
+  "Number of Enclaves",
+  "M",
+  "number-of-enclaves",
+  "number-of-enclaves",
+  "gf0zsh1FIgE",
+  12
+ ],
+ "1022": [
+  "Sum of Root To Leaf Binary Numbers",
+  "E",
+  "sum-of-root-to-leaf-binary-numbers",
+  "",
+  "",
+  0
+ ],
+ "1024": [
+  "Video Stitching",
+  "M",
+  "video-stitching",
+  "",
+  "",
+  0
+ ],
+ "1027": [
+  "Longest Arithmetic Subsequence",
+  "M",
+  "longest-arithmetic-subsequence",
+  "",
+  "",
+  0
+ ],
+ "1028": [
+  "Recover a Tree From Preorder Traversal",
+  "H",
+  "recover-a-tree-from-preorder-traversal",
+  "recover-a-tree-from-preorder-traversal",
+  "",
+  0
+ ],
+ "1029": [
+  "Two City Scheduling",
+  "M",
+  "two-city-scheduling",
+  "two-city-scheduling",
+  "d-B_gk_gJtQ",
+  12
+ ],
+ "103": [
+  "Binary Tree Zigzag Level Order Traversal",
+  "M",
+  "binary-tree-zigzag-level-order-traversal",
+  "binary-tree-zigzag-level-order-traversal",
+  "igbboQbiwqw",
+  8
+ ],
+ "1035": [
+  "Uncrossed Lines",
+  "M",
+  "uncrossed-lines",
+  "uncrossed-lines",
+  "",
+  0
+ ],
+ "104": [
+  "Maximum Depth of Binary Tree",
+  "E",
+  "maximum-depth-of-binary-tree",
+  "depth-of-binary-tree",
+  "hTM3phVI6YQ",
+  17
+ ],
+ "1043": [
+  "Partition Array for Maximum Sum",
+  "M",
+  "partition-array-for-maximum-sum",
+  "partition-array-for-maximum-sum",
+  "",
+  0
+ ],
+ "1044": [
+  "Longest Duplicate Substring",
+  "H",
+  "longest-duplicate-substring",
+  "",
+  "",
+  0
+ ],
+ "1046": [
+  "Last Stone Weight",
+  "E",
+  "last-stone-weight",
+  "last-stone-weight",
+  "B-QCq79-Vfw",
+  13
+ ],
+ "1047": [
+  "Remove All Adjacent Duplicates In String",
+  "E",
+  "remove-all-adjacent-duplicates-in-string",
+  "",
+  "",
+  0
+ ],
+ "1048": [
+  "Longest String Chain",
+  "M",
+  "longest-string-chain",
+  "longest-string-chain",
+  "",
+  0
+ ],
+ "1049": [
+  "Last Stone Weight II",
+  "M",
+  "last-stone-weight-ii",
+  "last-stone-weight-ii",
+  "gdXkkmzvR3c",
+  19
+ ],
+ "105": [
+  "Construct Binary Tree from Preorder and Inorder Traversal",
+  "M",
+  "construct-binary-tree-from-preorder-and-inorder-traversal",
+  "binary-tree-from-preorder-and-inorder-traversal",
+  "ihj4IQGZ2zc",
+  17
+ ],
+ "1052": [
+  "Grumpy Bookstore Owner",
+  "M",
+  "grumpy-bookstore-owner",
+  "grumpy-bookstore-owner",
+  "",
+  0
+ ],
+ "106": [
+  "Construct Binary Tree from Inorder and Postorder Traversal",
+  "M",
+  "construct-binary-tree-from-inorder-and-postorder-traversal",
+  "construct-binary-tree-from-inorder-and-postorder-traversal",
+  "vm63HuIU7kw",
+  14
+ ],
+ "1061": [
+  "Lexicographically Smallest Equivalent String",
+  "M",
+  "lexicographically-smallest-equivalent-string",
+  "",
+  "",
+  0
+ ],
+ "107": [
+  "Binary Tree Level Order Traversal II",
+  "M",
+  "binary-tree-level-order-traversal-ii",
+  "",
+  "",
+  0
+ ],
+ "1071": [
+  "Greatest Common Divisor of Strings",
+  "E",
+  "greatest-common-divisor-of-strings",
+  "greatest-common-divisor-of-strings",
+  "i5I_wrbUdzM",
+  9
+ ],
+ "1074": [
+  "Number of Submatrices That Sum to Target",
+  "H",
+  "number-of-submatrices-that-sum-to-target",
+  "number-of-submatrices-that-sum-to-target",
+  "",
+  0
+ ],
+ "108": [
+  "Convert Sorted Array to Binary Search Tree",
+  "E",
+  "convert-sorted-array-to-binary-search-tree",
+  "convert-sorted-array-to-binary-search-tree",
+  "0K0uCMYq5ng",
+  10
+ ],
+ "109": [
+  "Convert Sorted List to Binary Search Tree",
+  "M",
+  "convert-sorted-list-to-binary-search-tree",
+  "",
+  "",
+  0
+ ],
+ "1091": [
+  "Shortest Path in Binary Matrix",
+  "M",
+  "shortest-path-in-binary-matrix",
+  "shortest-path-in-binary-matrix",
+  "YnxUdAO7TAo",
+  13
+ ],
+ "1092": [
+  "Shortest Common Supersequence",
+  "H",
+  "shortest-common-supersequence",
+  "shortest-common-supersequence",
+  "",
+  0
+ ],
+ "1094": [
+  "Car Pooling",
+  "M",
+  "car-pooling",
+  "car-pooling",
+  "08sn_w4LWEE",
+  15
+ ],
+ "1095": [
+  "Find in Mountain Array",
+  "H",
+  "find-in-mountain-array",
+  "find-in-mountain-array",
+  "",
+  0
+ ],
+ "11": [
+  "Container With Most Water",
+  "M",
+  "container-with-most-water",
+  "max-water-container",
+  "UuiTKBwPgAo",
+  13
+ ],
+ "110": [
+  "Balanced Binary Tree",
+  "E",
+  "balanced-binary-tree",
+  "balanced-binary-tree",
+  "QfJsau0ItOY",
+  13
+ ],
+ "1109": [
+  "Corporate Flight Bookings",
+  "M",
+  "corporate-flight-bookings",
+  "",
+  "",
+  0
+ ],
+ "111": [
+  "Minimum Depth of Binary Tree",
+  "E",
+  "minimum-depth-of-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "1110": [
+  "Delete Nodes And Return Forest",
+  "M",
+  "delete-nodes-and-return-forest",
+  "delete-nodes-and-return-forest",
+  "",
+  0
+ ],
+ "112": [
+  "Path Sum",
+  "E",
+  "path-sum",
+  "path-sum",
+  "LSKQyOz_P8I",
+  7
+ ],
+ "1122": [
+  "Relative Sort Array",
+  "E",
+  "relative-sort-array",
+  "relative-sort-array",
+  "",
+  0
+ ],
+ "1125": [
+  "Smallest Sufficient Team",
+  "H",
+  "smallest-sufficient-team",
+  "",
+  "",
+  0
+ ],
+ "1129": [
+  "Shortest Path with Alternating Colors",
+  "M",
+  "shortest-path-with-alternating-colors",
+  "shortest-path-with-alternating-colors",
+  "69rcy6lb-HQ",
+  14
+ ],
+ "113": [
+  "Path Sum II",
+  "M",
+  "path-sum-ii",
+  "",
+  "",
+  0
+ ],
+ "1137": [
+  "N-th Tribonacci Number",
+  "E",
+  "n-th-tribonacci-number",
+  "n-th-tribonacci-number",
+  "3lpNp5Ojvrw",
+  4
+ ],
+ "114": [
+  "Flatten Binary Tree to Linked List",
+  "M",
+  "flatten-binary-tree-to-linked-list",
+  "",
+  "",
+  0
+ ],
+ "1140": [
+  "Stone Game II",
+  "M",
+  "stone-game-ii",
+  "stone-game-ii",
+  "I-z-u0zfQtg",
+  19
+ ],
+ "1143": [
+  "Longest Common Subsequence",
+  "M",
+  "longest-common-subsequence",
+  "longest-common-subsequence",
+  "Ua0GhsJSlWM",
+  18
+ ],
+ "1146": [
+  "Snapshot Array",
+  "M",
+  "snapshot-array",
+  "",
+  "",
+  0
+ ],
+ "115": [
+  "Distinct Subsequences",
+  "H",
+  "distinct-subsequences",
+  "count-subsequences",
+  "-RDzMJ33nx8",
+  12
+ ],
+ "1155": [
+  "Number of Dice Rolls With Target Sum",
+  "M",
+  "number-of-dice-rolls-with-target-sum",
+  "number-of-dice-rolls-with-target-sum",
+  "",
+  0
+ ],
+ "1157": [
+  "Online Majority Element In Subarray",
+  "H",
+  "online-majority-element-in-subarray",
+  "",
+  "",
+  0
+ ],
+ "116": [
+  "Populating Next Right Pointers in Each Node",
+  "M",
+  "populating-next-right-pointers-in-each-node",
+  "populating-next-right-pointers-in-each-node",
+  "U4hFQCa1Cq0",
+  10
+ ],
+ "1161": [
+  "Maximum Level Sum of a Binary Tree",
+  "M",
+  "maximum-level-sum-of-a-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "1162": [
+  "As Far from Land as Possible",
+  "M",
+  "as-far-from-land-as-possible",
+  "as-far-from-land-as-possible",
+  "fjxb1hQfrZk",
+  12
+ ],
+ "117": [
+  "Populating Next Right Pointers in Each Node II",
+  "M",
+  "populating-next-right-pointers-in-each-node-ii",
+  "",
+  "",
+  0
+ ],
+ "1171": [
+  "Remove Zero Sum Consecutive Nodes from Linked List",
+  "M",
+  "remove-zero-sum-consecutive-nodes-from-linked-list",
+  "",
+  "",
+  0
+ ],
+ "1172": [
+  "Dinner Plate Stacks",
+  "H",
+  "dinner-plate-stacks",
+  "",
+  "",
+  0
+ ],
+ "1178": [
+  "Number of Valid Words for Each Puzzle",
+  "H",
+  "number-of-valid-words-for-each-puzzle",
+  "",
+  "",
+  0
+ ],
+ "118": [
+  "Pascal's Triangle",
+  "E",
+  "pascals-triangle",
+  "pascals-triangle",
+  "nPVEaB3AjUM",
+  9
+ ],
+ "119": [
+  "Pascal's Triangle II",
+  "E",
+  "pascals-triangle-ii",
+  "pascals-triangle-ii",
+  "",
+  0
+ ],
+ "1190": [
+  "Reverse Substrings Between Each Pair of Parentheses",
+  "M",
+  "reverse-substrings-between-each-pair-of-parentheses",
+  "reverse-substrings-between-each-pair-of-parentheses",
+  "",
+  0
+ ],
+ "1192": [
+  "Critical Connections in a Network",
+  "H",
+  "critical-connections-in-a-network",
+  "",
+  "",
+  0
+ ],
+ "12": [
+  "Integer to Roman",
+  "M",
+  "integer-to-roman",
+  "integer-to-roman",
+  "ohBNdSJyLh8",
+  10
+ ],
+ "120": [
+  "Triangle",
+  "M",
+  "triangle",
+  "triangle",
+  "OM1MTokvxs4",
+  15
+ ],
+ "1202": [
+  "Smallest String With Swaps",
+  "M",
+  "smallest-string-with-swaps",
+  "",
+  "",
+  0
+ ],
+ "1203": [
+  "Sort Items by Groups Respecting Dependencies",
+  "H",
+  "sort-items-by-groups-respecting-dependencies",
+  "",
+  "",
+  0
+ ],
+ "1206": [
+  "Design Skiplist",
+  "H",
+  "design-skiplist",
+  "",
+  "",
+  0
+ ],
+ "1207": [
+  "Unique Number of Occurrences",
+  "E",
+  "unique-number-of-occurrences",
+  "",
+  "",
+  0
+ ],
+ "1208": [
+  "Get Equal Substrings Within Budget",
+  "M",
+  "get-equal-substrings-within-budget",
+  "get-equal-substrings-within-budget",
+  "",
+  0
+ ],
+ "1209": [
+  "Remove All Adjacent Duplicates in String II",
+  "M",
+  "remove-all-adjacent-duplicates-in-string-ii",
+  "remove-all-adjacent-duplicates-in-string-ii",
+  "w6LcypDgC4w",
+  13
+ ],
+ "121": [
+  "Best Time to Buy and Sell Stock",
+  "E",
+  "best-time-to-buy-and-sell-stock",
+  "buy-and-sell-crypto",
+  "1pkOgXD63yU",
+  9
+ ],
+ "1218": [
+  "Longest Arithmetic Subsequence of Given Difference",
+  "M",
+  "longest-arithmetic-subsequence-of-given-difference",
+  "",
+  "",
+  0
+ ],
+ "1219": [
+  "Path with Maximum Gold",
+  "M",
+  "path-with-maximum-gold",
+  "path-with-maximum-gold",
+  "",
+  0
+ ],
+ "122": [
+  "Best Time to Buy and Sell Stock II",
+  "M",
+  "best-time-to-buy-and-sell-stock-ii",
+  "best-time-to-buy-and-sell-stock-ii",
+  "3SJ3pUkPQMc",
+  7
+ ],
+ "1220": [
+  "Count Vowels Permutation",
+  "H",
+  "count-vowels-permutation",
+  "count-vowels-permutation",
+  "VUVpTZVa7Ls",
+  12
+ ],
+ "123": [
+  "Best Time to Buy and Sell Stock III",
+  "H",
+  "best-time-to-buy-and-sell-stock-iii",
+  "",
+  "",
+  0
+ ],
+ "1232": [
+  "Check If It Is a Straight Line",
+  "E",
+  "check-if-it-is-a-straight-line",
+  "",
+  "",
+  0
+ ],
+ "1233": [
+  "Remove Sub-Folders from the Filesystem",
+  "M",
+  "remove-sub-folders-from-the-filesystem",
+  "remove-sub-folders-from-the-filesystem",
+  "",
+  0
+ ],
+ "1235": [
+  "Maximum Profit in Job Scheduling",
+  "H",
+  "maximum-profit-in-job-scheduling",
+  "maximum-profit-in-job-scheduling",
+  "",
+  0
+ ],
+ "1239": [
+  "Maximum Length of a Concatenated String with Unique Characters",
+  "M",
+  "maximum-length-of-a-concatenated-string-with-unique-characters",
+  "maximum-length-of-a-concatenated-string-with-unique-characters",
+  "d4SPuvkaeoo",
+  13
+ ],
+ "124": [
+  "Binary Tree Maximum Path Sum",
+  "H",
+  "binary-tree-maximum-path-sum",
+  "binary-tree-maximum-path-sum",
+  "Hr5cWUld4vU",
+  15
+ ],
+ "1248": [
+  "Count Number of Nice Subarrays",
+  "M",
+  "count-number-of-nice-subarrays",
+  "count-number-of-nice-subarrays",
+  "",
+  0
+ ],
+ "1249": [
+  "Minimum Remove to Make Valid Parentheses",
+  "M",
+  "minimum-remove-to-make-valid-parentheses",
+  "minimum-remove-to-make-valid-parentheses",
+  "",
+  0
+ ],
+ "125": [
+  "Valid Palindrome",
+  "E",
+  "valid-palindrome",
+  "is-palindrome",
+  "jJXJ16kPFWg",
+  15
+ ],
+ "1254": [
+  "Number of Closed Islands",
+  "M",
+  "number-of-closed-islands",
+  "number-of-closed-islands",
+  "X8k48xek8g8",
+  14
+ ],
+ "126": [
+  "Word Ladder II",
+  "H",
+  "word-ladder-ii",
+  "",
+  "",
+  0
+ ],
+ "1268": [
+  "Search Suggestions System",
+  "M",
+  "search-suggestions-system",
+  "search-suggestions-system",
+  "D4T2N0yAr20",
+  13
+ ],
+ "127": [
+  "Word Ladder",
+  "H",
+  "word-ladder",
+  "word-ladder",
+  "h9iTnkgv05E",
+  17
+ ],
+ "1277": [
+  "Count Square Submatrices with All Ones",
+  "M",
+  "count-square-submatrices-with-all-ones",
+  "count-square-submatrices-with-all-ones",
+  "",
+  0
+ ],
+ "128": [
+  "Longest Consecutive Sequence",
+  "M",
+  "longest-consecutive-sequence",
+  "longest-consecutive-sequence",
+  "P6RZZMu_maU",
+  9
+ ],
+ "1283": [
+  "Find the Smallest Divisor Given a Threshold",
+  "M",
+  "find-the-smallest-divisor-given-a-threshold",
+  "",
+  "",
+  0
+ ],
+ "1288": [
+  "Remove Covered Intervals",
+  "M",
+  "remove-covered-intervals",
+  "remove-covered-intervals",
+  "nhAsMabiVkM",
+  12
+ ],
+ "1289": [
+  "Minimum Falling Path Sum II",
+  "H",
+  "minimum-falling-path-sum-ii",
+  "minimum-falling-path-sum-ii",
+  "",
+  0
+ ],
+ "129": [
+  "Sum Root to Leaf Numbers",
+  "M",
+  "sum-root-to-leaf-numbers",
+  "sum-root-to-leaf-numbers",
+  "Jk16lZGFWxE",
+  6
+ ],
+ "1293": [
+  "Shortest Path in a Grid with Obstacles Elimination",
+  "H",
+  "shortest-path-in-a-grid-with-obstacles-elimination",
+  "",
+  "",
+  0
+ ],
+ "1299": [
+  "Replace Elements with Greatest Element on Right Side",
+  "E",
+  "replace-elements-with-greatest-element-on-right-side",
+  "replace-elements-with-greatest-element-on-right-side",
+  "ZHjKhUjcsaU",
+  9
+ ],
+ "13": [
+  "Roman to Integer",
+  "E",
+  "roman-to-integer",
+  "roman-to-integer",
+  "3jdxYj3DD98",
+  8
+ ],
+ "130": [
+  "Surrounded Regions",
+  "M",
+  "surrounded-regions",
+  "surrounded-regions",
+  "9z2BunfoZ5Y",
+  15
+ ],
+ "1306": [
+  "Jump Game III",
+  "M",
+  "jump-game-iii",
+  "",
+  "",
+  0
+ ],
+ "131": [
+  "Palindrome Partitioning",
+  "M",
+  "palindrome-partitioning",
+  "palindrome-partitioning",
+  "3jvWodd7ht0",
+  10
+ ],
+ "1310": [
+  "XOR Queries of a Subarray",
+  "M",
+  "xor-queries-of-a-subarray",
+  "xor-queries-of-a-subarray",
+  "",
+  0
+ ],
+ "1312": [
+  "Minimum Insertion Steps to Make a String Palindrome",
+  "H",
+  "minimum-insertion-steps-to-make-a-string-palindrome",
+  "",
+  "",
+  0
+ ],
+ "1314": [
+  "Matrix Block Sum",
+  "M",
+  "matrix-block-sum",
+  "",
+  "",
+  0
+ ],
+ "1316": [
+  "Distinct Echo Substrings",
+  "H",
+  "distinct-echo-substrings",
+  "",
+  "",
+  0
+ ],
+ "1318": [
+  "Minimum Flips to Make a OR b Equal to c",
+  "M",
+  "minimum-flips-to-make-a-or-b-equal-to-c",
+  "",
+  "",
+  0
+ ],
+ "1319": [
+  "Number of Operations to Make Network Connected",
+  "M",
+  "number-of-operations-to-make-network-connected",
+  "",
+  "",
+  0
+ ],
+ "132": [
+  "Palindrome Partitioning II",
+  "H",
+  "palindrome-partitioning-ii",
+  "",
+  "",
+  0
+ ],
+ "1325": [
+  "Delete Leaves With a Given Value",
+  "M",
+  "delete-leaves-with-a-given-value",
+  "delete-leaves-with-a-given-value",
+  "",
+  0
+ ],
+ "1326": [
+  "Minimum Number of Taps to Open to Water a Garden",
+  "H",
+  "minimum-number-of-taps-to-open-to-water-a-garden",
+  "",
+  "",
+  0
+ ],
+ "1329": [
+  "Sort the Matrix Diagonally",
+  "M",
+  "sort-the-matrix-diagonally",
+  "",
+  "",
+  0
+ ],
+ "133": [
+  "Clone Graph",
+  "M",
+  "clone-graph",
+  "clone-graph",
+  "mQeF6bN8hMk",
+  12
+ ],
+ "1334": [
+  "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+  "M",
+  "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+  "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+  "",
+  0
+ ],
+ "1335": [
+  "Minimum Difficulty of a Job Schedule",
+  "H",
+  "minimum-difficulty-of-a-job-schedule",
+  "minimum-difficulty-of-a-job-schedule",
+  "",
+  0
+ ],
+ "134": [
+  "Gas Station",
+  "M",
+  "gas-station",
+  "gas-station",
+  "lJwbPZGo05A",
+  16
+ ],
+ "1343": [
+  "Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold",
+  "M",
+  "number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold",
+  "number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold",
+  "D8B4tKxMTnY",
+  8
+ ],
+ "1347": [
+  "Minimum Number of Steps to Make Two Strings Anagram",
+  "M",
+  "minimum-number-of-steps-to-make-two-strings-anagram",
+  "",
+  "",
+  0
+ ],
+ "135": [
+  "Candy",
+  "H",
+  "candy",
+  "candy",
+  "1IzCRCcK17A",
+  14
+ ],
+ "1351": [
+  "Count Negative Numbers in a Sorted Matrix",
+  "E",
+  "count-negative-numbers-in-a-sorted-matrix",
+  "",
+  "",
+  0
+ ],
+ "1352": [
+  "Product of the Last K Numbers",
+  "M",
+  "product-of-the-last-k-numbers",
+  "",
+  "",
+  0
+ ],
+ "1353": [
+  "Maximum Number of Events That Can Be Attended",
+  "M",
+  "maximum-number-of-events-that-can-be-attended",
+  "",
+  "",
+  0
+ ],
+ "1356": [
+  "Sort Integers by The Number of 1 Bits",
+  "E",
+  "sort-integers-by-the-number-of-1-bits",
+  "",
+  "",
+  0
+ ],
+ "1358": [
+  "Number of Substrings Containing All Three Characters",
+  "M",
+  "number-of-substrings-containing-all-three-characters",
+  "number-of-substrings-containing-all-three-characters",
+  "",
+  0
+ ],
+ "1359": [
+  "Count All Valid Pickup and Delivery Options",
+  "H",
+  "count-all-valid-pickup-and-delivery-options",
+  "count-all-valid-pickup-and-delivery-options",
+  "OpgslsirW8s",
+  9
+ ],
+ "136": [
+  "Single Number",
+  "E",
+  "single-number",
+  "single-number",
+  "qMPX1AOa83k",
+  7
+ ],
+ "1365": [
+  "How Many Numbers Are Smaller Than the Current Number",
+  "E",
+  "how-many-numbers-are-smaller-than-the-current-number",
+  "",
+  "",
+  0
+ ],
+ "1368": [
+  "Minimum Cost to Make at Least One Valid Path in a Grid",
+  "H",
+  "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+  "minimum-cost-to-make-at-least-one-valid-path-in-a-grid",
+  "",
+  0
+ ],
+ "137": [
+  "Single Number II",
+  "M",
+  "single-number-ii",
+  "",
+  "",
+  0
+ ],
+ "1371": [
+  "Find the Longest Substring Containing Vowels in Even Counts",
+  "M",
+  "find-the-longest-substring-containing-vowels-in-even-counts",
+  "find-the-longest-substring-containing-vowels-in-even-counts",
+  "",
+  0
+ ],
+ "1372": [
+  "Longest ZigZag Path in a Binary Tree",
+  "M",
+  "longest-zigzag-path-in-a-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "1373": [
+  "Maximum Sum BST in Binary Tree",
+  "H",
+  "maximum-sum-bst-in-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "1376": [
+  "Time Needed to Inform All Employees",
+  "M",
+  "time-needed-to-inform-all-employees",
+  "time-needed-to-inform-all-employees",
+  "zdBYi0p4L5Q",
+  11
+ ],
+ "138": [
+  "Copy List with Random Pointer",
+  "M",
+  "copy-list-with-random-pointer",
+  "copy-linked-list-with-random-pointer",
+  "5Y2EiZST97Y",
+  10
+ ],
+ "1381": [
+  "Design a Stack With Increment Operation",
+  "M",
+  "design-a-stack-with-increment-operation",
+  "",
+  "",
+  0
+ ],
+ "1382": [
+  "Balance a Binary Search Tree",
+  "M",
+  "balance-a-binary-search-tree",
+  "",
+  "",
+  0
+ ],
+ "1383": [
+  "Maximum Performance of a Team",
+  "H",
+  "maximum-performance-of-a-team",
+  "maximum-performance-of-a-team",
+  "Y7UTvogADH0",
+  15
+ ],
+ "139": [
+  "Word Break",
+  "M",
+  "word-break",
+  "word-break",
+  "Sx9NNgInc3A",
+  16
+ ],
+ "1392": [
+  "Longest Happy Prefix",
+  "H",
+  "longest-happy-prefix",
+  "",
+  "",
+  0
+ ],
+ "1395": [
+  "Count Number of Teams",
+  "M",
+  "count-number-of-teams",
+  "count-number-of-teams",
+  "",
+  0
+ ],
+ "1396": [
+  "Design Underground System",
+  "M",
+  "design-underground-system",
+  "design-underground-system",
+  "W5QOLqXskZM",
+  9
+ ],
+ "14": [
+  "Longest Common Prefix",
+  "E",
+  "longest-common-prefix",
+  "longest-common-prefix",
+  "0sWShKIJoo4",
+  7
+ ],
+ "140": [
+  "Word Break II",
+  "H",
+  "word-break-ii",
+  "word-break-ii",
+  "",
+  0
+ ],
+ "1405": [
+  "Longest Happy String",
+  "M",
+  "longest-happy-string",
+  "longest-happy-string",
+  "8u-H6O_XQKE",
+  13
+ ],
+ "1406": [
+  "Stone Game III",
+  "H",
+  "stone-game-iii",
+  "stone-game-iii",
+  "HsLG5QW9CFQ",
+  15
+ ],
+ "141": [
+  "Linked List Cycle",
+  "E",
+  "linked-list-cycle",
+  "linked-list-cycle-detection",
+  "gBTe7lFR3vc",
+  11
+ ],
+ "1415": [
+  "The k-th Lexicographical String of All Happy Strings of Length n",
+  "M",
+  "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+  "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+  "",
+  0
+ ],
+ "142": [
+  "Linked List Cycle II",
+  "M",
+  "linked-list-cycle-ii",
+  "",
+  "",
+  0
+ ],
+ "1423": [
+  "Maximum Points You Can Obtain from Cards",
+  "M",
+  "maximum-points-you-can-obtain-from-cards",
+  "maximum-points-you-can-obtain-from-cards",
+  "TsA4vbtfCvo",
+  10
+ ],
+ "1424": [
+  "Diagonal Traverse II",
+  "M",
+  "diagonal-traverse-ii",
+  "",
+  "",
+  0
+ ],
+ "1425": [
+  "Constrained Subsequence Sum",
+  "H",
+  "constrained-subsequence-sum",
+  "constrained-subsequence-sum",
+  "",
+  0
+ ],
+ "143": [
+  "Reorder List",
+  "M",
+  "reorder-list",
+  "reorder-linked-list",
+  "S5bfdUTrKLM",
+  14
+ ],
+ "1434": [
+  "Number of Ways to Wear Different Hats to Each Other",
+  "H",
+  "number-of-ways-to-wear-different-hats-to-each-other",
+  "",
+  "",
+  0
+ ],
+ "1438": [
+  "Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
+  "M",
+  "longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit",
+  "longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit",
+  "",
+  0
+ ],
+ "144": [
+  "Binary Tree Preorder Traversal",
+  "E",
+  "binary-tree-preorder-traversal",
+  "binary-tree-preorder-traversal",
+  "afTpieEZXck",
+  10
+ ],
+ "1442": [
+  "Count Triplets That Can Form Two Arrays of Equal XOR",
+  "M",
+  "count-triplets-that-can-form-two-arrays-of-equal-xor",
+  "count-triplets-that-can-form-two-arrays-of-equal-xor",
+  "",
+  0
+ ],
+ "1448": [
+  "Count Good Nodes in Binary Tree",
+  "M",
+  "count-good-nodes-in-binary-tree",
+  "count-good-nodes-in-binary-tree",
+  "7cp5imvDzl4",
+  8
+ ],
+ "1449": [
+  "Form Largest Integer With Digits That Add up to Target",
+  "H",
+  "form-largest-integer-with-digits-that-add-up-to-target",
+  "",
+  "",
+  0
+ ],
+ "145": [
+  "Binary Tree Postorder Traversal",
+  "E",
+  "binary-tree-postorder-traversal",
+  "binary-tree-postorder-traversal",
+  "QhszUQhGGlA",
+  16
+ ],
+ "1456": [
+  "Maximum Number of Vowels in a Substring of Given Length",
+  "M",
+  "maximum-number-of-vowels-in-a-substring-of-given-length",
+  "maximum-number-of-vowels-in-a-substring-of-given-length",
+  "kEfPSzgL-Ss",
+  8
+ ],
+ "146": [
+  "LRU Cache",
+  "M",
+  "lru-cache",
+  "lru-cache",
+  "7ABFKPK2hD4",
+  18
+ ],
+ "1462": [
+  "Course Schedule IV",
+  "M",
+  "course-schedule-iv",
+  "course-schedule-iv",
+  "cEW05ofxhn0",
+  17
+ ],
+ "1463": [
+  "Cherry Pickup II",
+  "H",
+  "cherry-pickup-ii",
+  "cherry-pickup-ii",
+  "",
+  0
+ ],
+ "1466": [
+  "Reorder Routes to Make All Paths Lead to the City Zero",
+  "M",
+  "reorder-routes-to-make-all-paths-lead-to-the-city-zero",
+  "reorder-routes-to-make-all-paths-lead-to-the-city-zero",
+  "m17yOR5_PpI",
+  10
+ ],
+ "1472": [
+  "Design Browser History",
+  "M",
+  "design-browser-history",
+  "design-browser-history",
+  "i1G-kKnBu8k",
+  13
+ ],
+ "1475": [
+  "Final Prices With a Special Discount in a Shop",
+  "E",
+  "final-prices-with-a-special-discount-in-a-shop",
+  "final-prices-with-a-special-discount-in-a-shop",
+  "",
+  0
+ ],
+ "148": [
+  "Sort List",
+  "M",
+  "sort-list",
+  "sort-list",
+  "TGveA1oFhrc",
+  13
+ ],
+ "1480": [
+  "Running Sum of 1d Array",
+  "E",
+  "running-sum-of-1d-array",
+  "",
+  "",
+  0
+ ],
+ "1482": [
+  "Minimum Number of Days to Make m Bouquets",
+  "M",
+  "minimum-number-of-days-to-make-m-bouquets",
+  "",
+  "",
+  0
+ ],
+ "1489": [
+  "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+  "H",
+  "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+  "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+  "",
+  0
+ ],
+ "149": [
+  "Max Points on a Line",
+  "H",
+  "max-points-on-a-line",
+  "max-points-on-a-line",
+  "Bb9lOXUOnFw",
+  8
+ ],
+ "1492": [
+  "The kth Factor of n",
+  "M",
+  "the-kth-factor-of-n",
+  "",
+  "",
+  0
+ ],
+ "1493": [
+  "Longest Subarray of 1's After Deleting One Element",
+  "M",
+  "longest-subarray-of-1s-after-deleting-one-element",
+  "",
+  "",
+  0
+ ],
+ "1498": [
+  "Number of Subsequences That Satisfy the Given Sum Condition",
+  "M",
+  "number-of-subsequences-that-satisfy-the-given-sum-condition",
+  "number-of-subsequences-that-satisfy-the-given-sum-condition",
+  "xCsIkPLS4Ls",
+  9
+ ],
+ "1499": [
+  "Max Value of Equation",
+  "H",
+  "max-value-of-equation",
+  "",
+  "",
+  0
+ ],
+ "15": [
+  "3Sum",
+  "M",
+  "3sum",
+  "three-integer-sum",
+  "jzZsG8n2R9A",
+  13
+ ],
+ "150": [
+  "Evaluate Reverse Polish Notation",
+  "M",
+  "evaluate-reverse-polish-notation",
+  "evaluate-reverse-polish-notation",
+  "iu0082c4HDE",
+  9
+ ],
+ "151": [
+  "Reverse Words in a String",
+  "M",
+  "reverse-words-in-a-string",
+  "",
+  "",
+  0
+ ],
+ "1512": [
+  "Number of Good Pairs",
+  "E",
+  "number-of-good-pairs",
+  "number-of-good-pairs",
+  "",
+  0
+ ],
+ "1514": [
+  "Path with Maximum Probability",
+  "M",
+  "path-with-maximum-probability",
+  "path-with-maximum-probability",
+  "kPsDTGcrzGM",
+  13
+ ],
+ "152": [
+  "Maximum Product Subarray",
+  "M",
+  "maximum-product-subarray",
+  "maximum-product-subarray",
+  "lXVy6YWFcRM",
+  16
+ ],
+ "1524": [
+  "Number of Sub-arrays With Odd Sum",
+  "M",
+  "number-of-sub-arrays-with-odd-sum",
+  "number-of-sub-arrays-with-odd-sum",
+  "",
+  0
+ ],
+ "153": [
+  "Find Minimum in Rotated Sorted Array",
+  "M",
+  "find-minimum-in-rotated-sorted-array",
+  "find-minimum-in-rotated-sorted-array",
+  "nIVW4P8b1VA",
+  12
+ ],
+ "1530": [
+  "Number of Good Leaf Nodes Pairs",
+  "M",
+  "number-of-good-leaf-nodes-pairs",
+  "number-of-good-leaf-nodes-pairs",
+  "",
+  0
+ ],
+ "1531": [
+  "String Compression II",
+  "H",
+  "string-compression-ii",
+  "string-compression-ii",
+  "",
+  0
+ ],
+ "1539": [
+  "Kth Missing Positive Number",
+  "E",
+  "kth-missing-positive-number",
+  "",
+  "",
+  0
+ ],
+ "154": [
+  "Find Minimum in Rotated Sorted Array II",
+  "H",
+  "find-minimum-in-rotated-sorted-array-ii",
+  "",
+  "",
+  0
+ ],
+ "1544": [
+  "Make The String Great",
+  "E",
+  "make-the-string-great",
+  "make-the-string-great",
+  "",
+  0
+ ],
+ "1547": [
+  "Minimum Cost to Cut a Stick",
+  "H",
+  "minimum-cost-to-cut-a-stick",
+  "minimum-cost-to-cut-a-stick",
+  "EVxTO5I0d7w",
+  12
+ ],
+ "155": [
+  "Min Stack",
+  "M",
+  "min-stack",
+  "minimum-stack",
+  "qkLl7nAwDPo",
+  9
+ ],
+ "1552": [
+  "Magnetic Force Between Two Balls",
+  "M",
+  "magnetic-force-between-two-balls",
+  "",
+  "",
+  0
+ ],
+ "1557": [
+  "Minimum Number of Vertices to Reach All Nodes",
+  "M",
+  "minimum-number-of-vertices-to-reach-all-nodes",
+  "minimum-number-of-vertices-to-reach-all-nodes",
+  "TLzcum7vrTc",
+  5
+ ],
+ "1561": [
+  "Maximum Number of Coins You Can Get",
+  "M",
+  "maximum-number-of-coins-you-can-get",
+  "",
+  "",
+  0
+ ],
+ "1568": [
+  "Minimum Number of Days to Disconnect Island",
+  "H",
+  "minimum-number-of-days-to-disconnect-island",
+  "minimum-number-of-days-to-disconnect-island",
+  "",
+  0
+ ],
+ "1572": [
+  "Matrix Diagonal Sum",
+  "E",
+  "matrix-diagonal-sum",
+  "matrix-diagonal-sum",
+  "WliTu6gIK7o",
+  9
+ ],
+ "1578": [
+  "Minimum Time to Make Rope Colorful",
+  "M",
+  "minimum-time-to-make-rope-colorful",
+  "minimum-time-to-make-rope-colorful",
+  "",
+  0
+ ],
+ "1579": [
+  "Remove Max Number of Edges to Keep Graph Fully Traversable",
+  "H",
+  "remove-max-number-of-edges-to-keep-graph-fully-traversable",
+  "remove-max-number-of-edges-to-keep-graph-fully-traversable",
+  "booGwg5wYm4",
+  17
+ ],
+ "1584": [
+  "Min Cost to Connect All Points",
+  "M",
+  "min-cost-to-connect-all-points",
+  "min-cost-to-connect-points",
+  "",
+  0
+ ],
+ "1588": [
+  "Sum of All Odd Length Subarrays",
+  "E",
+  "sum-of-all-odd-length-subarrays",
+  "",
+  "",
+  0
+ ],
+ "1594": [
+  "Maximum Non Negative Product in a Matrix",
+  "M",
+  "maximum-non-negative-product-in-a-matrix",
+  "",
+  "",
+  0
+ ],
+ "16": [
+  "3Sum Closest",
+  "M",
+  "3sum-closest",
+  "",
+  "",
+  0
+ ],
+ "160": [
+  "Intersection of Two Linked Lists",
+  "E",
+  "intersection-of-two-linked-lists",
+  "intersection-of-two-linked-lists",
+  "D0X0BONOQhI",
+  8
+ ],
+ "1600": [
+  "Throne Inheritance",
+  "M",
+  "throne-inheritance",
+  "",
+  "",
+  0
+ ],
+ "162": [
+  "Find Peak Element",
+  "M",
+  "find-peak-element",
+  "find-peak-element",
+  "kMzJy9es7Hc",
+  11
+ ],
+ "1626": [
+  "Best Team With No Conflicts",
+  "M",
+  "best-team-with-no-conflicts",
+  "best-team-with-no-conflicts",
+  "7kURH3btcV4",
+  14
+ ],
+ "1631": [
+  "Path With Minimum Effort",
+  "M",
+  "path-with-minimum-effort",
+  "path-with-minimum-effort",
+  "XQlxCCx2vI4",
+  15
+ ],
+ "1636": [
+  "Sort Array by Increasing Frequency",
+  "E",
+  "sort-array-by-increasing-frequency",
+  "sort-array-by-increasing-frequency",
+  "",
+  0
+ ],
+ "1639": [
+  "Number of Ways to Form a Target String Given a Dictionary",
+  "H",
+  "number-of-ways-to-form-a-target-string-given-a-dictionary",
+  "number-of-ways-to-form-a-target-string-given-a-dictionary",
+  "_GF-0T-YjW8",
+  17
+ ],
+ "164": [
+  "Maximum Gap",
+  "M",
+  "maximum-gap",
+  "",
+  "",
+  0
+ ],
+ "1642": [
+  "Furthest Building You Can Reach",
+  "M",
+  "furthest-building-you-can-reach",
+  "furthest-building-you-can-reach",
+  "",
+  0
+ ],
+ "1647": [
+  "Minimum Deletions to Make Character Frequencies Unique",
+  "M",
+  "minimum-deletions-to-make-character-frequencies-unique",
+  "minimum-deletions-to-make-character-frequencies-unique",
+  "h8AZEN49gTc",
+  10
+ ],
+ "1649": [
+  "Create Sorted Array through Instructions",
+  "H",
+  "create-sorted-array-through-instructions",
+  "",
+  "",
+  0
+ ],
+ "165": [
+  "Compare Version Numbers",
+  "M",
+  "compare-version-numbers",
+  "",
+  "",
+  0
+ ],
+ "1653": [
+  "Minimum Deletions to Make String Balanced",
+  "M",
+  "minimum-deletions-to-make-string-balanced",
+  "minimum-deletions-to-make-string-balanced",
+  "",
+  0
+ ],
+ "1656": [
+  "Design an Ordered Stream",
+  "E",
+  "design-an-ordered-stream",
+  "",
+  "",
+  0
+ ],
+ "1657": [
+  "Determine if Two Strings Are Close",
+  "M",
+  "determine-if-two-strings-are-close",
+  "",
+  "",
+  0
+ ],
+ "1658": [
+  "Minimum Operations to Reduce X to Zero",
+  "M",
+  "minimum-operations-to-reduce-x-to-zero",
+  "minimum-operations-to-reduce-x-to-zero",
+  "xumn16n7njs",
+  14
+ ],
+ "166": [
+  "Fraction to Recurring Decimal",
+  "M",
+  "fraction-to-recurring-decimal",
+  "",
+  "",
+  0
+ ],
+ "1669": [
+  "Merge In Between Linked Lists",
+  "M",
+  "merge-in-between-linked-lists",
+  "merge-in-between-linked-lists",
+  "",
+  0
+ ],
+ "167": [
+  "Two Sum II - Input Array Is Sorted",
+  "M",
+  "two-sum-ii-input-array-is-sorted",
+  "two-integer-sum-ii",
+  "cQ1Oz4ckceM",
+  8
+ ],
+ "1675": [
+  "Minimize Deviation in Array",
+  "H",
+  "minimize-deviation-in-array",
+  "minimize-deviation-in-array",
+  "",
+  0
+ ],
+ "1679": [
+  "Max Number of K-Sum Pairs",
+  "M",
+  "max-number-of-k-sum-pairs",
+  "",
+  "",
+  0
+ ],
+ "168": [
+  "Excel Sheet Column Title",
+  "E",
+  "excel-sheet-column-title",
+  "excel-sheet-column-title",
+  "X_vJDpCCuoA",
+  12
+ ],
+ "169": [
+  "Majority Element",
+  "E",
+  "majority-element",
+  "majority-element",
+  "7pnhv842keE",
+  15
+ ],
+ "1696": [
+  "Jump Game VI",
+  "M",
+  "jump-game-vi",
+  "",
+  "",
+  0
+ ],
+ "1697": [
+  "Checking Existence of Edge Length Limited Paths",
+  "H",
+  "checking-existence-of-edge-length-limited-paths",
+  "",
+  "",
+  0
+ ],
+ "17": [
+  "Letter Combinations of a Phone Number",
+  "M",
+  "letter-combinations-of-a-phone-number",
+  "combinations-of-a-phone-number",
+  "0snEunUacZY",
+  11
+ ],
+ "1707": [
+  "Maximum XOR With an Element From Array",
+  "H",
+  "maximum-xor-with-an-element-from-array",
+  "",
+  "",
+  0
+ ],
+ "171": [
+  "Excel Sheet Column Number",
+  "E",
+  "excel-sheet-column-number",
+  "",
+  "",
+  0
+ ],
+ "1710": [
+  "Maximum Units on a Truck",
+  "E",
+  "maximum-units-on-a-truck",
+  "",
+  "",
+  0
+ ],
+ "172": [
+  "Factorial Trailing Zeroes",
+  "M",
+  "factorial-trailing-zeroes",
+  "",
+  "",
+  0
+ ],
+ "1721": [
+  "Swapping Nodes in a Linked List",
+  "M",
+  "swapping-nodes-in-a-linked-list",
+  "swapping-nodes-in-a-linked-list",
+  "4LsrgMyQIjQ",
+  6
+ ],
+ "173": [
+  "Binary Search Tree Iterator",
+  "M",
+  "binary-search-tree-iterator",
+  "binary-search-tree-iterator",
+  "RXy5RzGF5wo",
+  13
+ ],
+ "1732": [
+  "Find the Highest Altitude",
+  "E",
+  "find-the-highest-altitude",
+  "",
+  "",
+  0
+ ],
+ "174": [
+  "Dungeon Game",
+  "H",
+  "dungeon-game",
+  "",
+  "",
+  0
+ ],
+ "1749": [
+  "Maximum Absolute Sum of Any Subarray",
+  "M",
+  "maximum-absolute-sum-of-any-subarray",
+  "maximum-absolute-sum-of-any-subarray",
+  "",
+  0
+ ],
+ "1750": [
+  "Minimum Length of String After Deleting Similar Ends",
+  "M",
+  "minimum-length-of-string-after-deleting-similar-ends",
+  "minimum-length-of-string-after-deleting-similar-ends",
+  "",
+  0
+ ],
+ "1760": [
+  "Minimum Limit of Balls in a Bag",
+  "M",
+  "minimum-limit-of-balls-in-a-bag",
+  "minimum-limit-of-balls-in-a-bag",
+  "",
+  0
+ ],
+ "1768": [
+  "Merge Strings Alternately",
+  "E",
+  "merge-strings-alternately",
+  "merge-strings-alternately",
+  "LECWOvTo-Sc",
+  4
+ ],
+ "1786": [
+  "Number of Restricted Paths From First to Last Node",
+  "M",
+  "number-of-restricted-paths-from-first-to-last-node",
+  "",
+  "",
+  0
+ ],
+ "179": [
+  "Largest Number",
+  "M",
+  "largest-number",
+  "largest-number",
+  "WDx6Y4i4xJ8",
+  10
+ ],
+ "1793": [
+  "Maximum Score of a Good Subarray",
+  "H",
+  "maximum-score-of-a-good-subarray",
+  "maximum-score-of-a-good-subarray",
+  "",
+  0
+ ],
+ "1797": [
+  "Design Authentication Manager",
+  "M",
+  "design-authentication-manager",
+  "",
+  "",
+  0
+ ],
+ "18": [
+  "4Sum",
+  "M",
+  "4sum",
+  "4sum",
+  "EYeR-_1NRlQ",
+  15
+ ],
+ "1823": [
+  "Find the Winner of the Circular Game",
+  "M",
+  "find-the-winner-of-the-circular-game",
+  "find-the-winner-of-the-circular-game",
+  "",
+  0
+ ],
+ "1832": [
+  "Check if the Sentence Is Pangram",
+  "E",
+  "check-if-the-sentence-is-pangram",
+  "",
+  "",
+  0
+ ],
+ "1834": [
+  "Single-Threaded CPU",
+  "M",
+  "single-threaded-cpu",
+  "single-threaded-cpu",
+  "RR1n-d4oYqE",
+  17
+ ],
+ "1835": [
+  "Find XOR Sum of All Pairs Bitwise AND",
+  "H",
+  "find-xor-sum-of-all-pairs-bitwise-and",
+  "",
+  "",
+  0
+ ],
+ "1838": [
+  "Frequency of the Most Frequent Element",
+  "M",
+  "frequency-of-the-most-frequent-element",
+  "frequency-of-the-most-frequent-element",
+  "vgBrQ0NM5vE",
+  18
+ ],
+ "1845": [
+  "Seat Reservation Manager",
+  "M",
+  "seat-reservation-manager",
+  "seat-reservation-manager",
+  "ahobllKXEEY",
+  8
+ ],
+ "1846": [
+  "Maximum Element After Decreasing and Rearranging",
+  "M",
+  "maximum-element-after-decreasing-and-rearranging",
+  "maximum-element-after-decreasing-and-rearranging",
+  "",
+  0
+ ],
+ "1849": [
+  "Splitting a String Into Descending Consecutive Values",
+  "M",
+  "splitting-a-string-into-descending-consecutive-values",
+  "splitting-a-string-into-descending-consecutive-values",
+  "eDtMmysldaw",
+  13
+ ],
+ "1851": [
+  "Minimum Interval to Include Each Query",
+  "H",
+  "minimum-interval-to-include-each-query",
+  "minimum-interval-including-query",
+  "",
+  0
+ ],
+ "1854": [
+  "Maximum Population Year",
+  "E",
+  "maximum-population-year",
+  "",
+  "",
+  0
+ ],
+ "1856": [
+  "Maximum Subarray Min-Product",
+  "M",
+  "maximum-subarray-min-product",
+  "maximum-subarray-min-product",
+  "",
+  0
+ ],
+ "1857": [
+  "Largest Color Value in a Directed Graph",
+  "H",
+  "largest-color-value-in-a-directed-graph",
+  "largest-color-value-in-a-directed-graph",
+  "",
+  0
+ ],
+ "1861": [
+  "Rotating the Box",
+  "M",
+  "rotating-the-box",
+  "rotating-the-box",
+  "",
+  0
+ ],
+ "1863": [
+  "Sum of All Subset XOR Totals",
+  "E",
+  "sum-of-all-subset-xor-totals",
+  "sum-of-all-subset-xor-totals",
+  "",
+  0
+ ],
+ "187": [
+  "Repeated DNA Sequences",
+  "M",
+  "repeated-dna-sequences",
+  "repeated-dna-sequences",
+  "FzTYfsmtOso",
+  8
+ ],
+ "1870": [
+  "Minimum Speed to Arrive on Time",
+  "M",
+  "minimum-speed-to-arrive-on-time",
+  "",
+  "",
+  0
+ ],
+ "188": [
+  "Best Time to Buy and Sell Stock IV",
+  "H",
+  "best-time-to-buy-and-sell-stock-iv",
+  "",
+  "",
+  0
+ ],
+ "1882": [
+  "Process Tasks Using Servers",
+  "M",
+  "process-tasks-using-servers",
+  "process-tasks-using-servers",
+  "XKA22PecuMQ",
+  17
+ ],
+ "189": [
+  "Rotate Array",
+  "M",
+  "rotate-array",
+  "rotate-array",
+  "BHr381Guz3Y",
+  9
+ ],
+ "1898": [
+  "Maximum Number of Removable Characters",
+  "M",
+  "maximum-number-of-removable-characters",
+  "maximum-number-of-removable-characters",
+  "NMP3nRPyX5g",
+  11
+ ],
+ "1899": [
+  "Merge Triplets to Form Target Triplet",
+  "M",
+  "merge-triplets-to-form-target-triplet",
+  "merge-triplets-to-form-target",
+  "kShkQLQZ9K4",
+  7
+ ],
+ "19": [
+  "Remove Nth Node From End of List",
+  "M",
+  "remove-nth-node-from-end-of-list",
+  "remove-node-from-end-of-linked-list",
+  "XVuQxVej6y8",
+  7
+ ],
+ "190": [
+  "Reverse Bits",
+  "E",
+  "reverse-bits",
+  "reverse-bits",
+  "UcoN6UjAI64",
+  10
+ ],
+ "1905": [
+  "Count Sub Islands",
+  "M",
+  "count-sub-islands",
+  "count-sub-islands",
+  "mLpW3qfbNJ8",
+  13
+ ],
+ "191": [
+  "Number of 1 Bits",
+  "E",
+  "number-of-1-bits",
+  "number-of-one-bits",
+  "5Km3utixwZs",
+  12
+ ],
+ "1913": [
+  "Maximum Product Difference Between Two Pairs",
+  "E",
+  "maximum-product-difference-between-two-pairs",
+  "maximum-product-difference-between-two-pairs",
+  "",
+  0
+ ],
+ "1915": [
+  "Number of Wonderful Substrings",
+  "M",
+  "number-of-wonderful-substrings",
+  "",
+  "",
+  0
+ ],
+ "1922": [
+  "Count Good Numbers",
+  "M",
+  "count-good-numbers",
+  "",
+  "",
+  0
+ ],
+ "1926": [
+  "Nearest Exit from Entrance in Maze",
+  "M",
+  "nearest-exit-from-entrance-in-maze",
+  "",
+  "",
+  0
+ ],
+ "1929": [
+  "Concatenation of Array",
+  "E",
+  "concatenation-of-array",
+  "concatenation-of-array",
+  "68isPRHgcFQ",
+  4
+ ],
+ "1937": [
+  "Maximum Number of Points with Cost",
+  "M",
+  "maximum-number-of-points-with-cost",
+  "maximum-number-of-points-with-cost",
+  "",
+  0
+ ],
+ "1944": [
+  "Number of Visible People in a Queue",
+  "H",
+  "number-of-visible-people-in-a-queue",
+  "number-of-visible-people-in-a-queue",
+  "",
+  0
+ ],
+ "1962": [
+  "Remove Stones to Minimize the Total",
+  "M",
+  "remove-stones-to-minimize-the-total",
+  "",
+  "",
+  0
+ ],
+ "1964": [
+  "Find the Longest Valid Obstacle Course at Each Position",
+  "H",
+  "find-the-longest-valid-obstacle-course-at-each-position",
+  "find-the-longest-valid-obstacle-course-at-each-position",
+  "Xq9VT7p0lic",
+  15
+ ],
+ "1971": [
+  "Find if Path Exists in Graph",
+  "E",
+  "find-if-path-exists-in-graph",
+  "",
+  "",
+  0
+ ],
+ "1976": [
+  "Number of Ways to Arrive at Destination",
+  "M",
+  "number-of-ways-to-arrive-at-destination",
+  "number-of-ways-to-arrive-at-destination",
+  "",
+  0
+ ],
+ "198": [
+  "House Robber",
+  "M",
+  "house-robber",
+  "house-robber",
+  "73r3KWiEvyk",
+  11
+ ],
+ "1980": [
+  "Find Unique Binary String",
+  "M",
+  "find-unique-binary-string",
+  "find-unique-binary-string",
+  "aHqn4Dynd1k",
+  9
+ ],
+ "1985": [
+  "Find the Kth Largest Integer in the Array",
+  "M",
+  "find-the-kth-largest-integer-in-the-array",
+  "find-the-kth-largest-integer-in-the-array",
+  "lRCaNiqO3xI",
+  5
+ ],
+ "1986": [
+  "Minimum Number of Work Sessions to Finish the Tasks",
+  "M",
+  "minimum-number-of-work-sessions-to-finish-the-tasks",
+  "",
+  "",
+  0
+ ],
+ "199": [
+  "Binary Tree Right Side View",
+  "M",
+  "binary-tree-right-side-view",
+  "binary-tree-right-side-view",
+  "d4zLyf32e3I",
+  10
+ ],
+ "2": [
+  "Add Two Numbers",
+  "M",
+  "add-two-numbers",
+  "add-two-numbers",
+  "wgFPrzTjm7s",
+  10
+ ],
+ "20": [
+  "Valid Parentheses",
+  "E",
+  "valid-parentheses",
+  "validate-parentheses",
+  "WTzjTskDFMg",
+  11
+ ],
+ "200": [
+  "Number of Islands",
+  "M",
+  "number-of-islands",
+  "count-number-of-islands",
+  "pV2kpPD66nE",
+  12
+ ],
+ "2001": [
+  "Number of Pairs of Interchangeable Rectangles",
+  "M",
+  "number-of-pairs-of-interchangeable-rectangles",
+  "number-of-pairs-of-interchangeable-rectangles",
+  "lEQ8ZlLOuyQ",
+  8
+ ],
+ "2009": [
+  "Minimum Number of Operations to Make Array Continuous",
+  "H",
+  "minimum-number-of-operations-to-make-array-continuous",
+  "minimum-number-of-operations-to-make-array-continuous",
+  "",
+  0
+ ],
+ "201": [
+  "Bitwise AND of Numbers Range",
+  "M",
+  "bitwise-and-of-numbers-range",
+  "bitwise-and-of-numbers-range",
+  "",
+  0
+ ],
+ "2013": [
+  "Detect Squares",
+  "M",
+  "detect-squares",
+  "",
+  "bahebearrDc",
+  12
+ ],
+ "202": [
+  "Happy Number",
+  "E",
+  "happy-number",
+  "non-cyclical-number",
+  "ljz85bxOYJ0",
+  11
+ ],
+ "2024": [
+  "Maximize the Confusion of an Exam",
+  "M",
+  "maximize-the-confusion-of-an-exam",
+  "",
+  "",
+  0
+ ],
+ "203": [
+  "Remove Linked List Elements",
+  "E",
+  "remove-linked-list-elements",
+  "remove-linked-list-elements",
+  "JI71sxtHTng",
+  8
+ ],
+ "2034": [
+  "Stock Price Fluctuation",
+  "M",
+  "stock-price-fluctuation",
+  "",
+  "",
+  0
+ ],
+ "204": [
+  "Count Primes",
+  "M",
+  "count-primes",
+  "count-primes",
+  "",
+  0
+ ],
+ "2044": [
+  "Count Number of Maximum Bitwise-OR Subsets",
+  "M",
+  "count-number-of-maximum-bitwise-or-subsets",
+  "count-number-of-maximum-bitwise-or-subsets",
+  "",
+  0
+ ],
+ "2045": [
+  "Second Minimum Time to Reach Destination",
+  "H",
+  "second-minimum-time-to-reach-destination",
+  "second-minimum-time-to-reach-destination",
+  "",
+  0
+ ],
+ "205": [
+  "Isomorphic Strings",
+  "E",
+  "isomorphic-strings",
+  "isomorphic-strings",
+  "7yF-U1hLEqQ",
+  10
+ ],
+ "2050": [
+  "Parallel Courses III",
+  "H",
+  "parallel-courses-iii",
+  "parallel-courses-iii",
+  "",
+  0
+ ],
+ "206": [
+  "Reverse Linked List",
+  "E",
+  "reverse-linked-list",
+  "reverse-a-linked-list",
+  "G0_I-ZF0S38",
+  11
+ ],
+ "2064": [
+  "Minimized Maximum of Products Distributed to Any Store",
+  "M",
+  "minimized-maximum-of-products-distributed-to-any-store",
+  "minimized-maximum-of-products-distributed-to-any-store",
+  "",
+  0
+ ],
+ "207": [
+  "Course Schedule",
+  "M",
+  "course-schedule",
+  "course-schedule",
+  "EgI5nU9etnU",
+  16
+ ],
+ "2073": [
+  "Time Needed to Buy Tickets",
+  "E",
+  "time-needed-to-buy-tickets",
+  "time-needed-to-buy-tickets",
+  "",
+  0
+ ],
+ "208": [
+  "Implement Trie (Prefix Tree)",
+  "M",
+  "implement-trie-prefix-tree",
+  "implement-prefix-tree",
+  "oobqoCJlHA0",
+  19
+ ],
+ "209": [
+  "Minimum Size Subarray Sum",
+  "M",
+  "minimum-size-subarray-sum",
+  "minimum-size-subarray-sum",
+  "aYqYMIqZx5s",
+  12
+ ],
+ "2090": [
+  "K Radius Subarray Averages",
+  "M",
+  "k-radius-subarray-averages",
+  "",
+  "",
+  0
+ ],
+ "2092": [
+  "Find All People With Secret",
+  "H",
+  "find-all-people-with-secret",
+  "find-all-people-with-secret",
+  "",
+  0
+ ],
+ "2095": [
+  "Delete the Middle Node of a Linked List",
+  "M",
+  "delete-the-middle-node-of-a-linked-list",
+  "",
+  "",
+  0
+ ],
+ "2096": [
+  "Step-By-Step Directions From a Binary Tree Node to Another",
+  "M",
+  "step-by-step-directions-from-a-binary-tree-node-to-another",
+  "step-by-step-directions-from-a-binary-tree-node-to-another",
+  "",
+  0
+ ],
+ "2097": [
+  "Valid Arrangement of Pairs",
+  "H",
+  "valid-arrangement-of-pairs",
+  "",
+  "",
+  0
+ ],
+ "21": [
+  "Merge Two Sorted Lists",
+  "E",
+  "merge-two-sorted-lists",
+  "merge-two-sorted-linked-lists",
+  "XIdigk956u0",
+  6
+ ],
+ "210": [
+  "Course Schedule II",
+  "M",
+  "course-schedule-ii",
+  "course-schedule-ii",
+  "Akt3glAwyfY",
+  17
+ ],
+ "2101": [
+  "Detonate the Maximum Bombs",
+  "M",
+  "detonate-the-maximum-bombs",
+  "detonate-the-maximum-bombs",
+  "8NPbAvVXKR4",
+  11
+ ],
+ "2104": [
+  "Sum of Subarray Ranges",
+  "M",
+  "sum-of-subarray-ranges",
+  "",
+  "",
+  0
+ ],
+ "211": [
+  "Design Add and Search Words Data Structure",
+  "M",
+  "design-add-and-search-words-data-structure",
+  "design-word-search-data-structure",
+  "BTf05gs_8iU",
+  20
+ ],
+ "2115": [
+  "Find All Possible Recipes from Given Supplies",
+  "M",
+  "find-all-possible-recipes-from-given-supplies",
+  "find-all-possible-recipes-from-given-supplies",
+  "",
+  0
+ ],
+ "212": [
+  "Word Search II",
+  "H",
+  "word-search-ii",
+  "search-for-word-ii",
+  "",
+  0
+ ],
+ "2125": [
+  "Number of Laser Beams in a Bank",
+  "M",
+  "number-of-laser-beams-in-a-bank",
+  "number-of-laser-beams-in-a-bank",
+  "",
+  0
+ ],
+ "2127": [
+  "Maximum Employees to Be Invited to a Meeting",
+  "H",
+  "maximum-employees-to-be-invited-to-a-meeting",
+  "maximum-employees-to-be-invited-to-a-meeting",
+  "",
+  0
+ ],
+ "213": [
+  "House Robber II",
+  "M",
+  "house-robber-ii",
+  "house-robber-ii",
+  "rWAJCfYYOvM",
+  11
+ ],
+ "2130": [
+  "Maximum Twin Sum of a Linked List",
+  "M",
+  "maximum-twin-sum-of-a-linked-list",
+  "maximum-twin-sum-of-a-linked-list",
+  "doj95MelfSA",
+  9
+ ],
+ "2131": [
+  "Longest Palindrome by Concatenating Two Letter Words",
+  "M",
+  "longest-palindrome-by-concatenating-two-letter-words",
+  "",
+  "",
+  0
+ ],
+ "214": [
+  "Shortest Palindrome",
+  "H",
+  "shortest-palindrome",
+  "shortest-palindrome",
+  "",
+  0
+ ],
+ "2140": [
+  "Solving Questions With Brainpower",
+  "M",
+  "solving-questions-with-brainpower",
+  "solving-questions-with-brainpower",
+  "D7TD_ArkfkA",
+  15
+ ],
+ "2141": [
+  "Maximum Running Time of N Computers",
+  "H",
+  "maximum-running-time-of-n-computers",
+  "",
+  "",
+  0
+ ],
+ "215": [
+  "Kth Largest Element in an Array",
+  "M",
+  "kth-largest-element-in-an-array",
+  "kth-largest-element-in-an-array",
+  "XEmy13g1Qxc",
+  19
+ ],
+ "216": [
+  "Combination Sum III",
+  "M",
+  "combination-sum-iii",
+  "",
+  "",
+  0
+ ],
+ "217": [
+  "Contains Duplicate",
+  "E",
+  "contains-duplicate",
+  "duplicate-integer",
+  "3OamzN90kPg",
+  7
+ ],
+ "2179": [
+  "Count Good Triplets in an Array",
+  "H",
+  "count-good-triplets-in-an-array",
+  "",
+  "",
+  0
+ ],
+ "218": [
+  "The Skyline Problem",
+  "H",
+  "the-skyline-problem",
+  "",
+  "",
+  0
+ ],
+ "2187": [
+  "Minimum Time to Complete Trips",
+  "M",
+  "minimum-time-to-complete-trips",
+  "",
+  "",
+  0
+ ],
+ "219": [
+  "Contains Duplicate II",
+  "E",
+  "contains-duplicate-ii",
+  "contains-duplicate-ii",
+  "ypn0aZ0nrL4",
+  5
+ ],
+ "22": [
+  "Generate Parentheses",
+  "M",
+  "generate-parentheses",
+  "generate-parentheses",
+  "s9fokUqJ76A",
+  14
+ ],
+ "220": [
+  "Contains Duplicate III",
+  "H",
+  "contains-duplicate-iii",
+  "",
+  "",
+  0
+ ],
+ "2203": [
+  "Minimum Weighted Subgraph With the Required Paths",
+  "H",
+  "minimum-weighted-subgraph-with-the-required-paths",
+  "",
+  "",
+  0
+ ],
+ "221": [
+  "Maximal Square",
+  "M",
+  "maximal-square",
+  "maximal-square",
+  "6X7Ha2PrDmM",
+  20
+ ],
+ "2215": [
+  "Find the Difference of Two Arrays",
+  "E",
+  "find-the-difference-of-two-arrays",
+  "find-the-difference-of-two-arrays",
+  "a4wqKR-znBE",
+  8
+ ],
+ "222": [
+  "Count Complete Tree Nodes",
+  "M",
+  "count-complete-tree-nodes",
+  "",
+  "",
+  0
+ ],
+ "2223": [
+  "Sum of Scores of Built Strings",
+  "H",
+  "sum-of-scores-of-built-strings",
+  "",
+  "",
+  0
+ ],
+ "2226": [
+  "Maximum Candies Allocated to K Children",
+  "M",
+  "maximum-candies-allocated-to-k-children",
+  "maximum-candies-allocated-to-k-children",
+  "",
+  0
+ ],
+ "223": [
+  "Rectangle Area",
+  "M",
+  "rectangle-area",
+  "",
+  "",
+  0
+ ],
+ "224": [
+  "Basic Calculator",
+  "H",
+  "basic-calculator",
+  "",
+  "",
+  0
+ ],
+ "2246": [
+  "Longest Path With Different Adjacent Characters",
+  "H",
+  "longest-path-with-different-adjacent-characters",
+  "",
+  "",
+  0
+ ],
+ "225": [
+  "Implement Stack using Queues",
+  "E",
+  "implement-stack-using-queues",
+  "implement-stack-using-queues",
+  "rW4vm0-DLYc",
+  7
+ ],
+ "2251": [
+  "Number of Flowers in Full Bloom",
+  "H",
+  "number-of-flowers-in-full-bloom",
+  "number-of-flowers-in-full-bloom",
+  "",
+  0
+ ],
+ "226": [
+  "Invert Binary Tree",
+  "E",
+  "invert-binary-tree",
+  "invert-a-binary-tree",
+  "OnSn2XEQ4MY",
+  4
+ ],
+ "227": [
+  "Basic Calculator II",
+  "M",
+  "basic-calculator-ii",
+  "basic-calculator-ii",
+  "",
+  0
+ ],
+ "2276": [
+  "Count Integers in Intervals",
+  "H",
+  "count-integers-in-intervals",
+  "",
+  "",
+  0
+ ],
+ "228": [
+  "Summary Ranges",
+  "E",
+  "summary-ranges",
+  "",
+  "",
+  0
+ ],
+ "229": [
+  "Majority Element II",
+  "M",
+  "majority-element-ii",
+  "majority-element-ii",
+  "",
+  0
+ ],
+ "2290": [
+  "Minimum Obstacle Removal to Reach Corner",
+  "H",
+  "minimum-obstacle-removal-to-reach-corner",
+  "minimum-obstacle-removal-to-reach-corner",
+  "",
+  0
+ ],
+ "23": [
+  "Merge k Sorted Lists",
+  "H",
+  "merge-k-sorted-lists",
+  "merge-k-sorted-linked-lists",
+  "q5a5OiGbT6Q",
+  11
+ ],
+ "230": [
+  "Kth Smallest Element in a BST",
+  "M",
+  "kth-smallest-element-in-a-bst",
+  "kth-smallest-integer-in-bst",
+  "5LUXSvjmGCw",
+  11
+ ],
+ "2300": [
+  "Successful Pairs of Spells and Potions",
+  "M",
+  "successful-pairs-of-spells-and-potions",
+  "successful-pairs-of-spells-and-potions",
+  "OKnm5oyAhWg",
+  14
+ ],
+ "2304": [
+  "Minimum Path Cost in a Grid",
+  "M",
+  "minimum-path-cost-in-a-grid",
+  "",
+  "",
+  0
+ ],
+ "2305": [
+  "Fair Distribution of Cookies",
+  "M",
+  "fair-distribution-of-cookies",
+  "",
+  "",
+  0
+ ],
+ "231": [
+  "Power of Two",
+  "E",
+  "power-of-two",
+  "power-of-two",
+  "",
+  0
+ ],
+ "2316": [
+  "Count Unreachable Pairs of Nodes in an Undirected Graph",
+  "M",
+  "count-unreachable-pairs-of-nodes-in-an-undirected-graph",
+  "",
+  "",
+  0
+ ],
+ "232": [
+  "Implement Queue using Stacks",
+  "E",
+  "implement-queue-using-stacks",
+  "implement-queue-using-stacks",
+  "",
+  0
+ ],
+ "233": [
+  "Number of Digit One",
+  "H",
+  "number-of-digit-one",
+  "",
+  "",
+  0
+ ],
+ "2336": [
+  "Smallest Number in Infinite Set",
+  "M",
+  "smallest-number-in-infinite-set",
+  "",
+  "",
+  0
+ ],
+ "234": [
+  "Palindrome Linked List",
+  "E",
+  "palindrome-linked-list",
+  "palindrome-linked-list",
+  "yOzXms1J6Nk",
+  11
+ ],
+ "2349": [
+  "Design a Number Container System",
+  "M",
+  "design-a-number-container-system",
+  "",
+  "",
+  0
+ ],
+ "235": [
+  "Lowest Common Ancestor of a Binary Search Tree",
+  "M",
+  "lowest-common-ancestor-of-a-binary-search-tree",
+  "lowest-common-ancestor-in-binary-search-tree",
+  "gs2LMfuOR9k",
+  7
+ ],
+ "2352": [
+  "Equal Row and Column Pairs",
+  "M",
+  "equal-row-and-column-pairs",
+  "",
+  "",
+  0
+ ],
+ "236": [
+  "Lowest Common Ancestor of a Binary Tree",
+  "M",
+  "lowest-common-ancestor-of-a-binary-tree",
+  "lowest-common-ancestor-of-a-binary-tree",
+  "",
+  0
+ ],
+ "2360": [
+  "Longest Cycle in a Graph",
+  "H",
+  "longest-cycle-in-a-graph",
+  "",
+  "",
+  0
+ ],
+ "2366": [
+  "Minimum Replacements to Sort the Array",
+  "H",
+  "minimum-replacements-to-sort-the-array",
+  "",
+  "",
+  0
+ ],
+ "2376": [
+  "Count Special Integers",
+  "H",
+  "count-special-integers",
+  "",
+  "",
+  0
+ ],
+ "238": [
+  "Product of Array Except Self",
+  "M",
+  "product-of-array-except-self",
+  "products-of-array-discluding-self",
+  "bNvIQI2wAjk",
+  12
+ ],
+ "2381": [
+  "Shifting Letters II",
+  "M",
+  "shifting-letters-ii",
+  "shifting-letters-ii",
+  "",
+  0
+ ],
+ "2385": [
+  "Amount of Time for Binary Tree to Be Infected",
+  "M",
+  "amount-of-time-for-binary-tree-to-be-infected",
+  "",
+  "",
+  0
+ ],
+ "239": [
+  "Sliding Window Maximum",
+  "H",
+  "sliding-window-maximum",
+  "sliding-window-maximum",
+  "DfljaUwZsOk",
+  16
+ ],
+ "2390": [
+  "Removing Stars From a String",
+  "M",
+  "removing-stars-from-a-string",
+  "removing-stars-from-a-string",
+  "pRyFZIaKegA",
+  5
+ ],
+ "2392": [
+  "Build a Matrix With Conditions",
+  "H",
+  "build-a-matrix-with-conditions",
+  "build-a-matrix-with-conditions",
+  "",
+  0
+ ],
+ "2398": [
+  "Maximum Number of Robots Within Budget",
+  "H",
+  "maximum-number-of-robots-within-budget",
+  "",
+  "",
+  0
+ ],
+ "24": [
+  "Swap Nodes in Pairs",
+  "M",
+  "swap-nodes-in-pairs",
+  "swap-nodes-in-pairs",
+  "o811TZLAWOo",
+  9
+ ],
+ "240": [
+  "Search a 2D Matrix II",
+  "M",
+  "search-a-2d-matrix-ii",
+  "",
+  "",
+  0
+ ],
+ "2402": [
+  "Meeting Rooms III",
+  "H",
+  "meeting-rooms-iii",
+  "meeting-rooms-iii",
+  "",
+  0
+ ],
+ "2405": [
+  "Optimal Partition of String",
+  "M",
+  "optimal-partition-of-string",
+  "optimal-partition-of-string",
+  "CKZPdiXiQf0",
+  7
+ ],
+ "2406": [
+  "Divide Intervals Into Minimum Number of Groups",
+  "M",
+  "divide-intervals-into-minimum-number-of-groups",
+  "divide-intervals-into-minimum-number-of-groups",
+  "",
+  0
+ ],
+ "2407": [
+  "Longest Increasing Subsequence II",
+  "H",
+  "longest-increasing-subsequence-ii",
+  "",
+  "",
+  0
+ ],
+ "241": [
+  "Different Ways to Add Parentheses",
+  "M",
+  "different-ways-to-add-parentheses",
+  "different-ways-to-add-parentheses",
+  "",
+  0
+ ],
+ "2416": [
+  "Sum of Prefix Scores of Strings",
+  "H",
+  "sum-of-prefix-scores-of-strings",
+  "sum-of-prefix-scores-of-strings",
+  "",
+  0
+ ],
+ "242": [
+  "Valid Anagram",
+  "E",
+  "valid-anagram",
+  "is-anagram",
+  "9UtInBqnCgA",
+  12
+ ],
+ "2421": [
+  "Number of Good Paths",
+  "H",
+  "number-of-good-paths",
+  "number-of-good-paths",
+  "",
+  0
+ ],
+ "2433": [
+  "Find The Original Array of Prefix Xor",
+  "M",
+  "find-the-original-array-of-prefix-xor",
+  "",
+  "",
+  0
+ ],
+ "2458": [
+  "Height of Binary Tree After Subtree Removal Queries",
+  "H",
+  "height-of-binary-tree-after-subtree-removal-queries",
+  "",
+  "",
+  0
+ ],
+ "2461": [
+  "Maximum Sum of Distinct Subarrays With Length K",
+  "M",
+  "maximum-sum-of-distinct-subarrays-with-length-k",
+  "maximum-sum-of-distinct-subarrays-with-length-k",
+  "",
+  0
+ ],
+ "2462": [
+  "Total Cost to Hire K Workers",
+  "M",
+  "total-cost-to-hire-k-workers",
+  "",
+  "",
+  0
+ ],
+ "2466": [
+  "Count Ways To Build Good Strings",
+  "M",
+  "count-ways-to-build-good-strings",
+  "count-ways-to-build-good-strings",
+  "JKpVHG2mhbk",
+  14
+ ],
+ "2483": [
+  "Minimum Penalty for a Shop",
+  "M",
+  "minimum-penalty-for-a-shop",
+  "minimum-penalty-for-a-shop",
+  "0d7ShRoOFVE",
+  15
+ ],
+ "2486": [
+  "Append Characters to String to Make Subsequence",
+  "M",
+  "append-characters-to-string-to-make-subsequence",
+  "append-characters-to-string-to-make-subsequence",
+  "",
+  0
+ ],
+ "2492": [
+  "Minimum Score of a Path Between Two Cities",
+  "M",
+  "minimum-score-of-a-path-between-two-cities",
+  "minimum-score-of-a-path-between-two-cities",
+  "K7-mXA0irhY",
+  8
+ ],
+ "25": [
+  "Reverse Nodes in k-Group",
+  "H",
+  "reverse-nodes-in-k-group",
+  "reverse-nodes-in-k-group",
+  "1UOPsfP85V4",
+  12
+ ],
+ "2536": [
+  "Increment Submatrices by One",
+  "M",
+  "increment-submatrices-by-one",
+  "",
+  "",
+  0
+ ],
+ "2542": [
+  "Maximum Subsequence Score",
+  "M",
+  "maximum-subsequence-score",
+  "maximum-subsequence-score",
+  "ax1DKi5lJwk",
+  14
+ ],
+ "2551": [
+  "Put Marbles in Bags",
+  "H",
+  "put-marbles-in-bags",
+  "put-marbles-in-bags",
+  "",
+  0
+ ],
+ "2560": [
+  "House Robber IV",
+  "M",
+  "house-robber-iv",
+  "house-robber-iv",
+  "",
+  0
+ ],
+ "257": [
+  "Binary Tree Paths",
+  "E",
+  "binary-tree-paths",
+  "",
+  "",
+  0
+ ],
+ "2585": [
+  "Number of Ways to Earn Points",
+  "H",
+  "number-of-ways-to-earn-points",
+  "",
+  "",
+  0
+ ],
+ "2597": [
+  "The Number of Beautiful Subsets",
+  "M",
+  "the-number-of-beautiful-subsets",
+  "the-number-of-beautiful-subsets",
+  "",
+  0
+ ],
+ "26": [
+  "Remove Duplicates from Sorted Array",
+  "E",
+  "remove-duplicates-from-sorted-array",
+  "remove-duplicates-from-sorted-array",
+  "DEJAZBq0FDA",
+  11
+ ],
+ "260": [
+  "Single Number III",
+  "M",
+  "single-number-iii",
+  "single-number-iii",
+  "",
+  0
+ ],
+ "2616": [
+  "Minimize the Maximum Difference of Pairs",
+  "M",
+  "minimize-the-maximum-difference-of-pairs",
+  "minimize-the-maximum-difference-of-pairs",
+  "lf1Pxg7IrzQ",
+  17
+ ],
+ "264": [
+  "Ugly Number II",
+  "M",
+  "ugly-number-ii",
+  "ugly-number-ii",
+  "",
+  0
+ ],
+ "268": [
+  "Missing Number",
+  "E",
+  "missing-number",
+  "missing-number",
+  "WnPLSRLSANE",
+  12
+ ],
+ "27": [
+  "Remove Element",
+  "E",
+  "remove-element",
+  "remove-element",
+  "Pcd1ii9P9ZI",
+  9
+ ],
+ "2707": [
+  "Extra Characters in a String",
+  "M",
+  "extra-characters-in-a-string",
+  "extra-characters-in-a-string",
+  "",
+  0
+ ],
+ "274": [
+  "H-Index",
+  "M",
+  "h-index",
+  "",
+  "",
+  0
+ ],
+ "275": [
+  "H-Index II",
+  "M",
+  "h-index-ii",
+  "",
+  "",
+  0
+ ],
+ "278": [
+  "First Bad Version",
+  "E",
+  "first-bad-version",
+  "",
+  "",
+  0
+ ],
+ "279": [
+  "Perfect Squares",
+  "M",
+  "perfect-squares",
+  "perfect-squares",
+  "HLZLwjzIVGo",
+  15
+ ],
+ "28": [
+  "Find the Index of the First Occurrence in a String",
+  "E",
+  "find-the-index-of-the-first-occurrence-in-a-string",
+  "find-the-index-of-the-first-occurrence-in-a-string",
+  "",
+  0
+ ],
+ "282": [
+  "Expression Add Operators",
+  "H",
+  "expression-add-operators",
+  "",
+  "",
+  0
+ ],
+ "283": [
+  "Move Zeroes",
+  "E",
+  "move-zeroes",
+  "move-zeroes",
+  "aayNRwUN3Do",
+  8
+ ],
+ "284": [
+  "Peeking Iterator",
+  "M",
+  "peeking-iterator",
+  "",
+  "",
+  0
+ ],
+ "2848": [
+  "Points That Intersect With Cars",
+  "E",
+  "points-that-intersect-with-cars",
+  "",
+  "",
+  0
+ ],
+ "287": [
+  "Find the Duplicate Number",
+  "M",
+  "find-the-duplicate-number",
+  "find-duplicate-integer",
+  "wjYnzkAhcNk",
+  18
+ ],
+ "289": [
+  "Game of Life",
+  "M",
+  "game-of-life",
+  "",
+  "",
+  0
+ ],
+ "29": [
+  "Divide Two Integers",
+  "M",
+  "divide-two-integers",
+  "",
+  "",
+  0
+ ],
+ "290": [
+  "Word Pattern",
+  "E",
+  "word-pattern",
+  "word-pattern",
+  "W_akoecmCbM",
+  9
+ ],
+ "295": [
+  "Find Median from Data Stream",
+  "H",
+  "find-median-from-data-stream",
+  "find-median-in-a-data-stream",
+  "",
+  0
+ ],
+ "2958": [
+  "Length of Longest Subarray With at Most K Frequency",
+  "M",
+  "length-of-longest-subarray-with-at-most-k-frequency",
+  "length-of-longest-subarray-with-at-most-k-frequency",
+  "",
+  0
+ ],
+ "2962": [
+  "Count Subarrays Where Max Element Appears at Least K Times",
+  "M",
+  "count-subarrays-where-max-element-appears-at-least-k-times",
+  "count-subarrays-where-max-element-appears-at-least-k-times",
+  "",
+  0
+ ],
+ "2966": [
+  "Divide Array Into Arrays With Max Difference",
+  "M",
+  "divide-array-into-arrays-with-max-difference",
+  "divide-array-into-arrays-with-max-difference",
+  "",
+  0
+ ],
+ "297": [
+  "Serialize and Deserialize Binary Tree",
+  "H",
+  "serialize-and-deserialize-binary-tree",
+  "serialize-and-deserialize-binary-tree",
+  "u4JAi2JJhI8",
+  14
+ ],
+ "2976": [
+  "Minimum Cost to Convert String I",
+  "M",
+  "minimum-cost-to-convert-string-i",
+  "minimum-cost-to-convert-string-i",
+  "",
+  0
+ ],
+ "2997": [
+  "Minimum Number of Operations to Make Array XOR Equal to K",
+  "M",
+  "minimum-number-of-operations-to-make-array-xor-equal-to-k",
+  "",
+  "",
+  0
+ ],
+ "3": [
+  "Longest Substring Without Repeating Characters",
+  "M",
+  "longest-substring-without-repeating-characters",
+  "longest-substring-without-duplicates",
+  "wiGpQwVHdE0",
+  7
+ ],
+ "30": [
+  "Substring with Concatenation of All Words",
+  "H",
+  "substring-with-concatenation-of-all-words",
+  "",
+  "",
+  0
+ ],
+ "300": [
+  "Longest Increasing Subsequence",
+  "M",
+  "longest-increasing-subsequence",
+  "longest-increasing-subsequence",
+  "cjWnW0hdF1Y",
+  18
+ ],
+ "301": [
+  "Remove Invalid Parentheses",
+  "H",
+  "remove-invalid-parentheses",
+  "",
+  "",
+  0
+ ],
+ "303": [
+  "Range Sum Query - Immutable",
+  "E",
+  "range-sum-query-immutable",
+  "range-sum-query-immutable",
+  "2pndAmo_sMA",
+  8
+ ],
+ "304": [
+  "Range Sum Query 2D - Immutable",
+  "M",
+  "range-sum-query-2d-immutable",
+  "range-sum-query-2d-immutable",
+  "KE8MQuwE2yA",
+  13
+ ],
+ "3043": [
+  "Find the Length of the Longest Common Prefix",
+  "M",
+  "find-the-length-of-the-longest-common-prefix",
+  "find-the-length-of-the-longest-common-prefix",
+  "",
+  0
+ ],
+ "307": [
+  "Range Sum Query - Mutable",
+  "M",
+  "range-sum-query-mutable",
+  "",
+  "",
+  0
+ ],
+ "309": [
+  "Best Time to Buy and Sell Stock with Cooldown",
+  "M",
+  "best-time-to-buy-and-sell-stock-with-cooldown",
+  "buy-and-sell-crypto-with-cooldown",
+  "I7j0F7AHpb8",
+  15
+ ],
+ "31": [
+  "Next Permutation",
+  "M",
+  "next-permutation",
+  "next-permutation",
+  "",
+  0
+ ],
+ "310": [
+  "Minimum Height Trees",
+  "M",
+  "minimum-height-trees",
+  "minimum-height-trees",
+  "",
+  0
+ ],
+ "312": [
+  "Burst Balloons",
+  "H",
+  "burst-balloons",
+  "burst-balloons",
+  "",
+  0
+ ],
+ "313": [
+  "Super Ugly Number",
+  "M",
+  "super-ugly-number",
+  "",
+  "",
+  0
+ ],
+ "315": [
+  "Count of Smaller Numbers After Self",
+  "H",
+  "count-of-smaller-numbers-after-self",
+  "",
+  "",
+  0
+ ],
+ "316": [
+  "Remove Duplicate Letters",
+  "M",
+  "remove-duplicate-letters",
+  "",
+  "",
+  0
+ ],
+ "318": [
+  "Maximum Product of Word Lengths",
+  "M",
+  "maximum-product-of-word-lengths",
+  "",
+  "",
+  0
+ ],
+ "32": [
+  "Longest Valid Parentheses",
+  "H",
+  "longest-valid-parentheses",
+  "",
+  "",
+  0
+ ],
+ "322": [
+  "Coin Change",
+  "M",
+  "coin-change",
+  "coin-change",
+  "H9bfqozjoqs",
+  19
+ ],
+ "324": [
+  "Wiggle Sort II",
+  "M",
+  "wiggle-sort-ii",
+  "",
+  "",
+  0
+ ],
+ "326": [
+  "Power of Three",
+  "E",
+  "power-of-three",
+  "",
+  "",
+  0
+ ],
+ "327": [
+  "Count of Range Sum",
+  "H",
+  "count-of-range-sum",
+  "",
+  "",
+  0
+ ],
+ "328": [
+  "Odd Even Linked List",
+  "M",
+  "odd-even-linked-list",
+  "",
+  "",
+  0
+ ],
+ "329": [
+  "Longest Increasing Path in a Matrix",
+  "H",
+  "longest-increasing-path-in-a-matrix",
+  "longest-increasing-path-in-matrix",
+  "wCc_nd-GiEc",
+  18
+ ],
+ "33": [
+  "Search in Rotated Sorted Array",
+  "M",
+  "search-in-rotated-sorted-array",
+  "find-target-in-rotated-sorted-array",
+  "U8XENwh8Oy8",
+  13
+ ],
+ "330": [
+  "Patching Array",
+  "H",
+  "patching-array",
+  "",
+  "",
+  0
+ ],
+ "332": [
+  "Reconstruct Itinerary",
+  "H",
+  "reconstruct-itinerary",
+  "reconstruct-flight-path",
+  "ZyB_gQ8vqGA",
+  18
+ ],
+ "336": [
+  "Palindrome Pairs",
+  "H",
+  "palindrome-pairs",
+  "",
+  "",
+  0
+ ],
+ "337": [
+  "House Robber III",
+  "M",
+  "house-robber-iii",
+  "house-robber-iii",
+  "nHR8ytpzz7c",
+  18
+ ],
+ "338": [
+  "Counting Bits",
+  "E",
+  "counting-bits",
+  "counting-bits",
+  "RyBM56RIWrM",
+  13
+ ],
+ "34": [
+  "Find First and Last Position of Element in Sorted Array",
+  "M",
+  "find-first-and-last-position-of-element-in-sorted-array",
+  "find-first-and-last-position-of-element-in-sorted-array",
+  "4sQL7R5ySUU",
+  10
+ ],
+ "341": [
+  "Flatten Nested List Iterator",
+  "M",
+  "flatten-nested-list-iterator",
+  "flatten-nested-list-iterator",
+  "",
+  0
+ ],
+ "342": [
+  "Power of Four",
+  "E",
+  "power-of-four",
+  "power-of-four",
+  "",
+  0
+ ],
+ "343": [
+  "Integer Break",
+  "M",
+  "integer-break",
+  "integer-break",
+  "in6QbUPMJ3I",
+  17
+ ],
+ "344": [
+  "Reverse String",
+  "E",
+  "reverse-string",
+  "reverse-string",
+  "_d0T_2Lk2qA",
+  9
+ ],
+ "345": [
+  "Reverse Vowels of a String",
+  "E",
+  "reverse-vowels-of-a-string",
+  "",
+  "",
+  0
+ ],
+ "347": [
+  "Top K Frequent Elements",
+  "M",
+  "top-k-frequent-elements",
+  "top-k-elements-in-list",
+  "YPTqKIgVk-k",
+  13
+ ],
+ "349": [
+  "Intersection of Two Arrays",
+  "E",
+  "intersection-of-two-arrays",
+  "intersection-of-two-arrays",
+  "",
+  0
+ ],
+ "35": [
+  "Search Insert Position",
+  "E",
+  "search-insert-position",
+  "search-insert-position",
+  "K-RYzDZkzCI",
+  14
+ ],
+ "350": [
+  "Intersection of Two Arrays II",
+  "E",
+  "intersection-of-two-arrays-ii",
+  "",
+  "",
+  0
+ ],
+ "352": [
+  "Data Stream as Disjoint Intervals",
+  "H",
+  "data-stream-as-disjoint-intervals",
+  "data-stream-as-disjoint-intervals",
+  "FavoZjPIWpo",
+  9
+ ],
+ "354": [
+  "Russian Doll Envelopes",
+  "H",
+  "russian-doll-envelopes",
+  "russian-doll-envelopes",
+  "",
+  0
+ ],
+ "355": [
+  "Design Twitter",
+  "M",
+  "design-twitter",
+  "design-twitter-feed",
+  "",
+  0
+ ],
+ "36": [
+  "Valid Sudoku",
+  "M",
+  "valid-sudoku",
+  "valid-sudoku",
+  "TjFXEUCMqI8",
+  13
+ ],
+ "367": [
+  "Valid Perfect Square",
+  "E",
+  "valid-perfect-square",
+  "valid-perfect-square",
+  "Cg_wWPHJ2Sk",
+  9
+ ],
+ "368": [
+  "Largest Divisible Subset",
+  "M",
+  "largest-divisible-subset",
+  "largest-divisible-subset",
+  "",
+  0
+ ],
+ "37": [
+  "Sudoku Solver",
+  "H",
+  "sudoku-solver",
+  "",
+  "",
+  0
+ ],
+ "371": [
+  "Sum of Two Integers",
+  "M",
+  "sum-of-two-integers",
+  "sum-of-two-integers",
+  "gVUrDV4tZfY",
+  12
+ ],
+ "373": [
+  "Find K Pairs with Smallest Sums",
+  "M",
+  "find-k-pairs-with-smallest-sums",
+  "",
+  "",
+  0
+ ],
+ "374": [
+  "Guess Number Higher or Lower",
+  "E",
+  "guess-number-higher-or-lower",
+  "guess-number-higher-or-lower",
+  "xW4QsTtaCa4",
+  6
+ ],
+ "375": [
+  "Guess Number Higher or Lower II",
+  "M",
+  "guess-number-higher-or-lower-ii",
+  "",
+  "",
+  0
+ ],
+ "376": [
+  "Wiggle Subsequence",
+  "M",
+  "wiggle-subsequence",
+  "",
+  "",
+  0
+ ],
+ "377": [
+  "Combination Sum IV",
+  "M",
+  "combination-sum-iv",
+  "combination-sum-iv",
+  "dw2nMCxG0ik",
+  12
+ ],
+ "378": [
+  "Kth Smallest Element in a Sorted Matrix",
+  "M",
+  "kth-smallest-element-in-a-sorted-matrix",
+  "",
+  "",
+  0
+ ],
+ "38": [
+  "Count and Say",
+  "M",
+  "count-and-say",
+  "",
+  "",
+  0
+ ],
+ "380": [
+  "Insert Delete GetRandom O(1)",
+  "M",
+  "insert-delete-getrandom-o1",
+  "insert-delete-getrandom-o1",
+  "j4KwhBziOpg",
+  13
+ ],
+ "381": [
+  "Insert Delete GetRandom O(1) - Duplicates allowed",
+  "H",
+  "insert-delete-getrandom-o1-duplicates-allowed",
+  "",
+  "",
+  0
+ ],
+ "382": [
+  "Linked List Random Node",
+  "M",
+  "linked-list-random-node",
+  "",
+  "",
+  0
+ ],
+ "383": [
+  "Ransom Note",
+  "E",
+  "ransom-note",
+  "ransom-note",
+  "",
+  0
+ ],
+ "384": [
+  "Shuffle an Array",
+  "M",
+  "shuffle-an-array",
+  "",
+  "",
+  0
+ ],
+ "387": [
+  "First Unique Character in a String",
+  "E",
+  "first-unique-character-in-a-string",
+  "first-unique-character-in-a-string",
+  "",
+  0
+ ],
+ "39": [
+  "Combination Sum",
+  "M",
+  "combination-sum",
+  "combination-target-sum",
+  "GBKI9VSKdGg",
+  15
+ ],
+ "392": [
+  "Is Subsequence",
+  "E",
+  "is-subsequence",
+  "is-subsequence",
+  "99RVfqklbCE",
+  8
+ ],
+ "394": [
+  "Decode String",
+  "M",
+  "decode-string",
+  "decode-string",
+  "qB0zZpBJlh8",
+  16
+ ],
+ "395": [
+  "Longest Substring with At Least K Repeating Characters",
+  "M",
+  "longest-substring-with-at-least-k-repeating-characters",
+  "",
+  "",
+  0
+ ],
+ "398": [
+  "Random Pick Index",
+  "M",
+  "random-pick-index",
+  "",
+  "",
+  0
+ ],
+ "399": [
+  "Evaluate Division",
+  "M",
+  "evaluate-division",
+  "evaluate-division",
+  "Uei1fwDoyKk",
+  18
+ ],
+ "4": [
+  "Median of Two Sorted Arrays",
+  "H",
+  "median-of-two-sorted-arrays",
+  "median-of-two-sorted-arrays",
+  "",
+  0
+ ],
+ "40": [
+  "Combination Sum II",
+  "M",
+  "combination-sum-ii",
+  "combination-target-sum-ii",
+  "rSA3t6BDDwg",
+  16
+ ],
+ "401": [
+  "Binary Watch",
+  "E",
+  "binary-watch",
+  "",
+  "",
+  0
+ ],
+ "402": [
+  "Remove K Digits",
+  "M",
+  "remove-k-digits",
+  "remove-k-digits",
+  "cFabMOnJaq0",
+  15
+ ],
+ "404": [
+  "Sum of Left Leaves",
+  "E",
+  "sum-of-left-leaves",
+  "",
+  "",
+  0
+ ],
+ "406": [
+  "Queue Reconstruction by Height",
+  "M",
+  "queue-reconstruction-by-height",
+  "",
+  "",
+  0
+ ],
+ "407": [
+  "Trapping Rain Water II",
+  "H",
+  "trapping-rain-water-ii",
+  "trapping-rain-water-ii",
+  "",
+  0
+ ],
+ "409": [
+  "Longest Palindrome",
+  "E",
+  "longest-palindrome",
+  "longest-palindrome",
+  "",
+  0
+ ],
+ "41": [
+  "First Missing Positive",
+  "H",
+  "first-missing-positive",
+  "first-missing-positive",
+  "",
+  0
+ ],
+ "410": [
+  "Split Array Largest Sum",
+  "H",
+  "split-array-largest-sum",
+  "split-array-largest-sum",
+  "YUF3_eBdzsk",
+  17
+ ],
+ "412": [
+  "Fizz Buzz",
+  "E",
+  "fizz-buzz",
+  "",
+  "",
+  0
+ ],
+ "413": [
+  "Arithmetic Slices",
+  "M",
+  "arithmetic-slices",
+  "",
+  "",
+  0
+ ],
+ "415": [
+  "Add Strings",
+  "E",
+  "add-strings",
+  "",
+  "",
+  0
+ ],
+ "416": [
+  "Partition Equal Subset Sum",
+  "M",
+  "partition-equal-subset-sum",
+  "partition-equal-subset-sum",
+  "IsvocB5BJhw",
+  14
+ ],
+ "417": [
+  "Pacific Atlantic Water Flow",
+  "M",
+  "pacific-atlantic-water-flow",
+  "pacific-atlantic-water-flow",
+  "s-VkcjHqkGI",
+  16
+ ],
+ "42": [
+  "Trapping Rain Water",
+  "H",
+  "trapping-rain-water",
+  "trapping-rain-water",
+  "",
+  0
+ ],
+ "421": [
+  "Maximum XOR of Two Numbers in an Array",
+  "M",
+  "maximum-xor-of-two-numbers-in-an-array",
+  "",
+  "",
+  0
+ ],
+ "424": [
+  "Longest Repeating Character Replacement",
+  "M",
+  "longest-repeating-character-replacement",
+  "longest-repeating-substring-with-replacement",
+  "",
+  0
+ ],
+ "43": [
+  "Multiply Strings",
+  "M",
+  "multiply-strings",
+  "multiply-strings",
+  "1vZswirL8Y8",
+  18
+ ],
+ "430": [
+  "Flatten a Multilevel Doubly Linked List",
+  "M",
+  "flatten-a-multilevel-doubly-linked-list",
+  "",
+  "",
+  0
+ ],
+ "432": [
+  "All O`one Data Structure",
+  "H",
+  "all-oone-data-structure",
+  "",
+  "",
+  0
+ ],
+ "433": [
+  "Minimum Genetic Mutation",
+  "M",
+  "minimum-genetic-mutation",
+  "",
+  "",
+  0
+ ],
+ "435": [
+  "Non-overlapping Intervals",
+  "M",
+  "non-overlapping-intervals",
+  "non-overlapping-intervals",
+  "nONCGxWoUfM",
+  13
+ ],
+ "436": [
+  "Find Right Interval",
+  "M",
+  "find-right-interval",
+  "",
+  "",
+  0
+ ],
+ "437": [
+  "Path Sum III",
+  "M",
+  "path-sum-iii",
+  "",
+  "",
+  0
+ ],
+ "438": [
+  "Find All Anagrams in a String",
+  "M",
+  "find-all-anagrams-in-a-string",
+  "find-all-anagrams-in-a-string",
+  "G8xtZy0fDKg",
+  12
+ ],
+ "44": [
+  "Wildcard Matching",
+  "H",
+  "wildcard-matching",
+  "",
+  "",
+  0
+ ],
+ "442": [
+  "Find All Duplicates in an Array",
+  "M",
+  "find-all-duplicates-in-an-array",
+  "find-all-duplicates-in-an-array",
+  "",
+  0
+ ],
+ "443": [
+  "String Compression",
+  "M",
+  "string-compression",
+  "string-compression",
+  "",
+  0
+ ],
+ "445": [
+  "Add Two Numbers II",
+  "M",
+  "add-two-numbers-ii",
+  "add-two-numbers-ii",
+  "",
+  0
+ ],
+ "448": [
+  "Find All Numbers Disappeared in an Array",
+  "E",
+  "find-all-numbers-disappeared-in-an-array",
+  "find-all-numbers-disappeared-in-an-array",
+  "8i-f24YFWC4",
+  9
+ ],
+ "45": [
+  "Jump Game II",
+  "M",
+  "jump-game-ii",
+  "jump-game-ii",
+  "dJ7sWiOoK7g",
+  12
+ ],
+ "450": [
+  "Delete Node in a BST",
+  "M",
+  "delete-node-in-a-bst",
+  "delete-node-in-a-bst",
+  "LFzAoJJt92M",
+  13
+ ],
+ "451": [
+  "Sort Characters By Frequency",
+  "M",
+  "sort-characters-by-frequency",
+  "sort-characters-by-frequency",
+  "",
+  0
+ ],
+ "452": [
+  "Minimum Number of Arrows to Burst Balloons",
+  "M",
+  "minimum-number-of-arrows-to-burst-balloons",
+  "minimum-number-of-arrows-to-burst-balloons",
+  "",
+  0
+ ],
+ "454": [
+  "4Sum II",
+  "M",
+  "4sum-ii",
+  "",
+  "",
+  0
+ ],
+ "455": [
+  "Assign Cookies",
+  "E",
+  "assign-cookies",
+  "assign-cookies",
+  "",
+  0
+ ],
+ "456": [
+  "132 Pattern",
+  "M",
+  "132-pattern",
+  "132-pattern",
+  "q5ANAl8Z458",
+  12
+ ],
+ "459": [
+  "Repeated Substring Pattern",
+  "E",
+  "repeated-substring-pattern",
+  "",
+  "",
+  0
+ ],
+ "46": [
+  "Permutations",
+  "M",
+  "permutations",
+  "permutations",
+  "s7AvT7cGdSo",
+  10
+ ],
+ "460": [
+  "LFU Cache",
+  "H",
+  "lfu-cache",
+  "lfu-cache",
+  "bLEIHn-DgoA",
+  15
+ ],
+ "461": [
+  "Hamming Distance",
+  "E",
+  "hamming-distance",
+  "",
+  "",
+  0
+ ],
+ "463": [
+  "Island Perimeter",
+  "E",
+  "island-perimeter",
+  "island-perimeter",
+  "fISIuAFRM2s",
+  13
+ ],
+ "47": [
+  "Permutations II",
+  "M",
+  "permutations-ii",
+  "permutations-ii",
+  "qhBVWf0YafA",
+  12
+ ],
+ "470": [
+  "Implement Rand10() Using Rand7()",
+  "M",
+  "implement-rand10-using-rand7",
+  "",
+  "",
+  0
+ ],
+ "472": [
+  "Concatenated Words",
+  "H",
+  "concatenated-words",
+  "concatenated-words",
+  "iHp7fjw1R28",
+  12
+ ],
+ "473": [
+  "Matchsticks to Square",
+  "M",
+  "matchsticks-to-square",
+  "matchsticks-to-square",
+  "hUe0cUKV-YY",
+  16
+ ],
+ "474": [
+  "Ones and Zeroes",
+  "M",
+  "ones-and-zeroes",
+  "ones-and-zeroes",
+  "miZ3qV04b1g",
+  18
+ ],
+ "476": [
+  "Number Complement",
+  "E",
+  "number-complement",
+  "",
+  "",
+  0
+ ],
+ "477": [
+  "Total Hamming Distance",
+  "M",
+  "total-hamming-distance",
+  "",
+  "",
+  0
+ ],
+ "48": [
+  "Rotate Image",
+  "M",
+  "rotate-image",
+  "rotate-matrix",
+  "fMSJSS7eO1w",
+  16
+ ],
+ "480": [
+  "Sliding Window Median",
+  "H",
+  "sliding-window-median",
+  "",
+  "",
+  0
+ ],
+ "486": [
+  "Predict the Winner",
+  "M",
+  "predict-the-winner",
+  "",
+  "",
+  0
+ ],
+ "49": [
+  "Group Anagrams",
+  "M",
+  "group-anagrams",
+  "anagram-groups",
+  "vzdNOK2oB2E",
+  8
+ ],
+ "493": [
+  "Reverse Pairs",
+  "H",
+  "reverse-pairs",
+  "",
+  "",
+  0
+ ],
+ "494": [
+  "Target Sum",
+  "M",
+  "target-sum",
+  "target-sum",
+  "g0npyaQtAQM",
+  12
+ ],
+ "496": [
+  "Next Greater Element I",
+  "E",
+  "next-greater-element-i",
+  "next-greater-element-i",
+  "68a1Dc_qVq4",
+  15
+ ],
+ "498": [
+  "Diagonal Traverse",
+  "M",
+  "diagonal-traverse",
+  "",
+  "",
+  0
+ ],
+ "5": [
+  "Longest Palindromic Substring",
+  "M",
+  "longest-palindromic-substring",
+  "longest-palindromic-substring",
+  "XYQecbcd6_c",
+  8
+ ],
+ "50": [
+  "Pow(x, n)",
+  "M",
+  "powx-n",
+  "pow-x-n",
+  "g9YQyYi4IQQ",
+  13
+ ],
+ "502": [
+  "IPO",
+  "H",
+  "ipo",
+  "ipo",
+  "1IUzNJ6TPEM",
+  12
+ ],
+ "503": [
+  "Next Greater Element II",
+  "M",
+  "next-greater-element-ii",
+  "",
+  "",
+  0
+ ],
+ "509": [
+  "Fibonacci Number",
+  "E",
+  "fibonacci-number",
+  "",
+  "",
+  0
+ ],
+ "51": [
+  "N-Queens",
+  "H",
+  "n-queens",
+  "n-queens",
+  "Ph95IHmRp5M",
+  18
+ ],
+ "515": [
+  "Find Largest Value in Each Tree Row",
+  "M",
+  "find-largest-value-in-each-tree-row",
+  "find-largest-value-in-each-tree-row",
+  "",
+  0
+ ],
+ "516": [
+  "Longest Palindromic Subsequence",
+  "M",
+  "longest-palindromic-subsequence",
+  "longest-palindromic-subsequence",
+  "bUr8cNWI09Q",
+  18
+ ],
+ "518": [
+  "Coin Change II",
+  "M",
+  "coin-change-ii",
+  "coin-change-ii",
+  "",
+  0
+ ],
+ "52": [
+  "N-Queens II",
+  "H",
+  "n-queens-ii",
+  "n-queens-ii",
+  "nalYyLZgvCY",
+  14
+ ],
+ "523": [
+  "Continuous Subarray Sum",
+  "M",
+  "continuous-subarray-sum",
+  "continuous-subarray-sum",
+  "OKcrLfR-8mE",
+  15
+ ],
+ "525": [
+  "Contiguous Array",
+  "M",
+  "contiguous-array",
+  "contiguous-array",
+  "",
+  0
+ ],
+ "526": [
+  "Beautiful Arrangement",
+  "M",
+  "beautiful-arrangement",
+  "",
+  "",
+  0
+ ],
+ "528": [
+  "Random Pick with Weight",
+  "M",
+  "random-pick-with-weight",
+  "random-pick-with-weight",
+  "",
+  0
+ ],
+ "53": [
+  "Maximum Subarray",
+  "M",
+  "maximum-subarray",
+  "maximum-subarray",
+  "5WZl3MMT0Eg",
+  8
+ ],
+ "530": [
+  "Minimum Absolute Difference in BST",
+  "E",
+  "minimum-absolute-difference-in-bst",
+  "",
+  "",
+  0
+ ],
+ "535": [
+  "Encode and Decode TinyURL",
+  "M",
+  "encode-and-decode-tinyurl",
+  "encode-and-decode-tinyurl",
+  "VyBOaboQLGc",
+  9
+ ],
+ "538": [
+  "Convert BST to Greater Tree",
+  "M",
+  "convert-bst-to-greater-tree",
+  "convert-bst-to-greater-tree",
+  "7vVEJwVvAlI",
+  10
+ ],
+ "54": [
+  "Spiral Matrix",
+  "M",
+  "spiral-matrix",
+  "spiral-matrix",
+  "BJnMZNwUk1M",
+  17
+ ],
+ "540": [
+  "Single Element in a Sorted Array",
+  "M",
+  "single-element-in-a-sorted-array",
+  "single-element-in-a-sorted-array",
+  "HGtqdzyUJ3k",
+  11
+ ],
+ "542": [
+  "01 Matrix",
+  "M",
+  "01-matrix",
+  "",
+  "",
+  0
+ ],
+ "543": [
+  "Diameter of Binary Tree",
+  "E",
+  "diameter-of-binary-tree",
+  "binary-tree-diameter",
+  "bkxqA8Rfv04",
+  16
+ ],
+ "546": [
+  "Remove Boxes",
+  "H",
+  "remove-boxes",
+  "",
+  "",
+  0
+ ],
+ "547": [
+  "Number of Provinces",
+  "M",
+  "number-of-provinces",
+  "number-of-provinces",
+  "",
+  0
+ ],
+ "55": [
+  "Jump Game",
+  "M",
+  "jump-game",
+  "jump-game",
+  "Yan0cv2cLy8",
+  16
+ ],
+ "552": [
+  "Student Attendance Record II",
+  "H",
+  "student-attendance-record-ii",
+  "student-attendance-record-ii",
+  "",
+  0
+ ],
+ "554": [
+  "Brick Wall",
+  "M",
+  "brick-wall",
+  "brick-wall",
+  "Kkmv2h48ekw",
+  15
+ ],
+ "557": [
+  "Reverse Words in a String III",
+  "E",
+  "reverse-words-in-a-string-iii",
+  "reverse-words-in-a-string-iii",
+  "",
+  0
+ ],
+ "56": [
+  "Merge Intervals",
+  "M",
+  "merge-intervals",
+  "merge-intervals",
+  "44H3cEC2fFM",
+  10
+ ],
+ "560": [
+  "Subarray Sum Equals K",
+  "M",
+  "subarray-sum-equals-k",
+  "subarray-sum-equals-k",
+  "fFVZt-6sgyo",
+  15
+ ],
+ "561": [
+  "Array Partition",
+  "E",
+  "array-partition",
+  "",
+  "",
+  0
+ ],
+ "566": [
+  "Reshape the Matrix",
+  "E",
+  "reshape-the-matrix",
+  "",
+  "",
+  0
+ ],
+ "567": [
+  "Permutation in String",
+  "M",
+  "permutation-in-string",
+  "permutation-string",
+  "UbyhOgBN834",
+  20
+ ],
+ "57": [
+  "Insert Interval",
+  "M",
+  "insert-interval",
+  "insert-new-interval",
+  "A8NUOmlwOlM",
+  12
+ ],
+ "572": [
+  "Subtree of Another Tree",
+  "E",
+  "subtree-of-another-tree",
+  "subtree-of-a-binary-tree",
+  "E36O5SWp-LE",
+  14
+ ],
+ "576": [
+  "Out of Boundary Paths",
+  "M",
+  "out-of-boundary-paths",
+  "out-of-boundary-paths",
+  "",
+  0
+ ],
+ "58": [
+  "Length of Last Word",
+  "E",
+  "length-of-last-word",
+  "length-of-last-word",
+  "",
+  0
+ ],
+ "583": [
+  "Delete Operation for Two Strings",
+  "M",
+  "delete-operation-for-two-strings",
+  "",
+  "",
+  0
+ ],
+ "587": [
+  "Erect the Fence",
+  "H",
+  "erect-the-fence",
+  "",
+  "",
+  0
+ ],
+ "59": [
+  "Spiral Matrix II",
+  "M",
+  "spiral-matrix-ii",
+  "spiral-matrix-ii",
+  "RvLrWFBJ9fM",
+  16
+ ],
+ "593": [
+  "Valid Square",
+  "M",
+  "valid-square",
+  "",
+  "",
+  0
+ ],
+ "6": [
+  "Zigzag Conversion",
+  "M",
+  "zigzag-conversion",
+  "zigzag-conversion",
+  "Q2Tw6gcVEwc",
+  13
+ ],
+ "60": [
+  "Permutation Sequence",
+  "H",
+  "permutation-sequence",
+  "",
+  "",
+  0
+ ],
+ "605": [
+  "Can Place Flowers",
+  "E",
+  "can-place-flowers",
+  "can-place-flowers",
+  "ZGxqqjljpUI",
+  11
+ ],
+ "61": [
+  "Rotate List",
+  "M",
+  "rotate-list",
+  "rotate-list",
+  "UcGtPs2LE_c",
+  10
+ ],
+ "611": [
+  "Valid Triangle Number",
+  "M",
+  "valid-triangle-number",
+  "",
+  "",
+  0
+ ],
+ "617": [
+  "Merge Two Binary Trees",
+  "E",
+  "merge-two-binary-trees",
+  "merge-two-binary-trees",
+  "QHH6rIK3dDQ",
+  12
+ ],
+ "62": [
+  "Unique Paths",
+  "M",
+  "unique-paths",
+  "count-paths",
+  "IlEsdxuD4lY",
+  11
+ ],
+ "621": [
+  "Task Scheduler",
+  "M",
+  "task-scheduler",
+  "task-scheduling",
+  "s8p8ukTyA2I",
+  17
+ ],
+ "622": [
+  "Design Circular Queue",
+  "M",
+  "design-circular-queue",
+  "design-circular-queue",
+  "aBbsfn863oA",
+  17
+ ],
+ "623": [
+  "Add One Row to Tree",
+  "M",
+  "add-one-row-to-tree",
+  "",
+  "",
+  0
+ ],
+ "63": [
+  "Unique Paths II",
+  "M",
+  "unique-paths-ii",
+  "unique-paths-ii",
+  "d3UOz7zdE4I",
+  14
+ ],
+ "632": [
+  "Smallest Range Covering Elements from K Lists",
+  "H",
+  "smallest-range-covering-elements-from-k-lists",
+  "smallest-range-covering-elements-from-k-lists",
+  "",
+  0
+ ],
+ "636": [
+  "Exclusive Time of Functions",
+  "M",
+  "exclusive-time-of-functions",
+  "",
+  "",
+  0
+ ],
+ "637": [
+  "Average of Levels in Binary Tree",
+  "E",
+  "average-of-levels-in-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "64": [
+  "Minimum Path Sum",
+  "M",
+  "minimum-path-sum",
+  "minimum-path-sum",
+  "pGMsrvt0fpk",
+  9
+ ],
+ "641": [
+  "Design Circular Deque",
+  "M",
+  "design-circular-deque",
+  "",
+  "",
+  0
+ ],
+ "643": [
+  "Maximum Average Subarray I",
+  "E",
+  "maximum-average-subarray-i",
+  "",
+  "",
+  0
+ ],
+ "645": [
+  "Set Mismatch",
+  "E",
+  "set-mismatch",
+  "set-mismatch",
+  "",
+  0
+ ],
+ "646": [
+  "Maximum Length of Pair Chain",
+  "M",
+  "maximum-length-of-pair-chain",
+  "maximum-length-of-pair-chain",
+  "LcNNorqMVTw",
+  14
+ ],
+ "647": [
+  "Palindromic Substrings",
+  "M",
+  "palindromic-substrings",
+  "count-squares",
+  "4RACzI5-du8",
+  15
+ ],
+ "648": [
+  "Replace Words",
+  "M",
+  "replace-words",
+  "",
+  "",
+  0
+ ],
+ "649": [
+  "Dota2 Senate",
+  "M",
+  "dota2-senate",
+  "dota2-senate",
+  "zZA5KskfMuQ",
+  15
+ ],
+ "65": [
+  "Valid Number",
+  "H",
+  "valid-number",
+  "",
+  "",
+  0
+ ],
+ "652": [
+  "Find Duplicate Subtrees",
+  "M",
+  "find-duplicate-subtrees",
+  "",
+  "kn0Z5_qPPzY",
+  15
+ ],
+ "653": [
+  "Two Sum IV - Input is a BST",
+  "E",
+  "two-sum-iv-input-is-a-bst",
+  "",
+  "",
+  0
+ ],
+ "658": [
+  "Find K Closest Elements",
+  "M",
+  "find-k-closest-elements",
+  "find-k-closest-elements",
+  "o-YDQzHoaKM",
+  18
+ ],
+ "66": [
+  "Plus One",
+  "E",
+  "plus-one",
+  "plus-one",
+  "jIaA8boiG1s",
+  8
+ ],
+ "662": [
+  "Maximum Width of Binary Tree",
+  "M",
+  "maximum-width-of-binary-tree",
+  "maximum-width-of-binary-tree",
+  "FPzLE2L7uHs",
+  12
+ ],
+ "664": [
+  "Strange Printer",
+  "H",
+  "strange-printer",
+  "",
+  "",
+  0
+ ],
+ "668": [
+  "Kth Smallest Number in Multiplication Table",
+  "H",
+  "kth-smallest-number-in-multiplication-table",
+  "",
+  "",
+  0
+ ],
+ "669": [
+  "Trim a Binary Search Tree",
+  "M",
+  "trim-a-binary-search-tree",
+  "trim-a-binary-search-tree",
+  "jwt5mTjEXGc",
+  12
+ ],
+ "67": [
+  "Add Binary",
+  "E",
+  "add-binary",
+  "add-binary",
+  "keuWJ47xG8g",
+  8
+ ],
+ "670": [
+  "Maximum Swap",
+  "M",
+  "maximum-swap",
+  "maximum-swap",
+  "",
+  0
+ ],
+ "673": [
+  "Number of Longest Increasing Subsequence",
+  "M",
+  "number-of-longest-increasing-subsequence",
+  "number-of-longest-increasing-subsequence",
+  "",
+  0
+ ],
+ "677": [
+  "Map Sum Pairs",
+  "M",
+  "map-sum-pairs",
+  "",
+  "",
+  0
+ ],
+ "678": [
+  "Valid Parenthesis String",
+  "M",
+  "valid-parenthesis-string",
+  "valid-parenthesis-string",
+  "QhPdNS143Qg",
+  14
+ ],
+ "679": [
+  "24 Game",
+  "H",
+  "24-game",
+  "",
+  "",
+  0
+ ],
+ "68": [
+  "Text Justification",
+  "H",
+  "text-justification",
+  "text-justification",
+  "TzMl4Z7pVh8",
+  18
+ ],
+ "680": [
+  "Valid Palindrome II",
+  "E",
+  "valid-palindrome-ii",
+  "valid-palindrome-ii",
+  "JrxRYBwG6EI",
+  8
+ ],
+ "682": [
+  "Baseball Game",
+  "E",
+  "baseball-game",
+  "baseball-game",
+  "Id_tqGdsZQI",
+  7
+ ],
+ "684": [
+  "Redundant Connection",
+  "M",
+  "redundant-connection",
+  "redundant-connection",
+  "FXWRE67PLL0",
+  16
+ ],
+ "685": [
+  "Redundant Connection II",
+  "H",
+  "redundant-connection-ii",
+  "",
+  "",
+  0
+ ],
+ "686": [
+  "Repeated String Match",
+  "M",
+  "repeated-string-match",
+  "",
+  "",
+  0
+ ],
+ "688": [
+  "Knight Probability in Chessboard",
+  "M",
+  "knight-probability-in-chessboard",
+  "",
+  "",
+  0
+ ],
+ "689": [
+  "Maximum Sum of 3 Non-Overlapping Subarrays",
+  "H",
+  "maximum-sum-of-3-non-overlapping-subarrays",
+  "maximum-sum-of-3-non-overlapping-subarrays",
+  "",
+  0
+ ],
+ "69": [
+  "Sqrt(x)",
+  "E",
+  "sqrtx",
+  "sqrtx",
+  "zdMhGxRWutQ",
+  9
+ ],
+ "692": [
+  "Top K Frequent Words",
+  "M",
+  "top-k-frequent-words",
+  "",
+  "",
+  0
+ ],
+ "695": [
+  "Max Area of Island",
+  "M",
+  "max-area-of-island",
+  "max-area-of-island",
+  "iJGr1OtmH0c",
+  11
+ ],
+ "697": [
+  "Degree of an Array",
+  "E",
+  "degree-of-an-array",
+  "",
+  "",
+  0
+ ],
+ "698": [
+  "Partition to K Equal Sum Subsets",
+  "M",
+  "partition-to-k-equal-sum-subsets",
+  "partition-to-k-equal-sum-subsets",
+  "mBk4I0X46oI",
+  17
+ ],
+ "699": [
+  "Falling Squares",
+  "H",
+  "falling-squares",
+  "",
+  "",
+  0
+ ],
+ "7": [
+  "Reverse Integer",
+  "M",
+  "reverse-integer",
+  "reverse-integer",
+  "HAgLH58IgJQ",
+  13
+ ],
+ "70": [
+  "Climbing Stairs",
+  "E",
+  "climbing-stairs",
+  "climbing-stairs",
+  "Y0lT9Fck7qI",
+  18
+ ],
+ "700": [
+  "Search in a Binary Search Tree",
+  "E",
+  "search-in-a-binary-search-tree",
+  "",
+  "",
+  0
+ ],
+ "701": [
+  "Insert into a Binary Search Tree",
+  "M",
+  "insert-into-a-binary-search-tree",
+  "insert-into-a-binary-search-tree",
+  "Cpg8f79luEA",
+  10
+ ],
+ "703": [
+  "Kth Largest Element in a Stream",
+  "E",
+  "kth-largest-element-in-a-stream",
+  "kth-largest-integer-in-a-stream",
+  "hOjcdrqMoQ8",
+  11
+ ],
+ "704": [
+  "Binary Search",
+  "E",
+  "binary-search",
+  "binary-search",
+  "s4DPM8ct1pI",
+  10
+ ],
+ "705": [
+  "Design HashSet",
+  "E",
+  "design-hashset",
+  "design-hashset",
+  "VymjPQUXjL8",
+  12
+ ],
+ "706": [
+  "Design HashMap",
+  "E",
+  "design-hashmap",
+  "design-hashmap",
+  "cNWsgbKwwoU",
+  14
+ ],
+ "707": [
+  "Design Linked List",
+  "M",
+  "design-linked-list",
+  "design-linked-list",
+  "Wf4QhpdVFQo",
+  14
+ ],
+ "71": [
+  "Simplify Path",
+  "M",
+  "simplify-path",
+  "simplify-path",
+  "qYlHrAKJfyA",
+  13
+ ],
+ "712": [
+  "Minimum ASCII Delete Sum for Two Strings",
+  "M",
+  "minimum-ascii-delete-sum-for-two-strings",
+  "",
+  "",
+  0
+ ],
+ "713": [
+  "Subarray Product Less Than K",
+  "M",
+  "subarray-product-less-than-k",
+  "subarray-product-less-than-k",
+  "",
+  0
+ ],
+ "714": [
+  "Best Time to Buy and Sell Stock with Transaction Fee",
+  "M",
+  "best-time-to-buy-and-sell-stock-with-transaction-fee",
+  "",
+  "",
+  0
+ ],
+ "715": [
+  "Range Module",
+  "H",
+  "range-module",
+  "",
+  "",
+  0
+ ],
+ "719": [
+  "Find K-th Smallest Pair Distance",
+  "H",
+  "find-k-th-smallest-pair-distance",
+  "find-k-th-smallest-pair-distance",
+  "",
+  0
+ ],
+ "72": [
+  "Edit Distance",
+  "M",
+  "edit-distance",
+  "edit-distance",
+  "",
+  0
+ ],
+ "720": [
+  "Longest Word in Dictionary",
+  "M",
+  "longest-word-in-dictionary",
+  "",
+  "",
+  0
+ ],
+ "721": [
+  "Accounts Merge",
+  "M",
+  "accounts-merge",
+  "accounts-merge",
+  "6st4IxEF-90",
+  17
+ ],
+ "724": [
+  "Find Pivot Index",
+  "E",
+  "find-pivot-index",
+  "find-pivot-index",
+  "u89i60lYx8U",
+  9
+ ],
+ "725": [
+  "Split Linked List in Parts",
+  "M",
+  "split-linked-list-in-parts",
+  "split-linked-list-in-parts",
+  "-OTlqdrxrVI",
+  11
+ ],
+ "726": [
+  "Number of Atoms",
+  "H",
+  "number-of-atoms",
+  "number-of-atoms",
+  "",
+  0
+ ],
+ "729": [
+  "My Calendar I",
+  "M",
+  "my-calendar-i",
+  "my-calendar-i",
+  "",
+  0
+ ],
+ "73": [
+  "Set Matrix Zeroes",
+  "M",
+  "set-matrix-zeroes",
+  "set-zeroes-in-matrix",
+  "T41rL0L3Pnw",
+  18
+ ],
+ "731": [
+  "My Calendar II",
+  "M",
+  "my-calendar-ii",
+  "my-calendar-ii",
+  "",
+  0
+ ],
+ "732": [
+  "My Calendar III",
+  "H",
+  "my-calendar-iii",
+  "",
+  "",
+  0
+ ],
+ "733": [
+  "Flood Fill",
+  "E",
+  "flood-fill",
+  "flood-fill",
+  "",
+  0
+ ],
+ "735": [
+  "Asteroid Collision",
+  "M",
+  "asteroid-collision",
+  "asteroid-collision",
+  "LN7KjRszjk4",
+  12
+ ],
+ "738": [
+  "Monotone Increasing Digits",
+  "M",
+  "monotone-increasing-digits",
+  "",
+  "",
+  0
+ ],
+ "739": [
+  "Daily Temperatures",
+  "M",
+  "daily-temperatures",
+  "daily-temperatures",
+  "cTBiBSnjO3c",
+  12
+ ],
+ "74": [
+  "Search a 2D Matrix",
+  "M",
+  "search-a-2d-matrix",
+  "search-2d-matrix",
+  "Ber2pi2C0j0",
+  11
+ ],
+ "740": [
+  "Delete and Earn",
+  "M",
+  "delete-and-earn",
+  "delete-and-earn",
+  "7FCemBxvGw0",
+  19
+ ],
+ "741": [
+  "Cherry Pickup",
+  "H",
+  "cherry-pickup",
+  "cherry-pickup",
+  "",
+  0
+ ],
+ "743": [
+  "Network Delay Time",
+  "M",
+  "network-delay-time",
+  "network-delay-time",
+  "EaphyqKU4PQ",
+  20
+ ],
+ "744": [
+  "Find Smallest Letter Greater Than Target",
+  "E",
+  "find-smallest-letter-greater-than-target",
+  "",
+  "",
+  0
+ ],
+ "745": [
+  "Prefix and Suffix Search",
+  "H",
+  "prefix-and-suffix-search",
+  "",
+  "",
+  0
+ ],
+ "746": [
+  "Min Cost Climbing Stairs",
+  "E",
+  "min-cost-climbing-stairs",
+  "min-cost-climbing-stairs",
+  "ktmzAZWkEZ0",
+  19
+ ],
+ "75": [
+  "Sort Colors",
+  "M",
+  "sort-colors",
+  "sort-colors",
+  "4xbWSRZHqac",
+  16
+ ],
+ "752": [
+  "Open the Lock",
+  "M",
+  "open-the-lock",
+  "open-the-lock",
+  "Pzg3bCDY87w",
+  14
+ ],
+ "753": [
+  "Cracking the Safe",
+  "H",
+  "cracking-the-safe",
+  "",
+  "",
+  0
+ ],
+ "757": [
+  "Set Intersection Size At Least Two",
+  "H",
+  "set-intersection-size-at-least-two",
+  "",
+  "",
+  0
+ ],
+ "76": [
+  "Minimum Window Substring",
+  "H",
+  "minimum-window-substring",
+  "minimum-window-with-characters",
+  "",
+  0
+ ],
+ "763": [
+  "Partition Labels",
+  "M",
+  "partition-labels",
+  "partition-labels",
+  "B7m8UmZE-vw",
+  14
+ ],
+ "766": [
+  "Toeplitz Matrix",
+  "E",
+  "toeplitz-matrix",
+  "",
+  "",
+  0
+ ],
+ "767": [
+  "Reorganize String",
+  "M",
+  "reorganize-string",
+  "reorganize-string",
+  "2g_b1aYTHeg",
+  16
+ ],
+ "77": [
+  "Combinations",
+  "M",
+  "combinations",
+  "combinations",
+  "q0s6m7AiM7o",
+  11
+ ],
+ "778": [
+  "Swim in Rising Water",
+  "H",
+  "swim-in-rising-water",
+  "swim-in-rising-water",
+  "amvrKlMLuGY",
+  16
+ ],
+ "779": [
+  "K-th Symbol in Grammar",
+  "M",
+  "k-th-symbol-in-grammar",
+  "k-th-symbol-in-grammar",
+  "",
+  0
+ ],
+ "78": [
+  "Subsets",
+  "M",
+  "subsets",
+  "subsets",
+  "REOH22Xwdkk",
+  9
+ ],
+ "784": [
+  "Letter Case Permutation",
+  "M",
+  "letter-case-permutation",
+  "",
+  "",
+  0
+ ],
+ "785": [
+  "Is Graph Bipartite?",
+  "M",
+  "is-graph-bipartite",
+  "is-graph-bipartite",
+  "mev55LTubBY",
+  11
+ ],
+ "787": [
+  "Cheapest Flights Within K Stops",
+  "M",
+  "cheapest-flights-within-k-stops",
+  "cheapest-flight-path",
+  "5eIK3zUdYmE",
+  20
+ ],
+ "79": [
+  "Word Search",
+  "M",
+  "word-search",
+  "search-for-word",
+  "pfiQ_PS1g8E",
+  10
+ ],
+ "790": [
+  "Domino and Tromino Tiling",
+  "M",
+  "domino-and-tromino-tiling",
+  "",
+  "",
+  0
+ ],
+ "791": [
+  "Custom Sort String",
+  "M",
+  "custom-sort-string",
+  "custom-sort-string",
+  "",
+  0
+ ],
+ "796": [
+  "Rotate String",
+  "E",
+  "rotate-string",
+  "",
+  "",
+  0
+ ],
+ "797": [
+  "All Paths From Source to Target",
+  "M",
+  "all-paths-from-source-to-target",
+  "",
+  "",
+  0
+ ],
+ "8": [
+  "String to Integer (atoi)",
+  "M",
+  "string-to-integer-atoi",
+  "",
+  "",
+  0
+ ],
+ "80": [
+  "Remove Duplicates from Sorted Array II",
+  "M",
+  "remove-duplicates-from-sorted-array-ii",
+  "remove-duplicates-from-sorted-array-ii",
+  "ycAq8iqh0TI",
+  12
+ ],
+ "802": [
+  "Find Eventual Safe States",
+  "M",
+  "find-eventual-safe-states",
+  "find-eventual-safe-states",
+  "Re_v0j0CRsg",
+  13
+ ],
+ "81": [
+  "Search in Rotated Sorted Array II",
+  "M",
+  "search-in-rotated-sorted-array-ii",
+  "search-in-rotated-sorted-array-ii",
+  "oUnF7o88_Xc",
+  18
+ ],
+ "815": [
+  "Bus Routes",
+  "H",
+  "bus-routes",
+  "bus-routes",
+  "",
+  0
+ ],
+ "82": [
+  "Remove Duplicates from Sorted List II",
+  "M",
+  "remove-duplicates-from-sorted-list-ii",
+  "",
+  "",
+  0
+ ],
+ "820": [
+  "Short Encoding of Words",
+  "M",
+  "short-encoding-of-words",
+  "",
+  "",
+  0
+ ],
+ "829": [
+  "Consecutive Numbers Sum",
+  "H",
+  "consecutive-numbers-sum",
+  "",
+  "",
+  0
+ ],
+ "83": [
+  "Remove Duplicates from Sorted List",
+  "E",
+  "remove-duplicates-from-sorted-list",
+  "remove-duplicates-from-sorted-list",
+  "p10f-VpO4nE",
+  11
+ ],
+ "834": [
+  "Sum of Distances in Tree",
+  "H",
+  "sum-of-distances-in-tree",
+  "",
+  "",
+  0
+ ],
+ "84": [
+  "Largest Rectangle in Histogram",
+  "H",
+  "largest-rectangle-in-histogram",
+  "largest-rectangle-in-histogram",
+  "zx5Sw9130L0",
+  17
+ ],
+ "841": [
+  "Keys and Rooms",
+  "M",
+  "keys-and-rooms",
+  "",
+  "",
+  0
+ ],
+ "844": [
+  "Backspace String Compare",
+  "E",
+  "backspace-string-compare",
+  "backspace-string-compare",
+  "",
+  0
+ ],
+ "846": [
+  "Hand of Straights",
+  "M",
+  "hand-of-straights",
+  "hand-of-straights",
+  "amnrMCVd2YI",
+  16
+ ],
+ "847": [
+  "Shortest Path Visiting All Nodes",
+  "H",
+  "shortest-path-visiting-all-nodes",
+  "",
+  "",
+  0
+ ],
+ "848": [
+  "Shifting Letters",
+  "M",
+  "shifting-letters",
+  "",
+  "",
+  0
+ ],
+ "85": [
+  "Maximal Rectangle",
+  "H",
+  "maximal-rectangle",
+  "",
+  "",
+  0
+ ],
+ "850": [
+  "Rectangle Area II",
+  "H",
+  "rectangle-area-ii",
+  "",
+  "",
+  0
+ ],
+ "851": [
+  "Loud and Rich",
+  "M",
+  "loud-and-rich",
+  "",
+  "",
+  0
+ ],
+ "852": [
+  "Peak Index in a Mountain Array",
+  "M",
+  "peak-index-in-a-mountain-array",
+  "",
+  "",
+  0
+ ],
+ "853": [
+  "Car Fleet",
+  "M",
+  "car-fleet",
+  "car-fleet",
+  "Pr6T-3yB9RM",
+  16
+ ],
+ "856": [
+  "Score of Parentheses",
+  "M",
+  "score-of-parentheses",
+  "",
+  "",
+  0
+ ],
+ "857": [
+  "Minimum Cost to Hire K Workers",
+  "H",
+  "minimum-cost-to-hire-k-workers",
+  "",
+  "",
+  0
+ ],
+ "86": [
+  "Partition List",
+  "M",
+  "partition-list",
+  "partition-list",
+  "KT1iUciJr4g",
+  8
+ ],
+ "860": [
+  "Lemonade Change",
+  "E",
+  "lemonade-change",
+  "lemonade-change",
+  "",
+  0
+ ],
+ "862": [
+  "Shortest Subarray with Sum at Least K",
+  "H",
+  "shortest-subarray-with-sum-at-least-k",
+  "shortest-subarray-with-sum-at-least-k",
+  "",
+  0
+ ],
+ "863": [
+  "All Nodes Distance K in Binary Tree",
+  "M",
+  "all-nodes-distance-k-in-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "864": [
+  "Shortest Path to Get All Keys",
+  "H",
+  "shortest-path-to-get-all-keys",
+  "",
+  "",
+  0
+ ],
+ "867": [
+  "Transpose Matrix",
+  "E",
+  "transpose-matrix",
+  "transpose-matrix",
+  "",
+  0
+ ],
+ "87": [
+  "Scramble String",
+  "H",
+  "scramble-string",
+  "",
+  "",
+  0
+ ],
+ "871": [
+  "Minimum Number of Refueling Stops",
+  "H",
+  "minimum-number-of-refueling-stops",
+  "",
+  "",
+  0
+ ],
+ "872": [
+  "Leaf-Similar Trees",
+  "E",
+  "leaf-similar-trees",
+  "leaf-similar-trees",
+  "",
+  0
+ ],
+ "875": [
+  "Koko Eating Bananas",
+  "M",
+  "koko-eating-bananas",
+  "eating-bananas",
+  "U2SozAs9RzA",
+  15
+ ],
+ "876": [
+  "Middle of the Linked List",
+  "E",
+  "middle-of-the-linked-list",
+  "middle-of-the-linked-list",
+  "A2_ldqM4QcY",
+  5
+ ],
+ "877": [
+  "Stone Game",
+  "M",
+  "stone-game",
+  "stone-game",
+  "",
+  0
+ ],
+ "879": [
+  "Profitable Schemes",
+  "H",
+  "profitable-schemes",
+  "profitable-schemes",
+  "",
+  0
+ ],
+ "88": [
+  "Merge Sorted Array",
+  "E",
+  "merge-sorted-array",
+  "merge-sorted-array",
+  "P1Ic85RarKY",
+  10
+ ],
+ "881": [
+  "Boats to Save People",
+  "M",
+  "boats-to-save-people",
+  "boats-to-save-people",
+  "XbaxWuHIWUs",
+  7
+ ],
+ "882": [
+  "Reachable Nodes In Subdivided Graph",
+  "H",
+  "reachable-nodes-in-subdivided-graph",
+  "",
+  "",
+  0
+ ],
+ "885": [
+  "Spiral Matrix III",
+  "M",
+  "spiral-matrix-iii",
+  "spiral-matrix-iii",
+  "",
+  0
+ ],
+ "886": [
+  "Possible Bipartition",
+  "M",
+  "possible-bipartition",
+  "",
+  "",
+  0
+ ],
+ "889": [
+  "Construct Binary Tree from Preorder and Postorder Traversal",
+  "M",
+  "construct-binary-tree-from-preorder-and-postorder-traversal",
+  "construct-binary-tree-from-preorder-and-postorder-traversal",
+  "",
+  0
+ ],
+ "89": [
+  "Gray Code",
+  "M",
+  "gray-code",
+  "",
+  "",
+  0
+ ],
+ "894": [
+  "All Possible Full Binary Trees",
+  "M",
+  "all-possible-full-binary-trees",
+  "all-possible-full-binary-trees",
+  "nZtrZPTTCAo",
+  13
+ ],
+ "895": [
+  "Maximum Frequency Stack",
+  "H",
+  "maximum-frequency-stack",
+  "maximum-frequency-stack",
+  "Z6idIicFDOE",
+  13
+ ],
+ "9": [
+  "Palindrome Number",
+  "E",
+  "palindrome-number",
+  "palindrome-number",
+  "yubRKwixN-U",
+  12
+ ],
+ "90": [
+  "Subsets II",
+  "M",
+  "subsets-ii",
+  "subsets-ii",
+  "Vn2v6ajA7U0",
+  15
+ ],
+ "901": [
+  "Online Stock Span",
+  "M",
+  "online-stock-span",
+  "online-stock-span",
+  "slYh0ZNEqSw",
+  15
+ ],
+ "902": [
+  "Numbers At Most N Given Digit Set",
+  "H",
+  "numbers-at-most-n-given-digit-set",
+  "",
+  "",
+  0
+ ],
+ "904": [
+  "Fruit Into Baskets",
+  "M",
+  "fruit-into-baskets",
+  "fruit-into-baskets",
+  "yYtaV0G3mWQ",
+  10
+ ],
+ "905": [
+  "Sort Array By Parity",
+  "E",
+  "sort-array-by-parity",
+  "sort-array-by-parity",
+  "",
+  0
+ ],
+ "907": [
+  "Sum of Subarray Minimums",
+  "M",
+  "sum-of-subarray-minimums",
+  "sum-of-subarray-minimums",
+  "",
+  0
+ ],
+ "909": [
+  "Snakes and Ladders",
+  "M",
+  "snakes-and-ladders",
+  "snakes-and-ladders",
+  "",
+  0
+ ],
+ "91": [
+  "Decode Ways",
+  "M",
+  "decode-ways",
+  "decode-ways",
+  "6aEyTjOwlJU",
+  15
+ ],
+ "912": [
+  "Sort an Array",
+  "M",
+  "sort-an-array",
+  "sort-an-array",
+  "MsYZSinhuFo",
+  17
+ ],
+ "918": [
+  "Maximum Sum Circular Subarray",
+  "M",
+  "maximum-sum-circular-subarray",
+  "maximum-sum-circular-subarray",
+  "fxT9KjakYPM",
+  17
+ ],
+ "92": [
+  "Reverse Linked List II",
+  "M",
+  "reverse-linked-list-ii",
+  "reverse-linked-list-ii",
+  "RF_M9tX4Eag",
+  16
+ ],
+ "921": [
+  "Minimum Add to Make Parentheses Valid",
+  "M",
+  "minimum-add-to-make-parentheses-valid",
+  "minimum-add-to-make-parentheses-valid",
+  "",
+  0
+ ],
+ "923": [
+  "3Sum With Multiplicity",
+  "M",
+  "3sum-with-multiplicity",
+  "",
+  "",
+  0
+ ],
+ "929": [
+  "Unique Email Addresses",
+  "E",
+  "unique-email-addresses",
+  "unique-email-addresses",
+  "TC_xLIWl7qY",
+  12
+ ],
+ "93": [
+  "Restore IP Addresses",
+  "M",
+  "restore-ip-addresses",
+  "restore-ip-addresses",
+  "61tN4YEdiTM",
+  18
+ ],
+ "930": [
+  "Binary Subarrays With Sum",
+  "M",
+  "binary-subarrays-with-sum",
+  "binary-subarrays-with-sum",
+  "",
+  0
+ ],
+ "931": [
+  "Minimum Falling Path Sum",
+  "M",
+  "minimum-falling-path-sum",
+  "minimum-falling-path-sum",
+  "",
+  0
+ ],
+ "933": [
+  "Number of Recent Calls",
+  "E",
+  "number-of-recent-calls",
+  "",
+  "",
+  0
+ ],
+ "934": [
+  "Shortest Bridge",
+  "M",
+  "shortest-bridge",
+  "shortest-bridge",
+  "gkINMhbbIbU",
+  15
+ ],
+ "935": [
+  "Knight Dialer",
+  "M",
+  "knight-dialer",
+  "knight-dialer",
+  "",
+  0
+ ],
+ "938": [
+  "Range Sum of BST",
+  "E",
+  "range-sum-of-bst",
+  "range-sum-of-bst",
+  "",
+  0
+ ],
+ "94": [
+  "Binary Tree Inorder Traversal",
+  "E",
+  "binary-tree-inorder-traversal",
+  "binary-tree-inorder-traversal",
+  "g_S5WuasWUE",
+  15
+ ],
+ "940": [
+  "Distinct Subsequences II",
+  "H",
+  "distinct-subsequences-ii",
+  "",
+  "",
+  0
+ ],
+ "943": [
+  "Find the Shortest Superstring",
+  "H",
+  "find-the-shortest-superstring",
+  "",
+  "",
+  0
+ ],
+ "945": [
+  "Minimum Increment to Make Array Unique",
+  "M",
+  "minimum-increment-to-make-array-unique",
+  "minimum-increment-to-make-array-unique",
+  "",
+  0
+ ],
+ "946": [
+  "Validate Stack Sequences",
+  "M",
+  "validate-stack-sequences",
+  "validate-stack-sequences",
+  "mzua0r94kb8",
+  6
+ ],
+ "947": [
+  "Most Stones Removed with Same Row or Column",
+  "M",
+  "most-stones-removed-with-same-row-or-column",
+  "",
+  "",
+  0
+ ],
+ "948": [
+  "Bag of Tokens",
+  "M",
+  "bag-of-tokens",
+  "bag-of-tokens",
+  "",
+  0
+ ],
+ "95": [
+  "Unique Binary Search Trees II",
+  "M",
+  "unique-binary-search-trees-ii",
+  "unique-binary-search-trees-ii",
+  "m907FlQa2Yc",
+  13
+ ],
+ "951": [
+  "Flip Equivalent Binary Trees",
+  "M",
+  "flip-equivalent-binary-trees",
+  "flip-equivalent-binary-trees",
+  "izRDc1il9Pk",
+  11
+ ],
+ "952": [
+  "Largest Component Size by Common Factor",
+  "H",
+  "largest-component-size-by-common-factor",
+  "",
+  "",
+  0
+ ],
+ "956": [
+  "Tallest Billboard",
+  "H",
+  "tallest-billboard",
+  "",
+  "",
+  0
+ ],
+ "958": [
+  "Check Completeness of a Binary Tree",
+  "M",
+  "check-completeness-of-a-binary-tree",
+  "check-completeness-of-a-binary-tree",
+  "olbiZ-EOSig",
+  8
+ ],
+ "96": [
+  "Unique Binary Search Trees",
+  "M",
+  "unique-binary-search-trees",
+  "unique-binary-search-trees",
+  "Ox0TenN3Zpg",
+  11
+ ],
+ "962": [
+  "Maximum Width Ramp",
+  "M",
+  "maximum-width-ramp",
+  "maximum-width-ramp",
+  "",
+  0
+ ],
+ "967": [
+  "Numbers With Same Consecutive Differences",
+  "M",
+  "numbers-with-same-consecutive-differences",
+  "",
+  "",
+  0
+ ],
+ "968": [
+  "Binary Tree Cameras",
+  "H",
+  "binary-tree-cameras",
+  "",
+  "",
+  0
+ ],
+ "97": [
+  "Interleaving String",
+  "M",
+  "interleaving-string",
+  "interleaving-string",
+  "3Rw3p9LrgvE",
+  18
+ ],
+ "973": [
+  "K Closest Points to Origin",
+  "M",
+  "k-closest-points-to-origin",
+  "k-closest-points-to-origin",
+  "rI2EBUEMfTk",
+  9
+ ],
+ "974": [
+  "Subarray Sums Divisible by K",
+  "M",
+  "subarray-sums-divisible-by-k",
+  "subarray-sums-divisible-by-k",
+  "",
+  0
+ ],
+ "976": [
+  "Largest Perimeter Triangle",
+  "E",
+  "largest-perimeter-triangle",
+  "",
+  "",
+  0
+ ],
+ "977": [
+  "Squares of a Sorted Array",
+  "E",
+  "squares-of-a-sorted-array",
+  "squares-of-a-sorted-array",
+  "FPCZsG_AkUg",
+  8
+ ],
+ "979": [
+  "Distribute Coins in Binary Tree",
+  "M",
+  "distribute-coins-in-binary-tree",
+  "distribute-coins-in-binary-tree",
+  "",
+  0
+ ],
+ "98": [
+  "Validate Binary Search Tree",
+  "M",
+  "validate-binary-search-tree",
+  "valid-binary-search-tree",
+  "s6ATEkipzow",
+  10
+ ],
+ "980": [
+  "Unique Paths III",
+  "H",
+  "unique-paths-iii",
+  "",
+  "",
+  0
+ ],
+ "981": [
+  "Time Based Key-Value Store",
+  "M",
+  "time-based-key-value-store",
+  "time-based-key-value-store",
+  "fu2cD_6E8Hw",
+  17
+ ],
+ "983": [
+  "Minimum Cost For Tickets",
+  "M",
+  "minimum-cost-for-tickets",
+  "minimum-cost-for-tickets",
+  "4pY1bsBpIY4",
+  20
+ ],
+ "986": [
+  "Interval List Intersections",
+  "M",
+  "interval-list-intersections",
+  "interval-list-intersections",
+  "",
+  0
+ ],
+ "987": [
+  "Vertical Order Traversal of a Binary Tree",
+  "H",
+  "vertical-order-traversal-of-a-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "988": [
+  "Smallest String Starting From Leaf",
+  "M",
+  "smallest-string-starting-from-leaf",
+  "smallest-string-starting-from-leaf",
+  "",
+  0
+ ],
+ "99": [
+  "Recover Binary Search Tree",
+  "M",
+  "recover-binary-search-tree",
+  "recover-binary-search-tree",
+  "",
+  0
+ ],
+ "990": [
+  "Satisfiability of Equality Equations",
+  "M",
+  "satisfiability-of-equality-equations",
+  "",
+  "",
+  0
+ ],
+ "992": [
+  "Subarrays with K Different Integers",
+  "H",
+  "subarrays-with-k-different-integers",
+  "subarrays-with-k-different-integers",
+  "",
+  0
+ ],
+ "993": [
+  "Cousins in Binary Tree",
+  "E",
+  "cousins-in-binary-tree",
+  "",
+  "",
+  0
+ ],
+ "994": [
+  "Rotting Oranges",
+  "M",
+  "rotting-oranges",
+  "rotting-fruit",
+  "y704fEOx0s0",
+  12
+ ],
+ "995": [
+  "Minimum Number of K Consecutive Bit Flips",
+  "H",
+  "minimum-number-of-k-consecutive-bit-flips",
+  "minimum-number-of-k-consecutive-bit-flips",
+  "",
+  0
+ ],
+ "997": [
+  "Find the Town Judge",
+  "E",
+  "find-the-town-judge",
+  "find-the-town-judge",
+  "",
+  0
+ ],
+ "ac:dp_a": [
+  "A. Frog 1",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_a"
+ ],
+ "ac:dp_b": [
+  "B. Frog 2",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_b"
+ ],
+ "ac:dp_c": [
+  "C. Vacation",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_c"
+ ],
+ "ac:dp_d": [
+  "D. Knapsack 1",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_d"
+ ],
+ "ac:dp_e": [
+  "E. Knapsack 2",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_e"
+ ],
+ "ac:dp_f": [
+  "F. LCS",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_f"
+ ],
+ "ac:dp_h": [
+  "H. Grid 1",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_h"
+ ],
+ "ac:dp_o": [
+  "O. Matching",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_o"
+ ],
+ "ac:dp_p": [
+  "P. Independent Set",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_p"
+ ],
+ "ac:dp_s": [
+  "S. Digit Sum",
+  "AtCoder",
+  "https://atcoder.jp/contests/dp/tasks/dp_s"
+ ],
+ "cses:1071": [
+  "Number Spiral",
+  "CSES",
+  "https://cses.fi/problemset/task/1071"
+ ],
+ "cses:1074": [
+  "Stick Lengths",
+  "CSES",
+  "https://cses.fi/problemset/task/1074"
+ ],
+ "cses:1076": [
+  "Sliding Window Median",
+  "CSES",
+  "https://cses.fi/problemset/task/1076"
+ ],
+ "cses:1079": [
+  "Binomial Coefficients",
+  "CSES",
+  "https://cses.fi/problemset/task/1079"
+ ],
+ "cses:1081": [
+  "Common Divisors",
+  "CSES",
+  "https://cses.fi/problemset/task/1081"
+ ],
+ "cses:1084": [
+  "Apartments",
+  "CSES",
+  "https://cses.fi/problemset/task/1084"
+ ],
+ "cses:1085": [
+  "Array Division",
+  "CSES",
+  "https://cses.fi/problemset/task/1085"
+ ],
+ "cses:1090": [
+  "Ferris Wheel",
+  "CSES",
+  "https://cses.fi/problemset/task/1090"
+ ],
+ "cses:1091": [
+  "Concert Tickets",
+  "CSES",
+  "https://cses.fi/problemset/task/1091"
+ ],
+ "cses:1095": [
+  "Exponentiation",
+  "CSES",
+  "https://cses.fi/problemset/task/1095"
+ ],
+ "cses:1111": [
+  "Longest Palindrome",
+  "CSES",
+  "https://cses.fi/problemset/task/1111"
+ ],
+ "cses:1131": [
+  "Tree Diameter",
+  "CSES",
+  "https://cses.fi/problemset/task/1131"
+ ],
+ "cses:1141": [
+  "Playlist",
+  "CSES",
+  "https://cses.fi/problemset/task/1141"
+ ],
+ "cses:1145": [
+  "Increasing Subsequence",
+  "CSES",
+  "https://cses.fi/problemset/task/1145"
+ ],
+ "cses:1146": [
+  "Counting Bits",
+  "CSES",
+  "https://cses.fi/problemset/task/1146"
+ ],
+ "cses:1158": [
+  "Book Shop",
+  "CSES",
+  "https://cses.fi/problemset/task/1158"
+ ],
+ "cses:1164": [
+  "Room Allocation",
+  "CSES",
+  "https://cses.fi/problemset/task/1164"
+ ],
+ "cses:1192": [
+  "Counting Rooms",
+  "CSES",
+  "https://cses.fi/problemset/task/1192"
+ ],
+ "cses:1193": [
+  "Labyrinth",
+  "CSES",
+  "https://cses.fi/problemset/task/1193"
+ ],
+ "cses:1195": [
+  "Flight Discount",
+  "CSES",
+  "https://cses.fi/problemset/task/1195"
+ ],
+ "cses:1619": [
+  "Restaurant Customers",
+  "CSES",
+  "https://cses.fi/problemset/task/1619"
+ ],
+ "cses:1620": [
+  "Factory Machines",
+  "CSES",
+  "https://cses.fi/problemset/task/1620"
+ ],
+ "cses:1621": [
+  "Distinct Numbers",
+  "CSES",
+  "https://cses.fi/problemset/task/1621"
+ ],
+ "cses:1622": [
+  "Creating Strings",
+  "CSES",
+  "https://cses.fi/problemset/task/1622"
+ ],
+ "cses:1623": [
+  "Apple Division",
+  "CSES",
+  "https://cses.fi/problemset/task/1623"
+ ],
+ "cses:1624": [
+  "Chessboard and Queens",
+  "CSES",
+  "https://cses.fi/problemset/task/1624"
+ ],
+ "cses:1629": [
+  "Movie Festival",
+  "CSES",
+  "https://cses.fi/problemset/task/1629"
+ ],
+ "cses:1630": [
+  "Tasks and Deadlines",
+  "CSES",
+  "https://cses.fi/problemset/task/1630"
+ ],
+ "cses:1633": [
+  "Dice Combinations",
+  "CSES",
+  "https://cses.fi/problemset/task/1633"
+ ],
+ "cses:1634": [
+  "Minimizing Coins",
+  "CSES",
+  "https://cses.fi/problemset/task/1634"
+ ],
+ "cses:1635": [
+  "Coin Combinations I",
+  "CSES",
+  "https://cses.fi/problemset/task/1635"
+ ],
+ "cses:1638": [
+  "Grid Paths I",
+  "CSES",
+  "https://cses.fi/problemset/task/1638"
+ ],
+ "cses:1639": [
+  "Edit Distance",
+  "CSES",
+  "https://cses.fi/problemset/task/1639"
+ ],
+ "cses:1640": [
+  "Sum of Two Values",
+  "CSES",
+  "https://cses.fi/problemset/task/1640"
+ ],
+ "cses:1641": [
+  "Sum of Three Values",
+  "CSES",
+  "https://cses.fi/problemset/task/1641"
+ ],
+ "cses:1645": [
+  "Nearest Smaller Values",
+  "CSES",
+  "https://cses.fi/problemset/task/1645"
+ ],
+ "cses:1646": [
+  "Static Range Sum Queries",
+  "CSES",
+  "https://cses.fi/problemset/task/1646"
+ ],
+ "cses:1647": [
+  "Static Range Minimum Queries",
+  "CSES",
+  "https://cses.fi/problemset/task/1647"
+ ],
+ "cses:1648": [
+  "Dynamic Range Sum Queries",
+  "CSES",
+  "https://cses.fi/problemset/task/1648"
+ ],
+ "cses:1649": [
+  "Dynamic Range Minimum Queries",
+  "CSES",
+  "https://cses.fi/problemset/task/1649"
+ ],
+ "cses:1651": [
+  "Range Update Queries",
+  "CSES",
+  "https://cses.fi/problemset/task/1651"
+ ],
+ "cses:1652": [
+  "Forest Queries",
+  "CSES",
+  "https://cses.fi/problemset/task/1652"
+ ],
+ "cses:1653": [
+  "Elevator Rides",
+  "CSES",
+  "https://cses.fi/problemset/task/1653"
+ ],
+ "cses:1655": [
+  "Maximum Xor Subarray",
+  "CSES",
+  "https://cses.fi/problemset/task/1655"
+ ],
+ "cses:1661": [
+  "Subarray Sums II",
+  "CSES",
+  "https://cses.fi/problemset/task/1661"
+ ],
+ "cses:1662": [
+  "Subarray Divisibility",
+  "CSES",
+  "https://cses.fi/problemset/task/1662"
+ ],
+ "cses:1667": [
+  "Message Route",
+  "CSES",
+  "https://cses.fi/problemset/task/1667"
+ ],
+ "cses:1671": [
+  "Shortest Routes I",
+  "CSES",
+  "https://cses.fi/problemset/task/1671"
+ ],
+ "cses:1672": [
+  "Shortest Routes II",
+  "CSES",
+  "https://cses.fi/problemset/task/1672"
+ ],
+ "cses:1674": [
+  "Subordinates",
+  "CSES",
+  "https://cses.fi/problemset/task/1674"
+ ],
+ "cses:1675": [
+  "Road Reparation",
+  "CSES",
+  "https://cses.fi/problemset/task/1675"
+ ],
+ "cses:1676": [
+  "Road Construction",
+  "CSES",
+  "https://cses.fi/problemset/task/1676"
+ ],
+ "cses:1679": [
+  "Course Schedule",
+  "CSES",
+  "https://cses.fi/problemset/task/1679"
+ ],
+ "cses:1680": [
+  "Longest Flight Route",
+  "CSES",
+  "https://cses.fi/problemset/task/1680"
+ ],
+ "cses:1681": [
+  "Game Routes",
+  "CSES",
+  "https://cses.fi/problemset/task/1681"
+ ],
+ "cses:1683": [
+  "Planets and Kingdoms",
+  "CSES",
+  "https://cses.fi/problemset/task/1683"
+ ],
+ "cses:1690": [
+  "Hamiltonian Flights",
+  "CSES",
+  "https://cses.fi/problemset/task/1690"
+ ],
+ "cses:1691": [
+  "Mail Delivery",
+  "CSES",
+  "https://cses.fi/problemset/task/1691"
+ ],
+ "cses:1713": [
+  "Counting Divisors",
+  "CSES",
+  "https://cses.fi/problemset/task/1713"
+ ],
+ "cses:1731": [
+  "Word Combinations",
+  "CSES",
+  "https://cses.fi/problemset/task/1731"
+ ],
+ "cses:1732": [
+  "Finding Borders",
+  "CSES",
+  "https://cses.fi/problemset/task/1732"
+ ],
+ "cses:1753": [
+  "String Matching",
+  "CSES",
+  "https://cses.fi/problemset/task/1753"
+ ],
+ "cses:2168": [
+  "Nested Ranges Check",
+  "CSES",
+  "https://cses.fi/problemset/task/2168"
+ ],
+ "cses:2216": [
+  "Collecting Numbers",
+  "CSES",
+  "https://cses.fi/problemset/task/2216"
+ ],
+ "cses:3220": [
+  "Sliding Window Sum",
+  "CSES",
+  "https://cses.fi/problemset/task/3220"
+ ],
+ "cses:3221": [
+  "Sliding Window Minimum",
+  "CSES",
+  "https://cses.fi/problemset/task/3221"
+ ],
+ "cses:3222": [
+  "Sliding Window Distinct Values",
+  "CSES",
+  "https://cses.fi/problemset/task/3222"
+ ],
+ "cses:3359": [
+  "Minimal Grid Path",
+  "CSES",
+  "https://cses.fi/problemset/task/3359"
+ ],
+ "cses:3403": [
+  "Longest Common Subsequence",
+  "CSES",
+  "https://cses.fi/problemset/task/3403"
+ ],
+ "hr:2d-array": [
+  "2D Array - DS",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/2d-array/problem"
+ ],
+ "hr:balanced-brackets": [
+  "Balanced Brackets",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/balanced-brackets/problem"
+ ],
+ "hr:binary-search-tree-lowest-common-ancestor": [
+  "Binary Search Tree : Lowest Common Ancestor",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem"
+ ],
+ "hr:components-in-graph": [
+  "Components in a graph",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/components-in-graph/problem"
+ ],
+ "hr:contacts": [
+  "Contacts",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/contacts/problem"
+ ],
+ "hr:ctci-bfs-shortest-reach": [
+  "BFS: Shortest Reach in a Graph",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-bfs-shortest-reach/problem"
+ ],
+ "hr:ctci-comparator-sorting": [
+  "Sorting: Comparator",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-comparator-sorting/problem"
+ ],
+ "hr:ctci-ice-cream-parlor": [
+  "Hash Tables: Ice Cream Parlor",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-ice-cream-parlor/problem"
+ ],
+ "hr:ctci-is-binary-search-tree": [
+  "Trees: Is This a Binary Search Tree?",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-is-binary-search-tree/problem"
+ ],
+ "hr:ctci-linked-list-cycle": [
+  "Linked Lists: Detect a Cycle",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-linked-list-cycle/problem"
+ ],
+ "hr:ctci-merge-sort": [
+  "Merge Sort: Counting Inversions",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-merge-sort/problem"
+ ],
+ "hr:ctci-queue-using-two-stacks": [
+  "Queues: A Tale of Two Stacks",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-queue-using-two-stacks/problem"
+ ],
+ "hr:ctci-ransom-note": [
+  "Hash Tables: Ransom Note",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/ctci-ransom-note/problem"
+ ],
+ "hr:find-the-merge-point-of-two-joined-linked-lists": [
+  "Find Merge Point of Two Lists",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem"
+ ],
+ "hr:flipping-bits": [
+  "Flipping bits",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/flipping-bits/problem"
+ ],
+ "hr:friend-circle-queries": [
+  "Friend Circle Queries",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/friend-circle-queries/problem"
+ ],
+ "hr:largest-rectangle": [
+  "Largest Rectangle",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/largest-rectangle/problem"
+ ],
+ "hr:lonely-integer": [
+  "Lonely Integer",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/lonely-integer/problem"
+ ],
+ "hr:luck-balance": [
+  "Luck Balance",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/luck-balance/problem"
+ ],
+ "hr:maximum-xor": [
+  "Maximum Xor",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/maximum-xor/problem"
+ ],
+ "hr:minimum-time-required": [
+  "Minimum Time Required",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/minimum-time-required/problem"
+ ],
+ "hr:pairs": [
+  "Pairs",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/pairs/problem"
+ ],
+ "hr:qheap1": [
+  "QHEAP1",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/qheap1/problem"
+ ],
+ "hr:reverse-a-doubly-linked-list": [
+  "Reverse a doubly linked list",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/reverse-a-doubly-linked-list/problem"
+ ],
+ "hr:tree-height-of-a-binary-tree": [
+  "Tree: Height of a Binary Tree",
+  "HackerRank",
+  "https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem"
+ ]
+}

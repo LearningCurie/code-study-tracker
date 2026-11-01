@@ -257,8 +257,12 @@
       const li = t.closest(".it");
       if (t.open) {
         fill(li);
-        // One lesson open at a time keeps each session focused.
+        // One lesson open at a time keeps each session focused. Closing a lesson above this one would pull the page
+        // up, so scroll by the same amount: the header you clicked stays put and the lesson opens below it.
+        const sum = t.querySelector("summary"), top = sum.getBoundingClientRect().top;
         document.querySelectorAll(".lz[open]").forEach(o => { if (o !== t) o.open = false; });
+        const shift = sum.getBoundingClientRect().top - top;
+        if (Math.abs(shift) > 1) window.scrollBy(0, shift);
         history.replaceState(null, "", "#" + li.id);
         remember(D.modules[byId.get(li.dataset.id).mi]);
       }

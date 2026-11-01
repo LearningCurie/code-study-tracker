@@ -16,12 +16,12 @@ window.STUDY_TRACKS = {
   "unit": "confident"
  },
  "dsa-status": {
-  "first": "Arrays and hashing",
+  "first": "Solving problems you have not seen",
   "href": "./dsa.html",
-  "title": "DSA problem tracker",
-  "topics": 34,
-  "total": 899,
-  "unit": "solved"
+  "title": "Data structures and algorithms: a field guide",
+  "topics": 55,
+  "total": 1257,
+  "unit": "done"
  },
  "math-status": {
   "first": "Refresher: notation, functions and algebra",
