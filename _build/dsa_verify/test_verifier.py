@@ -73,27 +73,27 @@ class TestExampleRunner(unittest.TestCase):
                     build_dsa_guide.Problems()
 
     def test_strict_build_rejects_bad_card_before_writing(self):
-        module = {
-            "key": "test", "stage": "test", "bank": [],
-            "items": [{"id": "l:test", "tag": ["test", "Test"], "p": []}],
-            "practice": [{"id": "1", "tier": "core", "pattern": "test"}],
-            "cards": {"1": {"md": "## The problem\nIncomplete.", "time": None}},
-            "cards_name": "test.cards.md",
-        }
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            with patch.object(build_dsa_guide, "HERE", root / "_build"), \
-                 patch.object(build_dsa_guide, "load", return_value=([module], [])), \
-                 patch.object(build_dsa_guide, "old_bank", return_value={}), \
-                 patch.object(build_dsa_guide, "Problems") as problems, \
-                 patch.object(dsa_guide, "TRACK", {"contentDir": "lessons"}), \
-                 patch.object(dsa_guide, "STAGES", [{"key": "test"}]), \
-                 redirect_stdout(StringIO()):
-                problems.return_value.known.return_value = True
-                problems.return_value.record.return_value = ["test", "M"]
-                with self.assertRaises(SystemExit):
-                    build_dsa_guide.build(strict=True)
-            self.assertFalse((root / "lessons").exists())
+        for cards in ({}, {"1": {"md": "## The problem\nIncomplete.", "time": None}}):
+            with self.subTest(cards=cards), tempfile.TemporaryDirectory() as directory:
+                module = {
+                    "key": "test", "stage": "test", "bank": [],
+                    "items": [{"id": "l:test", "tag": ["test", "Test"], "p": []}],
+                    "practice": [{"id": "1", "tier": "core", "pattern": "test"}],
+                    "cards": cards, "cards_name": "test.cards.md",
+                }
+                root = Path(directory)
+                with patch.object(build_dsa_guide, "HERE", root / "_build"), \
+                     patch.object(build_dsa_guide, "load", return_value=([module], [])), \
+                     patch.object(build_dsa_guide, "old_bank", return_value={}), \
+                     patch.object(build_dsa_guide, "Problems") as problems, \
+                     patch.object(dsa_guide, "TRACK", {"contentDir": "lessons"}), \
+                     patch.object(dsa_guide, "STAGES", [{"key": "test"}]), \
+                     redirect_stdout(StringIO()):
+                    problems.return_value.known.return_value = True
+                    problems.return_value.record.return_value = ["test", "M"]
+                    with self.assertRaises(SystemExit):
+                        build_dsa_guide.build(strict=True)
+                self.assertFalse((root / "lessons").exists())
 
 
 if __name__ == "__main__":

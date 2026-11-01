@@ -531,6 +531,8 @@ def build(strict=False):
                 diff = P.record(p["id"])[1] if p["id"].isdigit() else "M"
                 visible, hidden, _ = card_parts(p["id"], card, diff, m["cards_name"], problems)
                 m["rendered_cards"][p["id"]] = (visible, hidden)
+            else:
+                problems.append(f"{m['key']}: problem {p['id']} has no full solution card")
     for p in problems:
         print("WARN", p)
     if strict and problems:

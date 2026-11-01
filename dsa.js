@@ -49,7 +49,7 @@
   const builds = order.filter(it => it.k === "build");
   const practiced = [...probs.values()].filter(p => p.tier !== "bank");
   const byPattern = new Map();
-  practiced.forEach(p => { if (D.tags[p.pat]) (byPattern.get(p.pat) || byPattern.set(p.pat, []).get(p.pat)).push(p.pid); });
+  practiced.forEach(p => { if (p.tier !== "mixed" && D.tags[p.pat]) (byPattern.get(p.pat) || byPattern.set(p.pat, []).get(p.pat)).push(p.pid); });
   const rec = pid => D.problems[pid];
   const isLc = pid => rec(pid).length === 6;
   const pdiff = pid => isLc(pid) ? rec(pid)[1] : "X";
@@ -96,14 +96,14 @@
   };
   function probRow(pid) {
     const p = probs.get(pid), d = pdiff(pid), r = rec(pid);
-    const search = esc((pid + " " + r[0] + " " + D.modules[p.mi].name + " " + (D.tags[p.pat] ? D.tags[p.pat][0] : "")).toLowerCase());
+    const search = esc((pid + " " + r[0] + " " + D.modules[p.mi].name + " " + (p.tier !== "mixed" && D.tags[p.pat] ? D.tags[p.pat][0] : "")).toLowerCase());
     const head = `<span class="df df-${d}">${esc(isLc(pid) ? DIFF[d] : r[1])}</span>${TIER[p.tier] ? `<span class="tier t-${p.tier}">${TIER[p.tier]}</span>` : ""}`;
     if (p.tier === "bank") {
       return `<li class="pr plain" id="${panchor(pid)}" data-id="${esc(pid)}" data-k="prob" data-f="${d}" data-s="${search}"><div class="ph">` +
         `<span class="pt">${isLc(pid) ? `<span class="nb">${esc(pid)}</span>` : ""}${A(original(pid), r[0], "pn")}${head}</span>` +
         `<span class="lk">${deeper(pid).map(([t, h]) => A(h, t.split(":")[0].replace(/ \(doocs\)$/, ""))).join("")}</span>${statusButtons(pid)}</div></li>`;
     }
-    return `<li class="pr" id="${panchor(pid)}" data-id="${esc(pid)}" data-k="prob" data-f="${d}" data-pat="${esc(p.pat)}" data-s="${search}"><div class="ph">` +
+    return `<li class="pr" id="${panchor(pid)}" data-id="${esc(pid)}" data-k="prob" data-f="${d}" data-pat="${esc(p.tier === "mixed" ? "" : p.pat)}" data-s="${search}"><div class="ph">` +
       `<button type="button" class="px" aria-expanded="false" aria-controls="pb-${panchor(pid)}"><span class="chev" aria-hidden="true"></span>${isLc(pid) ? `<span class="nb">${esc(pid)}</span>` : ""}<span class="pn">${esc(r[0])}</span></button>` +
       `<span class="pmeta">${head}${patChip(pid)}<span class="tm">${pmins(pid)} min</span></span>${statusButtons(pid)}</div>` +
       `<div class="pbody" id="pb-${panchor(pid)}" hidden></div></li>`;
@@ -257,7 +257,7 @@
     const next = it.k === "build" ? "Done" : "Done, next card";
     return `<div class="lc">${html}</div>${practiseList(it)}${src}<div class="lf"><button type="button" class="btn pri nx">${next} <span aria-hidden="true">&rarr;</span></button><button type="button" class="btn st" data-c="2" aria-pressed="false">Needs practice</button><button type="button" class="btn st" data-c="3" aria-pressed="false">Revisit later</button><button type="button" class="btn quiet cx">Close</button></div>`;
   }
-  const failed = '<p class="ld" role="alert">This could not be loaded. Check your connection and <button type="button" class="linkish rt">try again</button>.</p>';
+  const failed = '<p class="ld" role="alert">This content could not be loaded or is incomplete. Check your connection and <button type="button" class="linkish rt">try again</button>.</p>';
   function fill(li) {
     const it = byId.get(li.dataset.id), b = li.querySelector(".lb"), key = D.modules[it.mi].key;
     if (!b.dataset.ok) {
@@ -266,8 +266,14 @@
         loadModule(it.mi).then(() => fill(li), () => { b.innerHTML = failed; });
         return;
       }
+      const html = content.get(key)[it.id];
+      if (typeof html !== "string") {
+        content.delete(key); loading.delete(key);
+        b.innerHTML = failed;
+        return;
+      }
       // Card HTML is generated at build time by mdlite.py, which escapes all text and allows only https links.
-      b.innerHTML = body(it, content.get(key)[it.id] || "");
+      b.innerHTML = body(it, html);
       b.dataset.ok = "1";
       enhance(b);
       milestoneBoxes(b, it);
@@ -282,11 +288,17 @@
       loadModule(p.mi).then(() => fillProb(li), () => { b.innerHTML = failed; });
       return;
     }
+    const html = content.get(key)["p:" + pid];
+    if (typeof html !== "string") {
+      content.delete(key); loading.delete(key);
+      b.innerHTML = failed;
+      return;
+    }
     const orig = `<p class="po">${A(original(pid), (isLc(pid) ? "Open LeetCode " + pid : "Open the original on " + rec(pid)[1]) + " (free) ↗")} <span>to read the official statement and submit.</span></p>`;
     const links = `<aside class="src"><h4>Go deeper (optional)</h4><ul>${deeper(pid).map(([t, h]) => { const [a, ...n] = t.split(": "); return `<li>${A(h, a)}${n.length ? `<span> · ${esc(n.join(": "))}</span>` : ""}</li>`; }).join("")}</ul></aside>`;
     // Problem cards are build output from mdlite.py (escaped text, https links only), like card bodies.
     const note = p.card ? "" : '<p class="pnote">Full in-page solution not yet available. Use the hints below and the reference links after your attempt.</p>';
-    b.innerHTML = orig + note + (content.get(key)["p:" + pid] || "") + links +
+    b.innerHTML = orig + note + html + links +
       `<div class="lf"><span class="lfn">How did it go?</span>${statusButtons(pid)}<button type="button" class="btn quiet pcx">Close</button></div>`;
     b.dataset.ok = "1";
     enhance(b);
@@ -613,6 +625,16 @@
       progress.set(mck.dataset.mid, statusOf(mck.dataset.mid) === 1 ? 0 : 1);
       return;
     }
+    const retry = e.target.closest(".rt");
+    if (retry) {
+      const problem = retry.closest(".pr");
+      if (problem) fillProb(problem);
+      else {
+        const item = retry.closest(".it");
+        if (item) fill(item);
+      }
+      return;
+    }
     const li = e.target.closest(".it");
     if (!li) return;
     const id = li.dataset.id, s = statusOf(id);
@@ -632,8 +654,6 @@
       li.querySelector(".lz").open = false;
       if (!atTop(li)) li.scrollIntoView({ block: "nearest" });
       li.querySelector("summary").focus({ preventScroll: true });
-    } else if (e.target.closest(".rt")) {
-      fill(li);
     }
   });
   // Escape closes the card that has focus and returns focus to its header.
