@@ -138,7 +138,7 @@
       `<p class="pnote">Extra repetitions from the original tracker, still tracked. They do not have in-page cards yet: use them for second passes once the ladder above is solid.</p>` +
       byDiff(m.bank) + `</details>` : "";
     return `<section class="grp prs" data-k="prob"><h4 class="gh">${sets.length ? "Mixed review sets" : "Problems"} <span class="n"></span></h4>` +
-      (ladder.length ? `<p class="pnote">Solve first, check after. Open the original statement and try it in your editor; use the hints one at a time only when stuck. Some full in-page solutions are still being prepared.${rule}</p>${byDiff(ladder)}` : "") +
+      (ladder.length ? `<p class="pnote">Solve first, check after. Read the card and original statement, then try it in your editor. Use the hints one at a time if stuck and open the solution after an honest attempt.${rule}</p>${byDiff(ladder)}` : "") +
       (mixed ? `<p class="pnote">No topic labels: deciding which idea applies is the skill being trained. Each set opens when you finish the module it follows; Today's session offers one at a time. The last hint names the pattern.${rule}</p>${mixed}` : "") + bank + `</section>`;
   }
   const module = (m, mi) => `<details class="mod" id="m-${esc(m.key)}" data-k="${esc(m.key)}"><summary><span class="mn">${mi + 1}</span><span class="mt"><h3>${esc(m.name)}</h3><span class="ms">${esc(m.summary)}</span><span class="mm">${esc(modMeta(m))}</span></span><span class="mc"></span><span class="pb"><i></i></span></summary>` +

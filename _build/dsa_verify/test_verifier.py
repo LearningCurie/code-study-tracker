@@ -49,6 +49,18 @@ class TestExampleRunner(unittest.TestCase):
         self.assertTrue(any("video without" in note for note in lint_dsa.link_notes(url + "&start=90", "Watch: 35 min")))
         self.assertEqual(lint_dsa.link_notes(url + "&t=90", "Watch the marked segment"), [])
 
+    def test_mixed_patterns_are_hidden_before_last_hint(self):
+        modules, warnings = build_dsa_guide.load(build_dsa_guide.HERE / "dsa")
+        self.assertEqual(warnings, [])
+        mixed = next(module for module in modules if module["key"] == "mixed")
+        for problem in mixed["practice"]:
+            with self.subTest(problem=problem["id"]):
+                pattern = problem["pattern"].casefold()
+                visible = mixed["cards"][problem["id"]]["md"].split("## Brute force", 1)[0].casefold()
+                self.assertNotIn(pattern, visible)
+                self.assertNotIn(pattern, problem["cue"].casefold())
+                self.assertNotIn(pattern, problem["hint"].casefold())
+
     def test_offline_problem_catalog_preserves_records_and_urls(self):
         catalog = {
             "1": ["Example", "E", "example", "", "", 0],

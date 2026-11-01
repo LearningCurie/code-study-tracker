@@ -681,8 +681,11 @@ test("the DSA guide matches its template, keeps every old problem id once, and i
   const old = JSON.parse(fs.readFileSync(path.join(__dirname, "dsa_old_ids.json"), "utf8"));
   assert.equal(old.length, 899);
   for (const id of old) assert.ok(placed.includes(id), "old problem " + id + " is still on the page");
-  assert.match(value.subtitle, /work-in-progress/i);
-  assert.match(value.subtitle, /not yet complete/i);
+  assert.match(value.subtitle, /Later lists/i);
+  const practice = value.modules.flatMap(m => m.practice);
+  assert.equal(practice.length, 376, "all curated practice problems are present");
+  assert.ok(practice.every(p => p.card === 1), "every curated practice problem has a full solution card");
+  assert.equal(value.modules.reduce((n, m) => n + m.bank.length, 0), 539, "additional tracked problems remain in Later lists");
   assert.deepEqual(value.stages.flatMap(stage => stage.modules), value.modules.map((_, i) => i), "modules follow stage order");
   for (const stage of value.stages) {
     assert.ok(stage.modules.some(i => value.modules[i].items.some(item => item.k === "build")), stage.key + " has a project");

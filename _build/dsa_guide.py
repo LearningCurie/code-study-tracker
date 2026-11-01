@@ -2,16 +2,15 @@
 TRACK = dict(
     file="dsa.html", storageKey="dsa-status", contentDir="dsa-lessons",
     title="Data structures and algorithms: a field guide",
-    subtitle=("A work-in-progress guide to problem-solving patterns and the structures inside real software. "
-              "Lessons, projects and selected full problem solutions are available; other solution cards are not yet complete. "
-              "New lesson references have not all been independently verified."),
+    subtitle=("A field guide to problem-solving patterns and the structures inside real software, with lessons, projects "
+              "and worked solutions for curated practice. The Later lists preserve extra tracked problems with external references."),
     searchHint="Search cards and problems (name or number)",
     projects=("Build a project alongside each stage, then combine the ideas in the mastery capstones. "
               "Each project includes a specification, measurable checks and one-to-two-hour milestones."),
     routine=[
         "Press <b>Start</b>. Today's session lists about an hour of work: new cards, one problem on an idea you have met, and one review item. It ticks off as you go.",
         "<b>Cards</b> teach one idea in 10 to 20 minutes, right on this page. Answer <b>Check yourself</b> before revealing, then press <b>Done, next card</b>.",
-        "<b>Problems</b>: open the original statement, solve it in your editor and use the hints if needed. Full in-page solutions are not yet available for every problem.",
+        "<b>Problems</b>: read the curated card and original statement, solve it in your editor, then open the hints or hidden solution when needed. Later lists hold extra repetitions with external references.",
         "Mark problems <b>Solved</b> (you wrote brute force and optimal), <b>Brute only</b> or <b>Stuck</b>. Anything not solved, or marked Needs practice, comes back for review after three days.",
         "<b>Projects</b> have independent milestones; tick them as you build. Go deeper links are optional.",
     ],
