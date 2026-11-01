@@ -17,8 +17,8 @@ traps:
 
 === build | Capstone: searchable field notes | 8-12 h
 goal: Build a local ranked document search pipeline with an LRU query cache.
-link: Keyword search and BM25 | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-keyword-search-and-bm25 | Contrast a production ranking family with the deliberately simpler score here.
-link: OrderedDict | https://docs.python.org/3/library/collections.html#ordereddict-objects | Review ordered operations for a bounded LRU cache.
+link: Keyword search and BM25 | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-keyword-search-and-bm25 | About 12 min: Contrast a production ranking family with the deliberately simpler score here.
+link: OrderedDict | https://docs.python.org/3/library/collections.html#ordereddict-objects | About 5 min: Review ordered operations for a bounded LRU cache.
 
 ## The brief
 Build a single-process field-note search tool. Ingest and replace documents, answer ranked AND queries, and expose counters that explain whether the cache helped. Do not label the toy score BM25.

@@ -40,7 +40,7 @@ further:
 goal: Implement a paged KV-cache allocator with block tables, reference counts and copy-on-write, and explain each part through operating-system virtual memory
 tag: llmserve-paging | Paged KV blocks and block tables
 link: vLLM design docs: automatic prefix caching, data structure | https://docs.vllm.ai/en/latest/design/prefix_caching/#data-structure | 10 min: read 'Data Structure', 'Free' and 'Eviction (LRU)': vLLM's real block objects carry a reference count and linked free-list pointers, the production form of this card's pool
-link: AI guide: PagedAttention and vLLM | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-pagedattention-and-vllm | The user's side of this card: how paging raises throughput, and the vLLM flags that size the KV pool
+link: AI guide: PagedAttention and vLLM | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-pagedattention-and-vllm | About 12 min: The user's side of this card: how paging raises throughput, and the vLLM flags that size the KV pool
 
 > [!key]
 > A request's KV cache grows by one token per decoding step and nobody knows its final length. PagedAttention stores it in fixed-size **blocks** taken from a shared pool on demand, and each sequence keeps a **block table** that maps its logical block i to a physical block anywhere in memory. Blocks carry **reference counts**, so forked sequences share them, and a write to a shared block **copies it first**. Waste falls to at most one partly filled block per sequence: the same trade operating systems made with pages.
@@ -239,7 +239,7 @@ A: Hardly. Every sequence has the same known length, so a contiguous slot per re
 goal: Build a radix-tree prefix cache with node splitting, path locks and LRU eviction of leaves, and compare it with vLLM's chained block hashes
 tag: llmserve-radix | Radix-tree prefix cache with LRU leaves
 link: SGLang source: RadixCache (v0.5.22) | https://github.com/sgl-project/sglang/blob/v0.5.22/python/sglang/srt/mem_cache/radix_cache.py#L552-L580 | 15 min: read evict (lines 552 to 580), then _match_prefix_helper and _split_node further down: the production version of this card's template, with page sizes and priorities added
-link: AI guide: Prefix caching and RadixAttention in servers | https://learningcurie.github.io/code-study-tracker/ai.html#l-l-serving-prefix-caching-and-radixattention-in-servers | The user's side: designing prompts and routing so requests actually hit the cache
+link: AI guide: Prefix caching and RadixAttention in servers | https://learningcurie.github.io/code-study-tracker/ai.html#l-l-serving-prefix-caching-and-radixattention-in-servers | About 12 min: The user's side: designing prompts and routing so requests actually hit the cache
 
 > [!key]
 > Keep every cached token sequence in a **radix tree**: a trie whose edges carry runs of tokens, where siblings start with different tokens. A new prompt walks down from the root, and the depth it reaches is the number of tokens whose KV cache can be reused, found in time proportional to the prompt length however many sequences are cached. Inserting splits an edge where sequences diverge. When memory runs short, evict **leaves** in least-recently-used order, never a node that a running request has **locked**, so shared system prompts near the root survive longest.
@@ -477,7 +477,7 @@ A: To continue a match you know only the next prompt token, not the length or co
 goal: Implement beam search with a size-k min-heap, trace it on a toy model, and choose a length penalty knowing what it changes
 tag: llmserve-beam | Beam search with a size-k heap
 link: Hugging Face Transformers: generation strategies, beam search | https://huggingface.co/docs/transformers/generation_strategies#beam-search | 5 min: when beam search fits (input-grounded tasks such as captioning or speech recognition) and the num_beams switch; the length_penalty entry of GenerationConfig on the text generation page gives the exact length division
-link: AI guide: Sampling, temperature, top-p and friends | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-sampling-temperature-top-p-and-greedy | Greedy decoding from the user's side, and why open-ended chat samples instead of searching
+link: AI guide: Sampling, temperature, top-p and friends | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-sampling-temperature-top-p-and-greedy | About 14 min: Greedy decoding from the user's side, and why open-ended chat samples instead of searching
 
 > [!key]
 > Greedy decoding commits to the single most likely token at every step and can miss a sequence that is more likely overall. **Beam search** keeps the k best partial sequences: at each step it extends every beam by every token, scores the candidates by summed log-probability and keeps the best k with a **size-k min-heap**. Finished hypotheses leave the beam. Each token adds a negative log-probability, so raw scores favour short outputs; comparing **log P / length^α** corrects for that.
@@ -642,7 +642,7 @@ A: Multiplying hundreds of probabilities below one underflows below the smallest
 goal: Implement temperature, top-k and nucleus (top-p) sampling with a heap, prefix sums and binary search, and state the cost of each step for a 100,000-token vocabulary
 tag: llmserve-topp | Top-k and nucleus sampling
 link: Holtzman et al. 2020, nucleus sampling | https://arxiv.org/abs/1904.09751 | 15 min: §3.1 defines the nucleus as the smallest set whose probability reaches p, and §3.2 shows why one fixed k fails on both flat and peaked distributions
-link: AI guide: Sampling, temperature, top-p and friends | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-sampling-temperature-top-p-and-greedy | The user's view: which settings to choose per use case, plus min-p and repetition penalties
+link: AI guide: Sampling, temperature, top-p and friends | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-sampling-temperature-top-p-and-greedy | About 14 min: The user's view: which settings to choose per use case, plus min-p and repetition penalties
 
 > [!key]
 > Sampling turns V logits into one token. Divide the logits by the **temperature** and apply a softmax, subtracting the maximum first; **top-k** keeps the k most likely tokens, found with a size-k heap or a linear-time partition; **top-p** keeps the smallest set of most likely tokens whose probabilities reach p, found by sorting, taking **prefix sums** and **binary searching** for p. The draw itself is one more binary search: take u uniform in [0, 1) and find where u × total falls among the cumulative sums.
@@ -812,7 +812,7 @@ A: The index refers to a position in the sorted list, not a token id, because th
 goal: Simulate an iteration-level scheduler with a waiting queue, a per-step token budget, a KV block limit and preemption by recomputation, and relate each rule to vLLM's scheduler
 tag: llmserve-sched | Iteration-level scheduling with preemption
 link: Yu et al. 2022, Orca (OSDI) | https://www.usenix.org/conference/osdi22/presentation/yu | 20 min in the PDF linked on the page: §3 'S1: Iteration-level scheduling', then §4.2 and Algorithm 1; note that Orca reserves each request's maximum KV space at admission, which paging later removed
-link: AI guide: Continuous batching | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-continuous-batching | The user's side: chunked prefill, load-testing a server and tuning max-num-batched-tokens
+link: AI guide: Continuous batching | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-continuous-batching | About 12 min: The user's side: chunked prefill, load-testing a server and tuning max-num-batched-tokens
 
 > [!key]
 > A server runs the model one step at a time over a batch, and **continuous batching** (Orca's iteration-level scheduling) rebuilds that batch at every step. Underneath are four structures: a FIFO **waiting queue**, a **running list** in admission order, a per-step **token budget** shared by decode tokens and prefill chunks, and a pool of KV **blocks**. Running requests are planned first, then waiting ones are admitted in order while budget and blocks last. When a running request cannot get a block, the newest running request is **preempted**: its blocks are freed and it returns to the front of the queue, to be recomputed later.
@@ -1030,7 +1030,7 @@ A: Long new prompts take the token budget and the free blocks, so requests that 
 
 === lab | Measure prefix-cache reuse on simulated chat traffic | 50 min
 goal: Replay multi-turn chat traffic that shares system prompts through your radix-tree cache, and measure how capacity, eviction granularity and scheduling order change token reuse
-link: Zheng et al. 2024, SGLang | https://arxiv.org/abs/2312.07104 | §3 'Cache-aware scheduling' defines the hit rate you measure here and the longest-shared-prefix-first order you test in step 5
+link: Zheng et al. 2024, SGLang | https://arxiv.org/abs/2312.07104 | About 5 min: §3 'Cache-aware scheduling' defines the hit rate you measure here and the longest-shared-prefix-first order you test in step 5
 
 You will build the workload, replay it through the `RadixCache` from the radix-tree card, and compare it with a vLLM-style block cache and with two scheduling orders. Everything is seeded, so your numbers should match the ones below exactly if you copy the generator.
 

@@ -17,8 +17,8 @@ traps:
 
 === build | Cancellation-safe task queue | 6-8 h
 goal: Implement a FIFO task queue with keyed cancellation and measurable container costs.
-link: Hash table load factor | https://en.wikipedia.org/wiki/Hash_table#Load_factor | Review expected lookup costs and resizing.
-link: CPython list implementation | https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython | Contrast an array-backed list with a queue.
+link: Hash table load factor | https://en.wikipedia.org/wiki/Hash_table#Load_factor | About 5 min: Review expected lookup costs and resizing.
+link: CPython list implementation | https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython | About 5 min: Contrast an array-backed list with a queue.
 
 ## The brief
 Create an in-memory scheduler for a single process. It should return active tasks in arrival order even when tasks are cancelled and identifiers reused. Persistence and concurrency are out of scope.

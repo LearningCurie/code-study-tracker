@@ -17,8 +17,8 @@ traps:
 
 === build | Capstone: parallel build planner | 8-12 h
 goal: Plan a dependency graph and calculate its earliest finish and a critical path.
-link: Graph representation | https://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf#page=6 | Model tasks and prerequisite edges.
-link: Dynamic programming | https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf#page=2 | Treat each task's earliest finish as a DAG subproblem.
+link: Graph representation | https://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf#page=6 | About 5 min: Model tasks and prerequisite edges.
+link: Dynamic programming | https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf#page=2 | About 5 min: Treat each task's earliest finish as a DAG subproblem.
 
 ## The brief
 Plan an idealised build with unlimited workers. Every task has a duration and prerequisites; independent tasks may run simultaneously. A cycle makes the plan invalid. There are no resource limits, retries or network delays.

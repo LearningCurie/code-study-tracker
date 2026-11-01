@@ -39,7 +39,7 @@ further:
 goal: Train BPE by hand and in code on a small word-frequency table, and explain why what it learns is an ordered list of merge rules
 tag: tokens-bpe | BPE merge rules
 link: Sennrich, Haddow and Birch 2016 | https://arxiv.org/abs/1508.07909 | 10 min: §3.2 and Algorithm 1, the original subword BPE with its end-of-word symbol and a 20-line Python learner on the same toy dictionary as this card
-link: AI guide: Tokens and tokenisation | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-tokens-and-tokenisation | The user's side: counting tokens, and why code and other languages cost more
+link: AI guide: Tokens and tokenisation | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-tokens-and-tokenisation | About 12 min: The user's side: counting tokens, and why code and other languages cost more
 
 > [!key]
 > BPE starts from single characters (or bytes), counts every adjacent pair of symbols weighted by how often each word occurs, merges the most frequent pair into one new symbol everywhere, records that **merge rule**, and repeats. What it learns is the **ordered list of merges**; the vocabulary is the base symbols plus one new symbol per merge. To tokenise a new word, split it into characters and replay the merges in the same order, so no word is ever unknown and frequent words end up as single tokens.
@@ -869,7 +869,7 @@ A: First check that X really is a single token in M's tokeniser (encode it and c
 
 === lab | Train a byte-level BPE on Pride and Prejudice: naive versus heap | 45 min
 goal: Train byte-level BPE on a public-domain novel with both trainers, confirm identical merges, measure the speed-up, and see how compression grows with the number of merges
-link: Project Gutenberg: Pride and Prejudice, plain text | https://www.gutenberg.org/cache/epub/1342/pg1342.txt | The plain UTF-8 text of eBook 1342, public domain in the USA; strip the licence header and footer as in step 1
+link: Project Gutenberg: Pride and Prejudice, plain text | https://www.gutenberg.org/cache/epub/1342/pg1342.txt | About 5 min: The plain UTF-8 text of eBook 1342, public domain in the USA; strip the licence header and footer as in step 1
 
 You will combine every card of this module: pre-tokenisation, the byte alphabet, both trainers and the heap encoder.
 

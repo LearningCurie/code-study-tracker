@@ -37,8 +37,8 @@ further:
 === primer | What did AlphaDev change in the C++ standard library's sort, and why did it matter? | 10 min
 goal: Explain what AlphaDev discovered, what went into libc++, how it was measured, and what it does not change about sorting
 tag: frontier-sortnet | Sorting networks and the 0-1 principle
-link: Mankowitz et al. 2023, Nature | https://www.nature.com/articles/s41586-023-06004-9#Sec16 | 'Libc++ sort patch' (one paragraph) for what shipped and the measured gains, then 'AlphaDev swap move' with Table 2 for the one-instruction saving
-link: LLVM review D118029 | https://reviews.llvm.org/D118029 | The patch itself: branchless sort3, sort4 and sort5 in libc++'s sort.h, with its benchmarks
+link: Mankowitz et al. 2023, Nature | https://www.nature.com/articles/s41586-023-06004-9#Sec16 | About 5 min: 'Libc++ sort patch' (one paragraph) for what shipped and the measured gains, then 'AlphaDev swap move' with Table 2 for the one-instruction saving
+link: LLVM review D118029 | https://reviews.llvm.org/D118029 | About 10 min: The patch itself: branchless sort3, sort4 and sort5 in libc++'s sort.h, with its benchmarks
 
 > [!key]
 > **AlphaDev** (DeepMind; Mankowitz et al., Nature 2023) is a reinforcement-learning agent that writes x86 assembly one instruction at a time and is rewarded for programs that are correct and short or fast. For sorting exactly 3, 4 or 5 numbers it matched or beat human sorting networks (17 instructions against 18 for sort 3, 42 against 46 for sort 5, equal at 28 for sort 4). Reverse-engineered into C++, the routines went into LLVM's libc++, the first change to those sub-routines in over a decade. The paper measured up to 70% faster sorting of length-5 sequences and roughly 1.7% for sequences over 250,000 elements. Big-O did not move: this is a constant factor in the leaves of std::sort.
@@ -150,8 +150,8 @@ A: Every large sort ends in many tiny sorts, so a constant-factor gain there app
 
 === primer | Has Dijkstra's algorithm been beaten? The sorting barrier for shortest paths | 12 min
 goal: State what Duan et al. (2025) and the 2026 follow-up proved, explain the frontier-reduction idea, and explain why Dijkstra is still what you should write
-link: Duan, Mao, Mao, Shu and Yin 2025, technical overview | https://arxiv.org/html/2504.17033v2#S1.SS1.SSS0.Px1 | Two pages: the frontier, why it forces sorting, and how k Bellman-Ford steps plus 'pivots' shrink it
-link: Castro, Clementino and de Freitas 2025 | https://arxiv.org/abs/2511.03007 | The abstract: an implementation tested on graphs of up to 10 million vertices, where Dijkstra stayed 3 to 4 times faster
+link: Duan, Mao, Mao, Shu and Yin 2025, technical overview | https://arxiv.org/html/2504.17033v2#S1.SS1.SSS0.Px1 | About 15 min: Two pages: the frontier, why it forces sorting, and how k Bellman-Ford steps plus 'pivots' shrink it
+link: Castro, Clementino and de Freitas 2025 | https://arxiv.org/abs/2511.03007 | About 5 min: The abstract: an implementation tested on graphs of up to 10 million vertices, where Dijkstra stayed 3 to 4 times faster
 
 > [!key]
 > For directed graphs with real non-negative weights, in the **comparison-addition model** (weights may only be compared and added), Dijkstra's algorithm with a Fibonacci heap takes O(m + n log n). In 2025 Duan, Mao, Mao, Shu and Yin gave a deterministic **O(m log^(2/3) n)** algorithm, the first to beat that bound on sparse directed graphs; in 2026 Duan, Mao, Shu and Yin improved it to O(m sqrt(log n) + sqrt(m n log n log log n)), which is O(m sqrt(log n log log n)) on sparse graphs. These algorithms compute distances without listing vertices in distance order, which is what lets them avoid sorting. Dijkstra, which does produce the order, is optimal for that task, and in practice it is still faster.
@@ -294,8 +294,9 @@ A: The bound is asymptotically better but the measured implementation was 3 to 4
 
 === primer | Can open addressing beat uniform probing without moving keys? Elastic and funnel hashing | 12 min
 goal: State the elastic and funnel hashing bounds precisely, explain the funnel structure, and judge when the asymptotic gain would matter
-link: Farach-Colton, Krapivin and Kuszmaul 2025, introduction | https://arxiv.org/html/2501.02305v2#S1.SS0.SSS0.Px2 | The two theorems, what Yao conjectured, and the matching lower bounds, in two pages
-link: Funnel hashing, section 3 | https://arxiv.org/html/2501.02305v2#S3 | The first page: levels of geometrically shrinking arrays split into buckets of size beta, one attempt per level, and the special overflow array
+link: Farach-Colton, Krapivin and Kuszmaul 2025, introduction | https://arxiv.org/html/2501.02305v2#S1.SS0.SSS0.Px2 | About 15 min: The two theorems, what Yao conjectured, and the matching lower bounds, in two pages
+link: Funnel hashing, section 3 | https://arxiv.org/html/2501.02305v2#S3 | About 5 min: The first page: levels of geometrically shrinking arrays split into buckets of size beta, one attempt per level, and the special overflow array
+link: Krapivin and Kuszmaul 2026: braided cuckoo hashing | https://arxiv.org/abs/2610.33229 | About 5 min: the abstract's worst-case bounds and the conjecture it disproves
 
 > [!key]
 > Insert (1 - δ)n keys into an array of n slots. Each key has a random **probe sequence**, keys never move once placed (**no reordering**), and a key's **probe complexity** is its position in its sequence, which is also what a lookup costs. **Uniform probing** has amortised expected probe complexity Θ(log δ^-1) and worst-case expected O(δ^-1); Yao (1985) proved the first optimal for **greedy** schemes and conjectured the second was too. Farach-Colton, Krapivin and Kuszmaul (2025) built **elastic hashing** (non-greedy): amortised expected O(1) and worst-case expected O(log δ^-1); and **funnel hashing** (greedy): worst-case expected O(log² δ^-1), disproving Yao's conjecture. All bounds come with matching lower bounds.
@@ -320,7 +321,7 @@ Arrays halve in size. During a batch, an insertion may look ahead at a limited n
 
 ### Since then
 
-Bender, Kuszmaul and Zhou (STOC 2025) showed that tables that encode information in the arrangement of elements (non-oblivious open addressing) can support constant-time operations even when completely full. Krapivin and Kuszmaul's braided cuckoo hashing (preprint, October 2026, to appear at SODA 2027) supports load factors up to 1 - ε with queries, insertions and deletions in worst-case O(log ε^-1) time with high probability.
+Bender, Kuszmaul and Zhou (STOC 2025) showed that tables that encode information in the arrangement of elements (non-oblivious open addressing) can support constant-time operations even when completely full. Krapivin and Kuszmaul's braided cuckoo hashing (preprint, October 2026, to appear at SODA 2027) supports load factors up to 1 - ε with queries, insertions and deletions in worst-case O(log ε^-1) time with high probability. Its dynamic cuckoo-style model permits rearrangement, so those bounds should not be read as a direct replacement for the no-reordering bounds above.
 
 ## Cost
 
@@ -447,8 +448,8 @@ A: No. The theorem is asymptotic: with α = 34 levels and buckets of β = 12, a 
 === primer | Can a model replace a B-tree? Learned indexes and what stuck | 10 min
 goal: Build an error-bounded piecewise-linear learned index, explain where its speed comes from, and say where learned indexes have been used
 tag: frontier-learned-index | Error-bounded learned index
-link: Kraska et al. 2018 | https://arxiv.org/abs/1712.01208 | The abstract and section 2 of the PDF: indexes as models of the key distribution (the CDF), and the recursive model index
-link: Marcus et al. 2020, SOSD benchmark | https://arxiv.org/abs/2006.12804 | The abstract and introduction: where learned indexes win (read-only, in-memory, dense arrays) and why (cache misses)
+link: Kraska et al. 2018 | https://arxiv.org/abs/1712.01208 | About 5 min: The abstract and section 2 of the PDF: indexes as models of the key distribution (the CDF), and the recursive model index
+link: Marcus et al. 2020, SOSD benchmark | https://arxiv.org/abs/2006.12804 | About 5 min: The abstract and introduction: where learned indexes win (read-only, in-memory, dense arrays) and why (cache misses)
 
 > [!key]
 > A sorted array's index is a function from key to position, which is n times the key distribution's CDF. Kraska, Beutel, Chi, Dean and Polyzotis (2018) proposed **learning** it: a model predicts a key's position, then a short search in a window around the prediction finishes the job. They reported up to 70% faster lookups than cache-optimised B-trees and an order of magnitude less memory on several real datasets. What stuck: **error-bounded** piecewise-linear indexes such as the PGM-index, updatable designs such as ALEX, a careful benchmark (SOSD) showing wins on read-only in-memory data, and a learned index inside Google's Bigtable.
@@ -586,8 +587,8 @@ A: Start with a B-tree (or a hash table if you only need point lookups). Constan
 === primer | What makes Swiss tables fast, and why did Go 1.24 switch its map to one? | 12 min
 goal: Explain Swiss-table control bytes, group matching, probing and tombstones, implement a small one, and describe Go 1.24's adaptation
 tag: frontier-swiss | Swiss-table probing
-link: Abseil: Swiss Tables design notes | https://abseil.io/about/design/swisstables#metadata-lookup | 'Metadata layout' and 'Metadata lookup': H1 and H2, one control byte per slot, and the SSE code that matches 16 candidates at once
-link: Go blog: Faster Go maps with Swiss Tables | https://go.dev/blog/swisstable#swiss-table | 'Swiss Table' for the 8-slot groups and control words, then 'Incremental growth' for the 1,024-entry tables and extendible hashing
+link: Abseil: Swiss Tables design notes | https://abseil.io/about/design/swisstables#metadata-lookup | About 10 min: 'Metadata layout' and 'Metadata lookup': H1 and H2, one control byte per slot, and the SSE code that matches 16 candidates at once
+link: Go blog: Faster Go maps with Swiss Tables | https://go.dev/blog/swisstable#swiss-table | About 5 min: 'Swiss Table' for the 8-slot groups and control words, then 'Incremental growth' for the 1,024-entry tables and extendible hashing
 
 > [!key]
 > A **Swiss table** (designed at Google, presented in 2017, open-sourced in Abseil in 2018) is open addressing with a separate array of one-byte **control** entries per slot: empty, deleted, or the low 7 bits of the key's hash (**H2**). The remaining bits (**H1**) choose where probing starts. A lookup compares H2 with every control byte of a **group** of slots in one SIMD instruction (16 slots with SSE2 in Abseil, 8 in Go) and compares full keys only for matching bytes; an empty byte in the group ends the search. Probing a whole group at once makes long probe sequences cheap, so the table can run at 7/8 load. Rust's HashMap has used a Swiss-table design since 1.36, and Go 1.24 rebuilt its built-in map on one.
@@ -763,8 +764,8 @@ A: Growth latency. A single Swiss table doubles all at once, copying every entry
 === primer | Which sorting algorithms do standard libraries use now, and why? | 12 min
 goal: Name the current default sorts in Rust, Go and CPython, explain what each optimises, and implement powersort's merge policy on run lengths
 tag: frontier-powersort | Powersort merge policy
-link: CPython listsort.txt | https://github.com/python/cpython/blob/main/Objects/listsort.txt | 'The Merge Pattern' (powersort and its 'power' of a run boundary) and the minrun section (Pochmann's balanced scheme)
-link: Rust std: slice::sort_unstable | https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable | 'Current implementation' for ipnsort; the same section under slice::sort describes driftsort
+link: CPython listsort.txt | https://github.com/python/cpython/blob/main/Objects/listsort.txt | About 10 min: 'The Merge Pattern' (powersort and its 'power' of a run boundary) and the minrun section (Pochmann's balanced scheme)
+link: Rust std: slice::sort_unstable | https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable | About 10 min: 'Current implementation' for ipnsort; the same section under slice::sort describes driftsort
 
 > [!key]
 > Standard library sorts are now **hybrid and adaptive**. Unstable sorts build on **pattern-defeating quicksort** (pdqsort, Orson Peters): quicksort with a heapsort fallback and pattern detection. Go's sort package switched to it in 1.19. Rust 1.81 replaced both of its sorts: `sort_unstable` is now **ipnsort** and `sort` is **driftsort** (Bergdoll and Peters), and both may now panic on an ordering that is not a total order. Stable sorts merge natural runs: CPython 3.11 changed list.sort's merge order to **powersort** (Munro and Wild), provably near-optimal in the entropy of the run lengths, and CPython 3.15 balances the merge tree further with a new minimum-run-length scheme.
@@ -904,8 +905,8 @@ A: Rust's `sort_unstable` (ipnsort) and Go's `sort.Sort`, `sort.Ints` or `slices
 === primer | How can one bit per dimension still give trustworthy vector distances? RaBitQ | 12 min
 goal: Quantise vectors to one bit per dimension with RaBitQ's random rotation, estimate inner products without bias, and measure the 1/sqrt(D) error
 tag: frontier-rabitq | RaBitQ one-bit quantisation
-link: Gao and Long 2024, section 3 | https://arxiv.org/html/2405.12497v1#S3 | Sections 3.1 and 3.2: normalising, the rotated hypercube codebook, the estimator and Theorem 3.2's error bound
-link: AI page: vector compression | https://learningcurie.github.io/code-study-tracker/ai.html#l-l-embeddings-vector-compression-quantisation-and-rescoring | Binary and int8 quantisation with rescoring in a production vector database: the practical setting this result improves
+link: Gao and Long 2024, section 3 | https://arxiv.org/html/2405.12497v1#S3 | About 15 min: Sections 3.1 and 3.2: normalising, the rotated hypercube codebook, the estimator and Theorem 3.2's error bound
+link: AI page: vector compression | https://learningcurie.github.io/code-study-tracker/ai.html#l-l-embeddings-vector-compression-quantisation-and-rescoring | About 12 min: Binary and int8 quantisation with rescoring in a production vector database: the practical setting this result improves
 
 > [!key]
 > **RaBitQ** (Gao and Long, SIGMOD 2024) stores a D-dimensional vector as **D bits**. Each vector is first normalised relative to its cluster centroid, then multiplied by a random orthogonal matrix, and only the sign of each coordinate is kept. With one stored scalar, the inner product of the unit vector o with its quantised form ō, the estimator <ō, q> / <ō, o> is **unbiased** for <o, q> and its error is **O(1/sqrt(D))** with high probability, a guarantee product quantisation does not offer. Extended RaBitQ adds more bits per dimension, Faiss 1.11 (2025) ships an implementation, and Google's TurboQuant (2025) builds on the same random-rotation idea.

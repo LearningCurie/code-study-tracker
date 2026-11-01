@@ -17,8 +17,8 @@ traps:
 
 === build | Four-value sorting kernel study | 6-8 h
 goal: Compare a fixed sorting network with insertion sort on four-element inputs.
-link: AlphaDev sort patch | https://www.nature.com/articles/s41586-023-06004-9#Sec16 | Read the production-patch discussion and scope its claims.
-link: Rust sort implementation | https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable | See how a library describes its current sort implementation.
+link: AlphaDev sort patch | https://www.nature.com/articles/s41586-023-06004-9#Sec16 | About 5 min: Read the production-patch discussion and scope its claims.
+link: Rust sort implementation | https://doc.rust-lang.org/std/primitive.slice.html#method.sort_unstable | About 5 min: See how a library describes its current sort implementation.
 
 ## The brief
 Write a small experiment exploring a frontier lesson's theme: specialised sorting for tiny inputs. Your compare-swap network is a conventional educational construction, not AlphaDev and not a reproduction of its assembly-level results.

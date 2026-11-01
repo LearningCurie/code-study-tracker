@@ -17,8 +17,8 @@ traps:
 
 === build | Fenwick-backed inventory totals | 6-8 h
 goal: Maintain mutable inventory counts and answer range totals.
-link: Fenwick tree overview | https://cp-algorithms.com/data_structures/fenwick.html#overview | Review the indexed partial-sum invariant.
-link: Point update range sum | https://usaco.guide/gold/PURS#segment-tree | Compare an alternative range-query structure.
+link: Fenwick tree overview | https://cp-algorithms.com/data_structures/fenwick.html#overview | About 5 min: Review the indexed partial-sum invariant.
+link: Point update range sum | https://usaco.guide/gold/PURS#segment-tree | About 5 min: Compare an alternative range-query structure.
 
 ## The brief
 An inventory report needs totals over shelf ranges while counts change. Build an in-memory library with an explicit range contract; concurrent updates and persistence are out of scope.

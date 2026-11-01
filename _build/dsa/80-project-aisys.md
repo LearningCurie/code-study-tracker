@@ -17,8 +17,8 @@ traps:
 
 === build | Approximate vector retrieval lab | 6-8 h
 goal: Measure recall and distance computations for a simple approximate index against exact search.
-link: Nearest neighbour algorithm choice | https://scikit-learn.org/stable/modules/neighbors.html#choice-of-nearest-neighbors-algorithm | Relate dimensions and dataset size to search strategy.
-link: FAISS IndexLSH | https://github.com/facebookresearch/faiss/wiki/Faiss-indexes#indexlsh-and-its-relationship-with-cell-probe-methods | Compare the idea of binary signatures with this toy candidate filter.
+link: Nearest neighbour algorithm choice | https://scikit-learn.org/stable/modules/neighbors.html#choice-of-nearest-neighbors-algorithm | About 5 min: Relate dimensions and dataset size to search strategy.
+link: FAISS IndexLSH | https://github.com/facebookresearch/faiss/wiki/Faiss-indexes#indexlsh-and-its-relationship-with-cell-probe-methods | About 5 min: Compare the idea of binary signatures with this toy candidate filter.
 
 ## The brief
 Build a reproducible experiment on synthetic vectors. It demonstrates an approximation trade-off, not a production embedding service and not an implementation of FAISS or HNSW.

@@ -17,8 +17,8 @@ traps:
 
 === build | Sliding telemetry report | 6-8 h
 goal: Produce counts and value sums for many ordered time windows in linear time.
-link: Sliding window implementation | https://usaco.guide/gold/sliding-window#implementation | Review the moving-boundary invariant.
-link: Prefix sum explanation | https://usaco.guide/silver/prefix-sums#explanation | Use prefix differences for window totals.
+link: Sliding window implementation | https://usaco.guide/gold/sliding-window#implementation | About 5 min: Review the moving-boundary invariant.
+link: Prefix sum explanation | https://usaco.guide/silver/prefix-sums#explanation | About 5 min: Use prefix differences for window totals.
 
 ## The brief
 An operator wants a report over timestamped measurements. Build a local function and a small CLI that reads events and query starts, then returns one row per window.

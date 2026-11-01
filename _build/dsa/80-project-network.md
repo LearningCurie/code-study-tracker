@@ -17,8 +17,8 @@ traps:
 
 === build | Weighted delivery routes | 6-8 h
 goal: Find deterministic minimum-cost routes through a directed network.
-link: Dijkstra proof | https://cp-algorithms.com/graph/dijkstra.html#proof | Understand when a popped distance is final.
-link: Graph representation | https://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf#page=6 | Review vertices, edges and adjacency.
+link: Dijkstra proof | https://cp-algorithms.com/graph/dijkstra.html#proof | About 5 min: Understand when a popped distance is final.
+link: Graph representation | https://jeffe.cs.illinois.edu/teaching/algorithms/book/05-graphs.pdf#page=6 | About 5 min: Review vertices, edges and adjacency.
 
 ## The brief
 Build a command-line route calculator for a static map. A route is a sequence of directed edges and its cost is their sum; no live traffic or negative weights are supported.

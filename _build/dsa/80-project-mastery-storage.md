@@ -17,8 +17,8 @@ traps:
 
 === build | Capstone: recoverable key-value notebook | 10-12 h
 goal: Implement a small single-process key-value store with replay and safe snapshot replacement.
-link: LevelDB sorted tables | https://github.com/google/leveldb/blob/main/doc/impl.md#sorted-tables | Compare this simplified snapshot with sorted tables.
-link: LevelDB compactions | https://github.com/google/leveldb/blob/main/doc/impl.md#compactions | Study why persistent structures need compaction.
+link: LevelDB sorted tables | https://github.com/google/leveldb/blob/main/doc/impl.md#sorted-tables | About 5 min: Compare this simplified snapshot with sorted tables.
+link: LevelDB compactions | https://github.com/google/leveldb/blob/main/doc/impl.md#compactions | About 5 min: Study why persistent structures need compaction.
 
 ## The brief
 Build a local notebook that survives process restarts. This is an instructional single-writer store, not LevelDB: there are no concurrent readers, transactions, distributed guarantees or claims of production-grade crash safety on every filesystem.

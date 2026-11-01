@@ -17,8 +17,8 @@ traps:
 
 === build | Local document search | 6-8 h
 goal: Build a deterministic inverted index for AND keyword search.
-link: Lucene segments | https://lucene.apache.org/core/10_5_0/core/org/apache/lucene/codecs/lucene104/package-summary.html#Segments | See how production indexing groups index data.
-link: Keyword search | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-keyword-search-and-bm25 | Contrast this exact Boolean index with ranked retrieval.
+link: Lucene segments | https://lucene.apache.org/core/10_5_0/core/org/apache/lucene/codecs/lucene104/package-summary.html#Segments | About 5 min: See how production indexing groups index data.
+link: Keyword search | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-keyword-search-and-bm25 | About 12 min: Contrast this exact Boolean index with ranked retrieval.
 
 ## The brief
 Make a local searchable catalogue of short text documents. This is a toy in-memory index, not Lucene, a ranked search engine or a durable production service.

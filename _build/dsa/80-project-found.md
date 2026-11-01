@@ -17,8 +17,8 @@ traps:
 
 === build | Range-sum experiment bench | 6-8 h
 goal: Build a small command-line benchmark and correctness harness for repeated range sums.
-link: Complexity calculations | https://usaco.guide/bronze/time-comp#complexity-calculations | Connect operation counts to the measured growth.
-link: Four phases | https://en.wikipedia.org/wiki/How_to_Solve_It#Four_phases | Use the phases to write the experiment before optimising.
+link: Complexity calculations | https://usaco.guide/bronze/time-comp#complexity-calculations | About 5 min: Connect operation counts to the measured growth.
+link: Four phases | https://en.wikipedia.org/wiki/How_to_Solve_It#Four_phases | About 5 min: Use the phases to write the experiment before optimising.
 
 ## The brief
 An analyst asks for many sums over one fixed list. Deliver a program, automated tests and a short report comparing direct scans with preprocessing. This is a local educational tool, not a general benchmark framework.

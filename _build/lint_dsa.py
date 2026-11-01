@@ -19,6 +19,7 @@ GENERIC = [
     (re.compile(r"neetcode\.io/(roadmap|practice)/?$|leetcode\.com/(problemset|studyplan)|techinterviewhandbook\.org/grind75"), "roadmap or problem list"),
     (re.compile(r"^https://[a-z]+\.wikipedia\.org/wiki/[^#]+$"), "whole Wikipedia article (add a #section)"),
 ]
+DURATION = re.compile(r"\b\d+(?:\.\d+)?\s*(?:min|minutes?|h|hours?)\b", re.I)
 
 
 def link_notes(url, note):
@@ -33,6 +34,8 @@ def link_notes(url, note):
             out.append("video without a length under about 20 min or a timestamp")
     if not note:
         out.append("no note saying what to read")
+    elif not DURATION.search(note):
+        out.append("no reading-time estimate")
     return out
 
 HERE = Path(__file__).parent

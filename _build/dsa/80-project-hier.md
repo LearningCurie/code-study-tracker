@@ -17,8 +17,8 @@ traps:
 
 === build | Trie-backed name directory | 6-8 h
 goal: Build a case-sensitive directory with exact lookup and lexicographic autocomplete.
-link: Trie operations | https://en.wikipedia.org/wiki/Trie#Operations | Review path traversal and terminal markers.
-link: Tree depth-first traversal | https://en.wikipedia.org/wiki/Tree_traversal#Depth-first_search | Use traversal to enumerate descendants.
+link: Trie operations | https://en.wikipedia.org/wiki/Trie#Operations | About 5 min: Review path traversal and terminal markers.
+link: Tree depth-first traversal | https://en.wikipedia.org/wiki/Tree_traversal#Depth-first_search | About 5 min: Use traversal to enumerate descendants.
 
 ## The brief
 Create an in-memory name index suitable for a command-line contact picker. Store unique, nonempty lowercase ASCII names; this keeps ordering and validation explicit rather than implying full Unicode support.

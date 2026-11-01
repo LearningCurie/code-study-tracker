@@ -17,8 +17,8 @@ traps:
 
 === build | 0/1 purchase planner | 6-8 h
 goal: Maximise useful value under a fixed budget and return the selected items.
-link: Dynamic programming | https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf#page=2 | Define subproblems before transitions.
-link: Backtracking | https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf#page=9 | Use complete search as a small-input oracle.
+link: Dynamic programming | https://jeffe.cs.illinois.edu/teaching/algorithms/book/03-dynprog.pdf#page=2 | About 5 min: Define subproblems before transitions.
+link: Backtracking | https://jeffe.cs.illinois.edu/teaching/algorithms/book/02-backtracking.pdf#page=9 | About 5 min: Use complete search as a small-input oracle.
 
 ## The brief
 A community group has a fixed budget and proposed items. Build a planner that chooses a subset with maximum total benefit, not a fractional selection. Treat ties as allowing any optimal subset.

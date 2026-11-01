@@ -115,16 +115,19 @@ page. Problem links are: the original problem (all free), the doocs reference-so
 NeetCode editor page. The old "Find a video" YouTube search links are removed (search pages are generic); a problem
 video is shown only when its duration is present in the cached audit data and meets the length limit.
 
-On 1 November 2026, 480 distinct lesson and project URLs were fetched. Their HTML anchors, generated AI-page anchors,
+On 1 November 2026, 480 distinct lesson and project URLs were fetched. Two more primary-source preprints were checked
+and added after a frontier update, for 482 in total. Their HTML anchors, generated AI-page anchors,
 GitHub line ranges and PDF page numbers were checked; PDF checks confirm that the page exists, not that it is the
 best section for the lesson. The 16 problem-solution references added after the original audit were also fetched and
 checked for the expected title and a Python solution. This is a reachability and target check, not a complete editorial
-review of every resource or a guarantee that a site will remain available.
+review of every resource or a guarantee that a site will remain available. Reading times on optional references are
+estimates for the named section, not measured durations.
 
-The same pass compiled all 377 lesson Python blocks. Of those, 297 eligible examples ran in temporary,
-resource-limited working directories; 72 were not executed because they use file I/O, external dependencies or
-other restricted operations, and 8 require context from other cards or skipped setup blocks. These counts do not
-establish that every lesson example has been fully tested.
+The same pass compiled all 377 lesson Python blocks. One resource-limited run executed 319 examples independently;
+four more were checked with their documented prerequisite code. Ten expensive or data-dependent snippets were checked
+with smaller inputs or synthetic fixtures instead of the full benchmark datasets. The remaining 44 were not executed
+in that pass because they use file I/O, external dependencies or other restricted operations. These checks do not
+establish that every full-size lesson example has been independently run.
 
 ## 8. Writing standard
 

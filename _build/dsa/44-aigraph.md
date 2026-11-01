@@ -37,8 +37,8 @@ further:
 === primer | How does PageRank turn links into scores, and why does power iteration converge? | 15 min
 goal: Compute PageRank by power iteration with damping and dangling nodes, and work out how many iterations a tolerance needs
 tag: aigraph-pagerank | PageRank by power iteration
-link: Brin and Page 1998 | https://snap.stanford.edu/class/cs224w-readings/Brin98Anatomy.pdf | Section 2.1 (one page): the original formula, d = 0.85, the random surfer, and the remark that sending the random jump to chosen pages personalises the ranking
-link: NetworkX pagerank | https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html | The parameter list (alpha, personalization, dangling, tol): a reference implementation to check your own scores against, and its N·tol stopping rule
+link: Brin and Page 1998 | https://snap.stanford.edu/class/cs224w-readings/Brin98Anatomy.pdf | About 5 min: Section 2.1 (one page): the original formula, d = 0.85, the random surfer, and the remark that sending the random jump to chosen pages personalises the ranking
+link: NetworkX pagerank | https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html | About 5 min: The parameter list (alpha, personalization, dangling, tol): a reference implementation to check your own scores against, and its N·tol stopping rule
 
 > [!key]
 > PageRank scores a node by how often a **random surfer** visits it: with probability d (usually 0.85) follow a random out-link, otherwise jump to a node drawn from a **teleport** distribution. The scores are the stationary distribution of that walk. **Power iteration** applies one step of the walk to a probability vector until it stops changing; each step costs O(n + m), and the error shrinks by at least a factor d per step, so d = 0.85 needs at most about 90 steps to reach 10^-6.
@@ -198,8 +198,8 @@ A: NetworkX compares the L1 change with n · tol = 50, larger than the maximum p
 === primer | How does personalised PageRank find passages for a multi-hop question, as HippoRAG does? | 15 min
 goal: Rank passages for a question by running personalised PageRank from the question's entities over an entity graph, and explain why bridge entities win
 tag: aigraph-ppr | Personalised PageRank retrieval
-link: HippoRAG, section 2.3 | https://arxiv.org/html/2405.14831v3#S2.SS3 | The exact pipeline: OpenIE triples, synonym edges, query nodes, the personalised vector, node specificity and passage scores from the node-passage matrix
-link: AI page: lighter graph approaches | https://learningcurie.github.io/code-study-tracker/ai.html#l-l-advrag-lighter-graph-approaches-lightrag-entity-linking | How HippoRAG sits next to LightRAG and temporal graphs in a real retrieval stack
+link: HippoRAG, section 2.3 | https://arxiv.org/html/2405.14831v3#S2.SS3 | About 10 min: The exact pipeline: OpenIE triples, synonym edges, query nodes, the personalised vector, node specificity and passage scores from the node-passage matrix
+link: AI page: lighter graph approaches | https://learningcurie.github.io/code-study-tracker/ai.html#l-l-advrag-lighter-graph-approaches-lightrag-entity-linking | About 12 min: How HippoRAG sits next to LightRAG and temporal graphs in a real retrieval stack
 
 > [!key]
 > Personalised PageRank (PPR) is PageRank whose random jump always returns to a few **seed** nodes. The stationary mass then measures closeness to the seeds, counting every path, not just the shortest. **HippoRAG** (Gutiérrez et al., NeurIPS 2024) seeds PPR with the entities named in a question, runs it over an entity graph extracted from the corpus, and scores each passage by the PPR mass of the entities it mentions. Entities connected to several seeds collect mass from all of them, so the bridge in a multi-hop question rises to the top in one retrieval step.
@@ -342,8 +342,8 @@ A: Down-weight the city as a seed with node specificity (it appears in many pass
 === primer | How do you expand a knowledge graph k hops from the question without flooding the context? | 14 min
 goal: Write a budgeted k-hop expansion (hop limit, fan-out cap, node budget, decaying score) and pack the result into a token budget
 tag: aigraph-khop | Budgeted k-hop expansion
-link: GraphSAGE, section 3.1 | https://arxiv.org/abs/1706.02216 | In the PDF, the 'Neighborhood definition' paragraph of section 3.1: why fixed-size neighbour samples keep the cost per batch at O(S1·S2) instead of O(|V|) in the worst case
-link: GraphRAG local search | https://microsoft.github.io/graphrag/query/local_search/ | The first two sections: entities as entry points, then neighbours, relations and text units prioritised and filtered to fit one context window
+link: GraphSAGE, section 3.1 | https://arxiv.org/abs/1706.02216 | About 5 min: In the PDF, the 'Neighborhood definition' paragraph of section 3.1: why fixed-size neighbour samples keep the cost per batch at O(S1·S2) instead of O(|V|) in the worst case
+link: GraphRAG local search | https://microsoft.github.io/graphrag/query/local_search/ | About 10 min: The first two sections: entities as entry points, then neighbours, relations and text units prioritised and filtered to fit one context window
 
 > [!key]
 > Entity-anchored graph retrieval is **breadth-first search with budgets**. Start from the entities in the question, expand level by level, follow only the f strongest edges of each node (a **fan-out cap**), stop at k hops, keep at most N nodes (a **node budget**) ranked by a score that decays with every hop, then pack the best facts into a **token budget**. Without the caps, a few hub nodes turn two hops into thousands of nodes; with them, the work is bounded by seeds × (f + f^2 + ... + f^k) and by N, whatever the graph looks like.
@@ -501,8 +501,8 @@ A: Each level becomes a single batched query for the neighbours of the whole fro
 === primer | How does GraphRAG split an entity graph into communities, and what does Leiden fix in Louvain? | 15 min
 goal: Compute modularity, run Louvain-style local moving with Leiden's queue, and explain how GraphRAG builds and uses its community hierarchy
 tag: aigraph-leiden | Community detection with modularity
-link: From Louvain to Leiden, section III | https://arxiv.org/html/1810.08473v3#S3 | The three phases (local moving, refinement, aggregation), the fast local move queue, and Table 1 of guarantees
-link: AI page: GraphRAG for global questions | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-graphrag-for-global-questions | How community reports are written and queried with map-reduce, and what the index costs
+link: From Louvain to Leiden, section III | https://arxiv.org/html/1810.08473v3#S3 | About 15 min: The three phases (local moving, refinement, aggregation), the fast local move queue, and Table 1 of guarantees
+link: AI page: GraphRAG for global questions | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-graphrag-for-global-questions | About 14 min: How community reports are written and queried with map-reduce, and what the index costs
 
 > [!key]
 > A **community** is a group of nodes with more edges inside than chance would give. **Modularity** Q measures that: the fraction of edges inside communities minus the fraction expected if edges were rewired at random with the same degrees. **Louvain** raises Q greedily by moving single nodes to the neighbouring community with the best gain, then merges each community into one node and repeats. It can leave communities badly connected or even disconnected; **Leiden** (Traag et al., 2019) adds a refinement phase that guarantees connected communities and a queue that revisits only nodes whose neighbourhood changed. GraphRAG runs Leiden recursively to get a hierarchy of communities and writes an LLM summary for each.
@@ -704,8 +704,8 @@ A: Raise `max_cluster_size` (or stop the recursion earlier), so communities are 
 === primer | How do you run an agent workflow as a DAG: order, parallel branches, loops and crash recovery? | 15 min
 goal: Schedule a workflow with Kahn's algorithm in waves, merge parallel branches safely, bound loops, and resume from a checkpoint without redoing finished nodes
 tag: aigraph-dagrun | Waves, checkpoints and resume
-link: LangGraph checkpointers | https://docs.langchain.com/oss/python/langgraph/checkpointers#super-steps | 'Super-steps' and 'Pending writes': a checkpoint at every super-step boundary, per-node writes that let a resumed run skip the nodes that already succeeded
-link: LangGraph: defer node execution | https://docs.langchain.com/oss/python/langgraph/use-graph-api#defer-node-execution | Fan-in when branches have different lengths: defer=True versus a list-form edge that waits for all listed nodes
+link: LangGraph checkpointers | https://docs.langchain.com/oss/python/langgraph/checkpointers#super-steps | About 5 min: 'Super-steps' and 'Pending writes': a checkpoint at every super-step boundary, per-node writes that let a resumed run skip the nodes that already succeeded
+link: LangGraph: defer node execution | https://docs.langchain.com/oss/python/langgraph/use-graph-api#defer-node-execution | About 5 min: Fan-in when branches have different lengths: defer=True versus a list-form edge that waits for all listed nodes
 
 > [!key]
 > An agent workflow with dependencies is a directed graph of steps. **Kahn's algorithm** gives a safe order: repeatedly run the nodes whose dependencies are all done. Running each "ready" set as a **wave** gives parallel branches for free; merge their updates only after the whole wave, with an explicit rule (a **reducer**) for keys several branches write. Real agents loop, so collapse each loop into a node with a hard round limit and keep a global step limit. Save the state after every wave (a **checkpoint**), and keep the outputs of branches that finished in a failed wave, so a crashed run resumes where it stopped. LangGraph's super-steps, checkpointers and recursion limit follow this design.
@@ -910,7 +910,7 @@ A: It raises ValueError naming draft, publish and review, because draft now wait
 
 === lab | PageRank and personalised PageRank, checked against an exact solve | 45 min
 goal: Implement power-iteration PageRank and personalised PageRank on a generated graph, verify them against an exact linear solve, and measure convergence against the 2·d^k bound
-link: NetworkX pagerank | https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html | An independent implementation to cross-check your scores (pass alpha, personalization and a small tol)
+link: NetworkX pagerank | https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.link_analysis.pagerank_alg.pagerank.html | About 5 min: An independent implementation to cross-check your scores (pass alpha, personalization and a small tol)
 
 > [!key]
 > Power iteration is cheap and approximate; a linear solve is exact and expensive. On a 200-node graph you can afford both, so use the solve as the oracle, then measure how fast the iteration really converges compared with the worst-case bound.

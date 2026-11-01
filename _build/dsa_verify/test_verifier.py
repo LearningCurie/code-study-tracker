@@ -32,6 +32,19 @@ class TestExampleRunner(unittest.TestCase):
         self.assertNotEqual(code, 0)
         self.assertIn("visible error", error)
 
+    def test_execution_check_does_not_pass_for_unresolved_context(self):
+        module = {
+            "key": "test", "practice": [], "further": [], "cards": {},
+            "items": [{"k": "lab", "t": "example", "src": [], "md": "```python\nmissing_name()\n```"}],
+        }
+        output = StringIO()
+        with patch.object(verify_dsa.bd, "load", return_value=([module], [])), \
+             patch.object(verify_dsa.bd, "Problems"), \
+             patch.object(sys, "argv", ["verify_dsa.py", "--exec"]), \
+             redirect_stdout(output):
+            self.assertEqual(verify_dsa.main(), 1)
+        self.assertIn("needs context or a dependency", output.getvalue())
+
     def test_problem_card_links_enter_link_inventory(self):
         module = {
             "further": [],
@@ -47,7 +60,8 @@ class TestExampleRunner(unittest.TestCase):
         self.assertEqual(lint_dsa.link_notes(url, "Read this: 20 min"), [])
         self.assertTrue(any("video without" in note for note in lint_dsa.link_notes(url, "Watch: 35 min")))
         self.assertTrue(any("video without" in note for note in lint_dsa.link_notes(url + "&start=90", "Watch: 35 min")))
-        self.assertEqual(lint_dsa.link_notes(url + "&t=90", "Watch the marked segment"), [])
+        self.assertEqual(lint_dsa.link_notes(url + "&t=90", "Watch the marked segment: 5 min"), [])
+        self.assertTrue(any("reading-time" in note for note in lint_dsa.link_notes("https://example.test/section", "Read the section")))
 
     def test_mixed_patterns_are_hidden_before_last_hint(self):
         modules, warnings = build_dsa_guide.load(build_dsa_guide.HERE / "dsa")
@@ -60,6 +74,17 @@ class TestExampleRunner(unittest.TestCase):
                 self.assertNotIn(pattern, visible)
                 self.assertNotIn(pattern, problem["cue"].casefold())
                 self.assertNotIn(pattern, problem["hint"].casefold())
+
+    def test_hnsw_lesson_states_geometric_layers_and_unbounded_frontier(self):
+        modules, warnings = build_dsa_guide.load(build_dsa_guide.HERE / "dsa")
+        self.assertEqual(warnings, [])
+        vectors = next(module for module in modules if module["key"] == "vectors")
+        item = next(item for item in vectors["items"] if item.get("tag", [""])[0] == "vectors-hnsw")
+        self.assertIn("M / (M - 1) layers", item["md"])
+        self.assertIn("candidate heap and visited set can grow larger", item["md"])
+        self.assertTrue(any(source["h"] == "https://arxiv.org/abs/2610.38133" for source in item["src"]))
+        for m in (2, 4, 16):
+            self.assertAlmostEqual(sum(m ** -j for j in range(100)), m / (m - 1))
 
     def test_offline_problem_catalog_preserves_records_and_urls(self):
         catalog = {

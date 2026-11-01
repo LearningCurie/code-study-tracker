@@ -897,6 +897,7 @@ goal: Implement HNSW's layered best-first search with a candidate min-heap and a
 tag: vectors-hnsw | HNSW: layers and two-heap search
 link: Malkov and Yashunin: the HNSW paper (arXiv 1603.09320) | https://arxiv.org/abs/1603.09320 | 30 min: open the PDF; read section 3 (the skip-list idea and the neighbour heuristic, Figure 2), then Algorithms 1, 2, 4 and 5 in section 4 and the paragraphs of 4.1 on mL, Mmax0 and efConstruction
 link: AI page: Approximate nearest neighbour search and HNSW | https://learningcurie.github.io/code-study-tracker/ai.html#l-c-approximate-nearest-neighbour-search-and-hnsw | 5 min: the user's view, with the parameter table and pgvector defaults, memory per vector and operating advice on bulk loading, deletes and monitoring recall
+link: Daliri et al. 2026: graph-search worst cases | https://arxiv.org/abs/2610.38133 | 5 min: the abstract's lower bound for standard graph search and its distinction from the Steiner-point construction
 
 > [!key]
 > HNSW links every vector to a few near but diverse neighbours, and stacks these proximity graphs in layers like a skip list: every node is on layer 0, and a node reaches layer l with probability M^−l, so upper layers are sparse with long links. A search walks greedily down the upper layers to a good entry point, then runs **best-first search** on layer 0 with two heaps: a **min-heap of candidates** to expand and a **max-heap of the ef best results**, stopping when the nearest unexpanded candidate is farther than the worst result. ef_search sets how wide that search is (recall against time), M sets the links per node (recall against memory), and ef_construction sets how carefully the graph is built.
@@ -911,7 +912,7 @@ Within one layer the search works like exploring a city with a shortlist: keep t
 
 ### Layers: a skip list in many dimensions
 
-Each inserted node draws its top layer l = ⌊−ln(U) × mL⌋ with U uniform in (0, 1]. Then P(l ≥ j) = P(U ≤ e^(−j/mL)) = e^(−j/mL), and with the paper's choice mL = 1 / ln M that is M^(−j): with M = 16, one node in 16 reaches layer 1 and one in 256 reaches layer 2. In 20,000 draws: 1,230 nodes reached layer 1 (expected 1,250), 83 layer 2 (78) and 5 layer 3 (4.9). The expected number of layers per node is 1 + mL, a constant, so the work and memory per node stay bounded however large the index grows.
+Each inserted node draws its top layer l = ⌊−ln(U) × mL⌋ with U uniform in (0, 1]. Then P(l ≥ j) = P(U ≤ e^(−j/mL)) = e^(−j/mL), and with the paper's choice mL = 1 / ln M that is M^(−j): with M = 16, one node in 16 reaches layer 1 and one in 256 reaches layer 2. In 20,000 draws: 1,230 nodes reached layer 1 (expected 1,250), 83 layer 2 (78) and 5 layer 3 (4.9). Summing those probabilities gives an expected M / (M - 1) layers per node, a constant. This is a storage expectation, not a worst-case bound on search work.
 
 ### Searching one layer: best-first with two heaps (Algorithm 2)
 
@@ -921,7 +922,7 @@ The state is a `visited` set, `candidates` (a min-heap by distance: the frontier
 2. If c is farther than the worst result, stop.
 3. Otherwise, for each unvisited neighbour e of c: mark it visited and compute its distance; if `results` holds fewer than ef entries or e beats the worst result, push e onto both heaps, and if `results` now holds ef + 1 entries, pop its worst.
 
-Each step needs the nearest candidate and the farthest kept result, and the two heaps give both in O(log ef). It is best-first search, like Dijkstra's algorithm with "distance to the query" as the priority, but the result set is bounded by ef, which bounds memory and work. The stopping rule is a heuristic, not a proof: a far candidate could link to something near. That is why a larger ef, which keeps exploring longer, raises recall. Python's `heapq` is a min-heap, so the template stores negated distances in `results`.
+Each step needs the nearest candidate and the farthest kept result. The result heap has at most ef entries, but the candidate heap and visited set can grow larger; a candidate-heap operation costs O(log C) for its current size C, not necessarily O(log ef). This is best-first search, like Dijkstra's algorithm with "distance to the query" as the priority. The stopping rule is a heuristic, not a proof: a far candidate could link to something near. A larger ef generally explores more and improves recall, but does not impose a strict bound on total work. Python's `heapq` is a min-heap, so the template stores negated distances in `results`.
 
 ### The full search (Algorithm 5)
 
@@ -935,6 +936,8 @@ Draw the new node's level l. Walk greedily (ef = 1) down to layer l + 1; then on
 
 - **Search.** The paper argues for O(log n) scaling (a bounded number of hops per layer, about log n layers) and confirms it on low-dimensional data; in high dimensions it is an empirical observation. What you control is ef: the work is roughly the number of expansions times the degree. Measured with this card's template on the lab data (20,000 × 64, M = 16, ef_construction = 100), next to hnswlib built with the same settings:
 
+  Daliri et al. (October 2026, preprint) prove that standard greedy graph-based ANN methods, including flat and hierarchical variants, cannot guarantee sublinear worst-case query time for Euclidean approximate nearest-neighbour search. Their construction with extra Steiner points has different theoretical guarantees. This does not contradict the strong measured performance of HNSW on many real datasets, and is not a recommendation to replace a production index.
+
 | ef_search | recall@10 (template) | distances per query | recall@10 (hnswlib) |
 |---|---|---|---|
 | 10 | 0.882 | 324 (1.6% of n) | 0.877 |
@@ -945,8 +948,8 @@ Draw the new node's level l. Walk greedily (ef = 1) down to layer l + 1; then on
 
 As the collection grew at fixed ef = 40, the work barely moved: 614 distances per query at n = 1,250, 723 at 2,500, 794 at 5,000, 796 at 10,000 and 758 at 20,000, with recall steady at 0.97, while brute force grew 16-fold. hnswlib (C++) answered ef = 40 queries in about 0.1 ms on one core against 0.56 ms for the NumPy brute force; the Python template took 1.7 ms because each small distance batch pays interpreter overhead.
 
-- **Build.** Each insert is a search with ef_construction on about 1 + mL layers plus the heuristic; the paper reports O(n log n) on low-dimensional data. The template needed 2,432 distance computations per insert and 147 s in Python; hnswlib built the same index in 6.8 s on one core.
-- **Memory.** The vectors plus links. A node stores on average Mmax0 + mL × Mmax ids: 32 + 16 / ln 16 = 37.8 for M = 16, about 151 bytes with 4-byte ids. The paper estimates 60 to 450 bytes per object for M between 6 and 48; FAISS's guidelines count (d × 4 + M × 2 × 4) bytes per vector.
+- **Build.** Each insert first descends the upper graph layers, then searches with ef_construction on the new node's layers and applies the neighbour heuristic; the paper reports O(n log n) on low-dimensional data. The template needed 2,432 distance computations per insert and 147 s in Python; hnswlib built the same index in 6.8 s on one core.
+- **Memory.** The vectors plus links. With Mmax0 = 2M, Mmax = M and all layer caps filled, the expected link capacity is 2M + M / (M - 1) ids per node: about 33.1 ids, or 132 bytes at 4 bytes per id, for M = 16. Actual link counts and implementation overhead vary. The paper estimates 60 to 450 bytes per object for M between 6 and 48; FAISS's guidelines count (d × 4 + M × 2 × 4) bytes per vector.
 
 ## When to use it
 

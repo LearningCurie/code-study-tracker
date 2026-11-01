@@ -17,8 +17,8 @@ traps:
 
 === build | Meeting room allocator | 6-8 h
 goal: Assign meetings to the minimum number of rooms and verify the allocation.
-link: Interval techniques | https://www.techinterviewhandbook.org/algorithms/interval/#techniques | Revisit sorting and interval boundaries.
-link: Heap priority queue notes | https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes | Use a stable tie breaker in heap entries.
+link: Interval techniques | https://www.techinterviewhandbook.org/algorithms/interval/#techniques | About 5 min: Revisit sorting and interval boundaries.
+link: Heap priority queue notes | https://docs.python.org/3/library/heapq.html#priority-queue-implementation-notes | About 5 min: Use a stable tie breaker in heap entries.
 
 ## The brief
 Given a day's meeting requests, output a deterministic room assignment and the minimum number of rooms required. This is an offline planner; real-time rescheduling and attendee constraints are out of scope.

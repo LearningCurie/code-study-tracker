@@ -82,6 +82,7 @@ def main():
                         rc, err = run("\n\n".join(done + [code]))
                     if rc and ("NameError" in err or "ModuleNotFoundError" in err):
                         counts["needs_context"] += 1
+                        problems.append(f"{where}: python block needs context or a dependency: {err}")
                     elif rc:
                         problems.append(f"{where}: python block fails: {err}")
                     else:
